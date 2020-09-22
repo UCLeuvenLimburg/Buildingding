@@ -8,7 +8,8 @@ so that I can see the route Details.
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/sb01.png[alt="not bad.",width=450,height=300]
+
+image:img/sb01.png[alt="Android Screen.",width=450,height=300]
 
 
 ACCEPTANCE CRITERIA:
