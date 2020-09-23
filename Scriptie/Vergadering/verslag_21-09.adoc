@@ -1,0 +1,116 @@
+= Teamvergadering 21/09/2020
+
+== Taakverdeling
+Het is een groot en ambitieus project, waardoor het geen slecht idee is om een zicht te krijgen op de basis taken die er zijn net zoals de geïnteresseerden om dez taken op te nemen.
+
+.Taak:
+* Product owner: Thomas
+	- Communicatie (feedbackmomenten inplannen, vragen aan de klant stellen, etc.)
+* Scrum master: Hamid
+* User story map aanmaken en bijhouden: Hamid, Thomas
+* User stories maken: Hamid, Thomas
+* Domain class diagram onderhouden: Hamid
+* Installatiehandleiding: Thomas
+* Gebruikershandleiding: Hamid
+* Toolhandleiding: Johan
+* Notulen van de interviews: Jaron
+* Interne vergaderverslagen: Iedereen afwisselend
+* Programmeren: Iedereen, pair programmeren
+* Onderzoek: Hamid, Johan, Thomas
+
+== Werkmomenten
+Omdat in de groep er tijdens het afstudeerproject ook nog lessen gevolgd moeten worden zijn er enkele momenten wanneer we niet beschikbaar zijn. Er zal een Google Calendar aangemaakt worden waar aangegeven kan worden op welke tijdsstippen team members bezet zijn. Deze tool zal ook gebruikt worden om samenkomstmomenten in te plannen. We doen een daily-standup om 16u.
+
+Om met de huidige maatregelen rekening te houden en omdat de campus niet ideaal gelegen is om regelmatig af te spreken gaan de meeste vergaderingen online gebeuren via Discord. 
+
+== Brainstorm
+Om tot een goed idee te komen van wat de mogelijkheden van de applicatie zijn gaan we een korte brainstormsessie organiseren. Met deze concepten kunnen we dan verder gaan naar de user story map en het scope en vision document.
+
+Placeholder names
+	MindMover
+	Where Is My Mind?
+	Buildingding!
+	Alles Gids
+	UCLLocator
+	Campus Keeper
+	NeverLost
+	
+Waar vind ik...
+	Lokaal X
+		Warning lokaal volledig bezet ???
+			Verminderde en/of customized limieten (corona)
+	Les Y
+	Lector Z ???
+	Toiletten
+		Dichtstbijzijnde
+		Niet volledig bezet
+		...
+	Places of Interest
+		Bib
+		Monitoraat
+		Onthaal
+		Refter/Restaurant
+		(Trap naar) Parking
+		...
+	Nuttige zaken
+		Printer
+		Automaten
+			Frisdrank
+			Snacks
+			Water
+			Koffie/thee
+		EHBO-kit
+	Privileged stuff
+		Schoonmaakmachines
+		Koffie-apparaat
+		...
+	Nooduitgang
+==> Op plattegrond zien
+	Foto's
+	Kortste weg naar bepaalde plaats
+		Corona-toggle: Eenrichtingsverkeer Y/N
+		Vanaf huidige locatie
+		Vanaf bepaalde plaats ???
+		
+Waar ben ik
+	Hoe bepalen?
+		Foto's nemen en naar app sturen?
+		Uit lijst locaties kiezen?
+		Lokaal huidige/volgende/vorige les nemen?
+
+Hotkey! ASAP naar vrije WC! (sensoren in de wc’s?)
+
+Bezetting nagaan
+	Bepaald lokaal
+	Huidige/volgende les
+	Parking
+		Auto's
+		Fietsenrekken ???
+
+Integratie met ...
+	Restaurant menu
+		Dag/weekmenu :))))
+		Reservaties?
+		Externe API?
+	Bib catalogus
+		Uitgeleend ja/nee
+		Zoekfunctie
+		Externe API?
+	Lessenrooster
+		Locatie volgende les tonen
+		Kortste weg eventueel ook?
+		
+Algemene plattegrond
+	Per verdiep
+	Op lokaal klikken/duwen voor info lokaal
+		Bezetting
+		Eerstvolgende les
+			Welk vak
+			Wanneer
+			Welke lector
+
+Plattegrond tekenen
+
+Via camera een pijl hebben om ergens naar toe te wandelen
+
+Text to speech
