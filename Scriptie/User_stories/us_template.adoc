@@ -1,0 +1,29 @@
+= STORY <ID>. <TITLE>
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+
+As a <role> +
+I want <feature> +
+so that <benefit>
+
+// OPTIONAL
+== Wireframes
+// Uncomment line below for wireframe image caption
+// .Image caption
+image::us_temp_wf.png[I am the image alt text.]
+
+== Acceptance Criteria
+* Bla
+* Blabla
+* Lorem Ipsum
+
+== Technical Details
+* Bla
+* Blabla
+* Lorem Ipsum
+* Domain and database classes:
++
+// Uncomment line below for UML image caption
+// .Image caption
+image::us_temp_uml.png[I am the image alt text.]
