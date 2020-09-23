@@ -1,0 +1,40 @@
+= Verslag vergadering image:ucll.jpg[role="right",150,150]
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+
+// Macro's voor aanwezigen/verontschuldigd
+// Usage: insert {shortcut}
+:h: Hamid
+:jo: Johan
+:t: Thomas
+:ja: Jaron
+:hjo: Hamid, Johan
+:ht: Hamid, Thomas
+:hja: Hamid, Jaron
+:jot: Johan, Thomas
+:joja: Johan, Jaron
+:tja: Thomas, Jaron
+:hjot: Hamid, Johan, Thomas
+:htja: Hamid, Thomas, Jaron
+:hjoja: Hamid, Johan, Jaron
+:jotja: Johan, Thomas, Jaron
+:all: Hamid, Johan, Thomas, Jaron
+
+DATUM: dd/mm/yyyy +
+AANWEZIGEN: {} +
+VERONTSCHULDIGD: {} +
+VERSLAGGEVER: {} +
+DATUM VOLGENDE VERGADERING: dd/mm/yyyy +
+AGENDA:
+
+* Bla.
+* Blabla.
+
+'''
+
+KORT VERSLAG: +
+Lorem Ipsum.
+
+ACTIES: +
+Lorem Ipsum.
