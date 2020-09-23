@@ -1,0 +1,28 @@
+= Logboek afstudeerproject
+Jaron Trossaert; r0374256; 3TI/4SO
+:doctype: article
+:table-stripes: even
+
+// Macro's voor betrokkenen
+// Usage: insert {shortcut} in cel
+:ja: Jaron
+:hja: Hamid, Jaron
+:joja: Johan, Jaron
+:tja: Thomas, Jaron
+:htja: Hamid, Thomas, Jaron
+:hjoja: Hamid, Johan, Jaron
+:jotja: Johan, Thomas, Jaron
+:all: Hamid, Johan, Thomas, Jaron
+
+[options="header"]
+|=======================
+|Datum & uur|Duur|Betrokkenen|Topics
+|20/09 19u30|0.5u|{ja}|Solo brainstormsessie over project features
+|21/09 9u45|0.5u|{ja}|Klaarzetten documenten (scope & vision, logboek, verslag vergadering)
+|21/09 10u15|0.75u|{all}| Eerste vergadering met klant/begeleider 
+|21/09 11u15|1u|{all}|Eerste meeting: toewijzing rollen, bespreken aanpak
+|21/09 14u30|1u|{all}|Tweede meeting: brainstorm MVP, scope & vision
+|22/09 11u30|0.5u|{all}|Technische inleiding
+|22/09 13u00|4u|{all}|Scope & vision, user story map
+|23/09 10u00|2.5u|{ja}|Scope & vision in asciidoc, logboek template in asciidoc
+|=======================
