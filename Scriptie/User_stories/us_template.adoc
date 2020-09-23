@@ -1,4 +1,4 @@
-= STORY <ID>. <TITLE>
+= Story <ID>. <Title>
 :doctype: article
 :imagesdir: ./img
 :nofooter:
