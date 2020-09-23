@@ -1,0 +1,17 @@
+= Vergadering 21/09/2020
+
+== Verwachtingen van de klant
+het team krijgt veel vrijheid voor de ontwikkeling van de applicatie. De opzet van dit project is enerzijds het ontwikkelen van een mobiele applicaite om de weg in Campus proximus te vinden, en anderzijds onderzoek te doen naar mogelijke technologieeën en hun bruikbaarheid.
+
+Er zal een wekelijkse vergadering plaats vinden om de resultaten van die week te bespreken net zoals de verwachtingen en plannen van de week die daarop volgt.
+
+== Technical details
+Het hele team werkt met een android toestel en daarom zal de development van het project in Android Studio gebeuren met Kotlin. Er is een git-repository voorzien om alle vooruitgang in op te slaan.
+
+Het team gebruikt Jira als kanbanbord om duidelijk te maken met welke taak ze bezig zijn.
+
+== Uitdagingen
+De eerste grote mogelijke feature is het gebruiken maken van Augmented reality om de weg naar de gewenste bestemming weer te geven.
+De tweede grote feature is een "neural network" opstellen en de huidige locatie van de gebruiker bepalen via Access Points die over de hele school verspreid zijn.
+De derde grote feature zou zijn het maken van een 2D plattegrond van de school, die de locatie van de gebruiker op die kaart weergeeft en een richtingsaanwijzing bevat voor de bestemming.
+
