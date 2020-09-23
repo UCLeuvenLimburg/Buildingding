@@ -1,0 +1,31 @@
+= Logboek afstudeerproject
+Voornaam Achternaam; r0123456; 3TI/???
+:doctype: article
+
+// Macro's voor betrokkenen
+// Usage: insert {shortcut} in cel
+:h: Hamid
+:jo: Johan
+:t: Thomas
+:ja: Jaron
+:hjo: Hamid, Johan
+:ht: Hamid, Thomas
+:hja: Hamid, Jaron
+:jot: Johan, Thomas
+:joja: Johan, Jaron
+:tja: Thomas, Jaron
+:hjot: Hamid, Johan, Thomas
+:htja: Hamid, Thomas, Jaron
+:hjoja: Hamid, Johan, Jaron
+:jotja: Johan, Thomas, Jaron
+:all: Hamid, Johan, Thomas, Jaron
+
+[options="header"]
+|=======================
+|Datum & uur|Duur|Betrokkenen|Topics
+|dd/mm hhumm|?u|{}|Lipsum
+|e|f|g|h
+|i|j|k|l
+|m|n|o|p
+|q|r|s|t
+|=======================
