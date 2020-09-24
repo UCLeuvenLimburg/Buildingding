@@ -24,5 +24,23 @@ Johan Molenberghs; r0728245; 3TI/2SO
 [options="header"]
 |=======================
 |Datum & uur|Duur|Betrokkenen|Topics
-|21/09 10u15|0.75u|{all}| Eerste vergadering met klant/begeleider 
+|21/09 09:45|0.5|{jo}|Opzoeken tools (JIRA, confluence)
+|21/09 10:15|0.75|{all}|Eerste vergadering met klant/begeleider 
+|21/09 11:15|1|{all}|Eerste meeting, toewijzing rollen, bespreking aanpak
+|21/09 13:15|1.25||{jo}|Opzoeken Wi-Fi positioning system, methodes
+|21/09 14:30|1|{all}|Tweede meeting: brainstorm MVPm scope & vision
+|22/09 09:00|1||{jo}|Opzoeken WPS en Asciidoc
+|22/09 10:00|2|{all}|Technische inleiding, setup ide, …
+|22/09 13:00|3.25|{all}|Scope & Vision
+|22/09 16:30|1|{all}|User Story mapping
+|23/09 09:30|2||{jo}|Onderzoek WPS
+|23/09 12:45|0.75||{jo}|Onderzoek WPS
+|23/09 13:30|0.75|{all}|Scrum + status project bespreken, brainstorm
+|23/09 14:30|1||{jo}|Opschonen en onderzoek Jira
+|23/09 15:30|2.5||{jo}|Opmaken basis model 
+|24/09 10u30|0.5|{all}|Tweede vergadering met klant/begeleider
+|24/09 11u00|2|{all}|Hervorming datarepresentatie en verfijning user story map
+|24/09 15:00|1|{joja}|Aanpassen basis model 
+|24/09 17:00|2|{jo}|CRUD db opzoeken lijst
+|24/09 19:00|0.25|{jo}|bijwerken logs
 |=======================
