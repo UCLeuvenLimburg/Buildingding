@@ -3,7 +3,7 @@ package buildingding.proximus.repository
 import buildingding.proximus.model.*
 
 class InMemoryRepository (
-    var locations: Set<Location> = setOf(
+    var locations: MutableSet<Location> = mutableSetOf(
         Classroom("C101", emptyList(),Floor.C1),
         Classroom("C102", emptyList(),Floor.C1),
         Classroom("C103", emptyList(),Floor.C1),
@@ -21,4 +21,37 @@ class InMemoryRepository (
         Location("C111", emptyList(),Floor.C1)
     //todo complete this list!!!
     )
-) {}
+) {
+
+    fun addLocation(location: Location) {
+        locations.add(location)
+    }
+
+    fun getAllLocations(): List<Location> {
+        return locations.toList()
+    }
+
+    fun getLocationByName(name: String): Location? {
+        return locations.find{ it.name.equals(name) }
+    }
+
+    fun getLocationsByFloor(floor: Floor): List<Location> {
+        return locations.filter { it -> it.floor.equals(floor) }
+    }
+
+    fun getIndexOfLocationByName(name: String): Int {
+        return locations.indexOf(getLocationByName(name))
+    }
+
+    fun updateLocation(location: Location) {
+        locations.remove(getLocationByName(location.name))
+        locations.add(location)
+    }
+
+    fun removeLocationByName(name: String) {
+        locations.remove(getLocationByName(name))
+    }
+    fun removeAllLocations() {
+        locations.clear()
+    }
+}
