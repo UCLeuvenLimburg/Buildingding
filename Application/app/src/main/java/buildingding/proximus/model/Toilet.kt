@@ -1,4 +1,5 @@
 package buildingding.proximus.model
 
-class Toilet(name: String, target: Target) : Utility(name) {
+class Toilet(name: String, neighbours: List<Location>, floor: Floor, target: Target) :
+    Utility(name, neighbours, floor) {
 }

@@ -1,4 +1,5 @@
 package buildingding.proximus.model
 
-class Connection(node1: Location, node2: Location, weigth : Int, ) {
+class Connection(name: String, neighbours: List<Location>, floor: Floor) :
+Location(name, neighbours, floor) {
 }
