@@ -32,7 +32,7 @@ Scenario 3:
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb03_wireframe.png[alt="Wireframe user story 3"]
+image:img/usb03_wireframe.png[alt="Wireframe user story 3"]  
 
 
 TECHNICAL DETAILS:
