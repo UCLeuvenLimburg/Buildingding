@@ -1,6 +1,6 @@
 package buildingding.proximus.model
 
-enum class Target {
+enum class ToiletType {
     DISABLED,
     FEMALE,
     MALE
