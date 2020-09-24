@@ -31,5 +31,5 @@ Jaron Trossaert; r0374256; 3TI/4SO
 |24/09 10u30|0.5u|{all}|Tweede vergadering met klant/begeleider
 |24/09 11u00|2u|{all}|Hervorming datarepresentatie en verfijning user story map
 |24/09 13u30|0.25u|{ja}|Aanvullen logboek
-|24/09 13u45|???u|{ja}|Handleiding template
+|24/09 13u45|0.25u|{ja}|Manual template
 |=======================
