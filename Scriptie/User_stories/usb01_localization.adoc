@@ -1,0 +1,34 @@
+USER STORY B01. Localization
+----------------------------
+As a *user*
+
+I *want* to select locations from input list
+
+so that I can click for navigation.
+
+
+ACCEPTANCE CRITERIA:
+~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1:
+^^^^^^^^^^^
+*Given* a user +
+*When* user types the code-name of classroom that user is at the moment
+in _'Choose starting point'_  or code-name of classroom
+that he wants to be in _'Choose destination'._ +
+*Then* a selectable list of locations based on input value will be shown.
+
+WIREFRAMES:
+~~~~~~~~~~~
+image:img/usb01_wireframe.png[alt="Android Screen.",width=450,height=300]
+
+
+
+TECHNICAL DETAILS:
+~~~~~~~~~~~~~~~~~~
+- Use this topic to make the input autocomplete option: https://www.geeksforgeeks.org/autocompletetextview-in-kotlin/[AutoCompleteTextView in Kotlin
+^]
+
+Location Class:
+^^^^^^^^^^^^^^^
+image:img/usb01_location.png[alt="Location class"]
