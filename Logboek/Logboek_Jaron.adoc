@@ -25,4 +25,11 @@ Jaron Trossaert; r0374256; 3TI/4SO
 |22/09 11u30|0.5u|{all}|Technische inleiding
 |22/09 13u00|4u|{all}|Scope & vision, user story map
 |23/09 10u00|2.5u|{ja}|Scope & vision in asciidoc, logboek template in asciidoc
+|23/09 13u30|0.75u|{all}|Meeting: status project & ideeën
+|23/09 10u00|2.5u|{ja}|User story en peer assessment template in asciidoc
+|24/09 09u30|1u|{tja}|Research document Kotlin
+|24/09 10u30|0.5u|{all}|Tweede vergadering met klant/begeleider
+|24/09 11u00|2u|{all}|Hervorming datarepresentatie en verfijning user story map
+|24/09 13u30|0.25u|{ja}|Aanvullen logboek
+|24/09 13u45|???u|{ja}|Handleiding template
 |=======================
