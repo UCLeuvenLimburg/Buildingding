@@ -24,7 +24,8 @@ ACCEPTANCE CRITERIA:
 TECHNICAL DETAILS:
 ~~~~~~~~~~~~~~~~~~
 - Use this topic to make the input autocomplete option: https://www.geeksforgeeks.org/autocompletetextview-in-kotlin/[AutoCompleteTextView in Kotlin
-^]  
+^]
 
-- Domain en db classes:
+Domain en db classes:
+^^^^^^^^^^^^^^^^^^^^^
 image:img/uml.png[alt="Location class",width=300,height=300]

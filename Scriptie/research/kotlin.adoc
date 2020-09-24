@@ -1,0 +1,268 @@
+
+image:https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1024px-Kotlin-logo.svg.png[alt="kotlin logo.",width=75,height=75,float=left]
+
+Kotlin
+------
+
+
+
+*Kotlin* is a cross-platform, statically typed, general-purpose programming
+Language with type inference like Java, C++, which based on JVM (Java Virtual Machine).
+
+Kotlin is designed to interoperate with Java, and the JVM of Kotlin's standard library depends
+on the Java Class library. Kotlin targets the JVM, but also compiles to JS such as, frontend web
+ applications using https://en.wikipedia.org/wiki/React_(web_framework)[React^],
+or Machine code via  https://en.wikipedia.org/wiki/LLVM[LLVM compiler infrastructure project ^],
+ example: for native iOS apps sharing business logic with Android apps.
+
+Switching from Java to Kotlin is very easy as we just need to install a Plugin. On 7 May 2019, Google announced
+that they making Kotlin an officially supported language for Android application development.
+
+.Try Kotlin Playground
+[NOTE]
+===============================
+*NOTE* Kotlin Playground is an online sandbox to explore Kotlin
+programming language. Browse code samples directly in the browser
+
+Use: https://play.kotlinlang.org/[Kotlin Playground^]
+===============================
+
+Syntax
+~~~~~~
+Functions
+^^^^^^^^^
+
+.Default Parameter Values
+[source, Java]
+----
+fun printMessage(message: String): Unit {
+    println(message)
+}
+
+fun printMessageWithPrefix(message: String, prefix: String = "Info") {
+    println("[$prefix] $message")
+}
+
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+fun multiply(x: Int, y: Int) = x * y
+
+fun main() {
+    printMessage("Hello")
+    printMessageWithPrefix("Hello", "Log")
+    printMessageWithPrefix("Hello")
+    printMessageWithPrefix(prefix = "Log", message = "Hello")
+    println(sum(1, 2))
+}
+----
+*Result:*
+[source]
+----
+Hello
+[Log] Hello
+[Info] Hello
+[Log] Hello
+3
+----
+
+
+.Infix Functions
+Member functions and extensions with a single parameter can be turned into infix functions.
+[source, Java]
+----
+fun main() {
+// Defines an infix extension function on Int.
+  infix fun Int.times(str: String) = str.repeat(this)
+  println(2 times "Bye ")    //
+//  Creates a Pair by calling the infix function to from the standard library.
+  val pair = "Ferrari" to "Katrina"
+  println(pair)
+//Here's your own implementation of to creatively called onto.
+  infix fun String.onto(other: String) = Pair(this, other)
+  val myPair = "McLaren" onto "Lucas"
+  println(myPair)
+
+  val sophia = Person("Sophia")
+  val claudia = Person("Claudia")
+// Infix notation also works on members functions (methods).
+  sophia likes claudia
+}
+
+class Person(val name: String) {
+  val likedPeople = mutableListOf<Person>()
+// The containing class becomes the first parameter.
+  infix fun likes(other: Person) { likedPeople.add(other) }
+}
+----
+*Result:*
+[source]
+----
+  Bye Bye
+  (Ferrari, Katrina)
+  (McLaren, Lucas)
+----
+
+.Operator Functions
+Certain functions can be "upgraded" to operators, allowing their calls with the corresponding operator symbol.
+[source, Java]
+----
+// An operator function allows easy range access on strings.
+operator fun String.get(range: IntRange) = substring(range)
+val str = "Always forgive your enemies; nothing annoys them so much."
+
+// The get() operator enables bracket-access syntax.
+println(str[0..14])
+----
+*Result:*
+[source]
+----
+Always forgive
+----
+.Functions with vararg Parameters:
+Varargs allow you to pass any number of arguments by separating them with commas.
+[source, Java]
+----
+// The vararg modifier turns a parameter into a vararg.
+fun printAll(vararg messages: String) {
+    for (m in messages) println(m)
+}
+
+//This allows calling printAll with any number of string arguments.
+printAll("Hallo", "你好")
+
+//Thanks to named parameters, you can even add another parameter of the same type after the vararg. This wouldn't be allowed in Java because there's no way to pass a value.
+fun printAllWithPrefix(vararg messages: String, prefix: String) {
+    for (m in messages) println(prefix + m)
+}
+
+// Using named parameters, you can set a value to prefix separately from the vararg.
+printAllWithPrefix(
+    "Hallo", "你好",
+    prefix = "Greeting: "
+)
+
+// At runtime, a vararg is just an array. To pass it along into a vararg parameter, use the special spread operator * that lets you pass in *entries (a vararg of String) instead of entries (an Array<String>).
+fun log(vararg entries: String) {
+    printAll(*entries)
+}
+----
+*Result:*
+[source]
+----
+Hallo
+你好
+Greeting: Hallo
+Greeting: 你好
+----
+
+Variables
+^^^^^^^^^
+[source, Java]
+----
+// Declares a mutable variable and initializes it.
+var a: String = "initial"
+println(a)
+// Declares an immutable variable and initializes it.
+val b: Int = 1
+// same as above, but without specifying the type. The compiler infers the type Int.
+val c = 3
+var e: Int
+// An attempt to use the variable causes a compiler error: Variable 'e' must be initialized.
+println(e)
+val d: Int
+// Initializes the variable with different values depending on some condition.
+if (someCondition()) {
+    d = 1
+} else {
+    d = 2
+}
+// Reading the variable is possible because it's already been initialized.
+println(d)
+----
+
+Null Safety
+^^^^^^^^^^^^
+[source, Java]
+----
+var neverNull: String = "This can't be null"
+
+neverNull = null
+
+var nullable: String? = "You can keep a null here"
+
+nullable = null
+
+var inferredNonNull = "The compiler assumes non-null"
+
+inferredNonNull = null
+// When calling the function with a String? (nullable) argument, a compilation error is produced.
+strLength(nullable)
+----
+
+.Working with Nulls
+[source, Java]
+----
+fun describeString(maybeString: String?): String {
+    if (maybeString != null && maybeString.length > 0) {
+        return "String of length ${maybeString.length}"
+    } else {
+        return "Empty or null string"
+    }
+}
+----
+
+Classes
+^^^^^^^
+[source, Java]
+----
+// Declares a class named Customer without any properties or user-defined constructors. A non-parameterized default constructor is created by Kotlin automatically.
+class Customer
+
+// Declares a class with two properties: immutable id and mutable email, and a constructor with two parameters id and email.
+class Contact(val id: Int, var email: String)
+
+fun main() {
+// Creates an instance of the class Customer via the default constructor. Note that there is no new keyword in Kotlin.
+    val customer = Customer()
+
+    val contact = Contact(1, "mary@gmail.com")
+// Accesses the property id.
+    println(contact.id)
+// Updates the value of the property email.
+    contact.email = "jane@gmail.com"
+}
+----
+.Result:
+[source]
+----
+1
+----
+
+
+
+Kotlin vs Java
+~~~~~~~~~~~~~~
+.Comparison Table
+[options="header,footer"]
+|=======================
+|Comparison Basis |Java      | Kotlin
+|https://play.kotlinlang.org/byExample/01_introduction/04_Null%20Safety[Null Safety^]    |NullPointerExceptions allows users to assign null to any variables but while
+accessing an object reference having null value raises a null pointer exception which user needs to handle.     | By default, all types of variables are non-null able. If we try to assign or return null values,
+Kotlin code will fail during compile-time. If we really want a variable to have a null value, we can declare as follows: +
+value num: Int? = null
+|https://play.kotlinlang.org/byExample/04_functional/03_extensionFunctions[Extension Functions^]    |If we want to extend the functionality of existing class we need to create a new class and inherit the parent class. So Extension functions are not available in Java   | We can create extend functions by prefixing the name of a class to name of the new function.
+|No checked exceptions	    |Has checked exceptions support which makes developers declare and catch the exception which ultimately leads to robust code with good error handling. | Doesn't have checked exceptions.
+|https://play.kotlinlang.org/byExample/03_special_classes/01_Data%20classes[Data classes^] |Needs to define constructors, variables to store data, getter and setter methods, hashcode(), toString(), and equals() functions | A class with keyword “data” in the class definition then the compiler will take care of all of this work such as creating constructors, getter, setter methods for different fields.
+|Smart casts	   |Needs to check the type of variables and cast according to our operation.|Smart casts will handle these casting checks with keyword “is-checks” which will check for immutable values and performs implicit casting.
+|Type inference		   | Needs to specify a type of each variable explicitly while declaring.| Doesn't need to specify the type of each variable explicitly based on assignment it will handle. If we want to specify explicitly we can do.
+|https://play.kotlinlang.org/byExample/04_functional/01_Higher-Order%20Functions[Functional Programming^]	   |Java doesn’t have functional programming support till Java 8 but while developing Android applications it supports the only subset of Java 8 features.| Kotlin is a mix of procedural and functional programming language which consists of many useful methods such as lambda, operator overloading, higher-order functions, and lazy evaluation, etc.
+|=======================
+
+[bibliography]
+== References
+
+- https://play.kotlinlang.org/byExample/overview[Learn Kotlin by Example^]
+- https://en.wikipedia.org/wiki/Kotlin_(programming_language)#Design[Kotlin (programming language) - wikipedia^]
+- https://www.educba.com/java-vs-kotlin/[Java vs Kotlin - educba^]
