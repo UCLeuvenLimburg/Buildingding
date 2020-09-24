@@ -1,0 +1,96 @@
+= Titel afstudeerproject: Buildingding
+:doctype: article
+:nofooter:
+
+// Macro's voor namen
+// Usage: insert {shortcut}
+:h: Hamid
+:jo: Johan
+:t: Thomas
+:ja: Jaron
+
+[.lead]
+Evaluator:
+Voornaam Naam
+
+[.underline]*Vraag 1:* Geef voor elk van de 3 aspecten een score: A = uitstekend, B = zeer behoorlijk, C = juist voldoende, D = onvoldoende
+
+[options="header"]
+|=======================
+|Te evalueren aspect|Score A, B, C, D
+|In team functioneren|<letter>
+|Inzet voor het project|<letter>
+|Technische kennis|<letter>
+|=======================
+
+[.underline]*Vraag 2:* (open vraag): Wat vind je de beste kwaliteit van de geëvalueerde? +
+Lorem ipsum.
+
+[.underline]*Vraag 3:* (open vraag): Wat zou je als tip, verbeterpunt(en) - wat betreft het werken aan een project - aan de geëvalueerde meegeven? (Voor jezelf kan je hier beschrijven wat je beter zou willen doen) +
+Lorem ipsum.
+
+'''
+
+[.lead]
+Geëvalueerde medestudent 1:
+Voornaam Naam
+
+[.underline]*Vraag 1:* Geef voor elk van de 3 aspecten een score: A = uitstekend, B = zeer behoorlijk, C = juist voldoende, D = onvoldoende
+
+[options="header"]
+|=======================
+|Te evalueren aspect|Score A, B, C, D
+|In team functioneren|<letter>
+|Inzet voor het project|<letter>
+|Technische kennis|<letter>
+|=======================
+
+[.underline]*Vraag 2:* (open vraag): Wat vind je de beste kwaliteit van de geëvalueerde? +
+Lorem ipsum.
+
+[.underline]*Vraag 3:* (open vraag): Wat zou je als tip, verbeterpunt(en) - wat betreft het werken aan een project - aan de geëvalueerde meegeven? +
+Lorem ipsum.
+
+'''
+
+[.lead]
+Geëvalueerde medestudent 2:
+Voornaam Naam
+
+[.underline]*Vraag 1:* Geef voor elk van de 3 aspecten een score: A = uitstekend, B = zeer behoorlijk, C = juist voldoende, D = onvoldoende
+
+[options="header"]
+|=======================
+|Te evalueren aspect|Score A, B, C, D
+|In team functioneren|<letter>
+|Inzet voor het project|<letter>
+|Technische kennis|<letter>
+|=======================
+
+[.underline]*Vraag 2:* (open vraag): Wat vind je de beste kwaliteit van de geëvalueerde? +
+Lorem ipsum.
+
+[.underline]*Vraag 3:* (open vraag): Wat zou je als tip, verbeterpunt(en) - wat betreft het werken aan een project - aan de geëvalueerde meegeven? +
+Lorem ipsum.
+
+'''
+
+[.lead]
+Geëvalueerde medestudent 3:
+Voornaam Naam
+
+[.underline]*Vraag 1:* Geef voor elk van de 3 aspecten een score: A = uitstekend, B = zeer behoorlijk, C = juist voldoende, D = onvoldoende
+
+[options="header"]
+|=======================
+|Te evalueren aspect|Score A, B, C, D
+|In team functioneren|<letter>
+|Inzet voor het project|<letter>
+|Technische kennis|<letter>
+|=======================
+
+[.underline]*Vraag 2:* (open vraag): Wat vind je de beste kwaliteit van de geëvalueerde? +
+Lorem ipsum.
+
+[.underline]*Vraag 3:* (open vraag): Wat zou je als tip, verbeterpunt(en) - wat betreft het werken aan een project - aan de geëvalueerde meegeven? +
+Lorem ipsum.
