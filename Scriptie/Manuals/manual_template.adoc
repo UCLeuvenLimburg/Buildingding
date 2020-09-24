@@ -1,0 +1,27 @@
+= Title (eg. Manual: ...) image:ucll.jpg[role="right",150,150]
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+
+== Introduction
+TODO
+
+// OPTIONAL
+== The problem
+TODO
+
+// OPTIONAL
+== The idea
+TODO
+
+// OPTIONAL
+== Context
+TODO
+
+== Prerequisites
+* Bla
+* Blabla
+* Lorem Ipsum
+
+== Installing the ... / How to use ...
+TODO
