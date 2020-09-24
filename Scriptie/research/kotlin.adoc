@@ -1,34 +1,30 @@
+:nofooter:
 
 image:https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1024px-Kotlin-logo.svg.png[alt="kotlin logo.",width=75,height=75,float=left]
 
 Kotlin
 ------
 
+*Kotlin* is a cross-platform, statically typed, general-purpose programming language with type inference like Java, C++, which is based on JVM (Java Virtual Machine).
 
+Kotlin is designed to interoperate with Java, and the JVM of Kotlin's standard library depends on the Java Class library.
+Kotlin targets the JVM, but also compiles to JS such as frontend web applications using https://en.wikipedia.org/wiki/React_(web_framework)[React^], or Machine code via  https://en.wikipedia.org/wiki/LLVM[LLVM compiler infrastructure project ^], for example for native iOS apps sharing business logic with Android apps.
 
-*Kotlin* is a cross-platform, statically typed, general-purpose programming
-Language with type inference like Java, C++, which based on JVM (Java Virtual Machine).
+Switching from Java to Kotlin is very easy as we just need to install a plugin. On 7 May 2019, Google announced that they are making Kotlin an officially supported language for Android application development.footnote:[https://en.wikipedia.org/wiki/Kotlin_(programming_language)[Kotlin (programming language) - Wikipedia^]]
 
-Kotlin is designed to interoperate with Java, and the JVM of Kotlin's standard library depends
-on the Java Class library. Kotlin targets the JVM, but also compiles to JS such as, frontend web
- applications using https://en.wikipedia.org/wiki/React_(web_framework)[React^],
-or Machine code via  https://en.wikipedia.org/wiki/LLVM[LLVM compiler infrastructure project ^],
- example: for native iOS apps sharing business logic with Android apps.
-
-Switching from Java to Kotlin is very easy as we just need to install a Plugin. On 7 May 2019, Google announced
-that they making Kotlin an officially supported language for Android application development.
 
 .Try Kotlin Playground
 [NOTE]
 ===============================
-*NOTE* Kotlin Playground is an online sandbox to explore Kotlin
-programming language. Browse code samples directly in the browser
+*NOTE* Kotlin Playground is an online sandbox to explore the Kotlin programming language. Browse code samples directly in the browser.
 
-Use: https://play.kotlinlang.org/[Kotlin Playground^]
+Go to: https://play.kotlinlang.org/[Kotlin Playground^]
 ===============================
 
 Syntax
 ~~~~~~
+footnote:[https://play.kotlinlang.org/byExample/overview[Learn Kotlin by Example^]]
+
 Functions
 ^^^^^^^^^
 
@@ -120,7 +116,7 @@ println(str[0..14])
 ----
 Always forgive
 ----
-.Functions with vararg Parameters:
+.Functions with vararg parameters:
 Varargs allow you to pass any number of arguments by separating them with commas.
 [source, Java]
 ----
@@ -244,25 +240,15 @@ fun main() {
 
 Kotlin vs Java
 ~~~~~~~~~~~~~~
-.Comparison Table
+.Comparison table.footnote:[https://www.educba.com/java-vs-kotlin/[Java vs Kotlin - educba^]]
 [options="header,footer"]
 |=======================
-|Comparison Basis |Java      | Kotlin
-|https://play.kotlinlang.org/byExample/01_introduction/04_Null%20Safety[Null Safety^]    |NullPointerExceptions allows users to assign null to any variables but while
-accessing an object reference having null value raises a null pointer exception which user needs to handle.     | By default, all types of variables are non-null able. If we try to assign or return null values,
-Kotlin code will fail during compile-time. If we really want a variable to have a null value, we can declare as follows: +
+|Comparison basis |Java| Kotlin
+|https://play.kotlinlang.org/byExample/01_introduction/04_Null%20Safety[Null Safety^]|NullPointerExceptions allows users to assign null to any variable but accessing an object reference having null value raises a null pointer exception which user needs to handle.|By default, all types of variables are non-nullable. If we try to assign or return null values, Kotlin code will fail during compile-time. If we really want a variable to have a null value, we can declare it as follows: +
 value num: Int? = null
-|https://play.kotlinlang.org/byExample/04_functional/03_extensionFunctions[Extension Functions^]    |If we want to extend the functionality of existing class we need to create a new class and inherit the parent class. So Extension functions are not available in Java   | We can create extend functions by prefixing the name of a class to name of the new function.
-|No checked exceptions	    |Has checked exceptions support which makes developers declare and catch the exception which ultimately leads to robust code with good error handling. | Doesn't have checked exceptions.
-|https://play.kotlinlang.org/byExample/03_special_classes/01_Data%20classes[Data classes^] |Needs to define constructors, variables to store data, getter and setter methods, hashcode(), toString(), and equals() functions | A class with keyword “data” in the class definition then the compiler will take care of all of this work such as creating constructors, getter, setter methods for different fields.
-|Smart casts	   |Needs to check the type of variables and cast according to our operation.|Smart casts will handle these casting checks with keyword “is-checks” which will check for immutable values and performs implicit casting.
-|Type inference		   | Needs to specify a type of each variable explicitly while declaring.| Doesn't need to specify the type of each variable explicitly based on assignment it will handle. If we want to specify explicitly we can do.
-|https://play.kotlinlang.org/byExample/04_functional/01_Higher-Order%20Functions[Functional Programming^]	   |Java doesn’t have functional programming support till Java 8 but while developing Android applications it supports the only subset of Java 8 features.| Kotlin is a mix of procedural and functional programming language which consists of many useful methods such as lambda, operator overloading, higher-order functions, and lazy evaluation, etc.
+|https://play.kotlinlang.org/byExample/04_functional/03_extensionFunctions[Extension Functions^]|If we want to extend the functionality of existing classes we need to create a new class and inherit the parent class. So extension functions are not available in Java.|We can create extension functions by prefixing the name of a class to the name of the new function.|No checked exceptions|Has checked exceptions support which makes developers declare and catch the exception which ultimately leads to robust code with good error handling.|Doesn't have checked exceptions.
+|https://play.kotlinlang.org/byExample/03_special_classes/01_Data%20classes[Data classes^] |Needs to define constructors, variables to store data, getter and setter methods, hashcode(), toString(), and equals() functions.|A class with keyword “data” in the class definition lets the compiler take care of all this work such as creating constructors, getter, setter methods for different fields.
+|Smart casts|Needs to check the type of variables and cast according to our operation.|Smart casts will handle these casting checks with keyword “is-checks” which will check for immutable values and performs implicit casting.
+|Type inference|Needs to specify a type of each variable explicitly while declaring.|Doesn't need to specify the type of each variable explicitly based on assignment it will handle. If we want to specify explicitly we can do that.
+|https://play.kotlinlang.org/byExample/04_functional/01_Higher-Order%20Functions[Functional Programming^]|Java doesn’t have functional programming support till Java 8 but while developing Android applications it supports the only subset of Java 8 features.|Kotlin is a mix of procedural and functional programming language which consists of many useful methods such as lambda, operator overloading, higher-order functions, and lazy evaluation, etc.
 |=======================
-
-[bibliography]
-== References
-
-- https://play.kotlinlang.org/byExample/overview[Learn Kotlin by Example^]
-- https://en.wikipedia.org/wiki/Kotlin_(programming_language)#Design[Kotlin (programming language) - wikipedia^]
-- https://www.educba.com/java-vs-kotlin/[Java vs Kotlin - educba^]
