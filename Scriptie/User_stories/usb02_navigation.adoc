@@ -37,6 +37,8 @@ TECHNICAL DETAILS:
 You can use https://www.intmath.com/vectors/3-vectors-2-dimensions.php[Vectors in 2-D^]
 * Giving the location coordination parameters (x, y)
 * Using magnitude and direction of a 2-dimensional Vector
+. Clockwise direction of the angel: right
+. Counterclockwise direction of the angel: left
 * A vector showing the position of a point A with coordinates (2, 3) and a point O with coordinates (0,0).
 
 image:img/vector.svg.png[alt="A vector in the Cartesian plane, showing the position of a point A with coordinates (2, 3).
