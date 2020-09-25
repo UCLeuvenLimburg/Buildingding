@@ -32,4 +32,6 @@ Jaron Trossaert; r0374256; 3TI/4SO
 |24/09 11u00|2u|{all}|Hervorming datarepresentatie en verfijning user story map
 |24/09 13u30|0.25u|{ja}|Aanvullen logboek
 |24/09 13u45|0.25u|{ja}|Manual template
+|24/09 14u00|1u|{ja}|Research Kotlin/db repo
+|24/09 15u00|1u|{joja}|Backend domain pair programming
 |=======================
