@@ -20,7 +20,7 @@ that he wants to be in _'Choose destination'._ +
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb01_wireframe.png[alt="Android Screen.",width=450,height=300]
+image:img/usb01_wireframe.png[alt="User Story 1 Wireframe." ,width=450,height=300] 
 
 
 

@@ -24,7 +24,7 @@ Scenario 2:
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb02_wireframe.png[alt="Android Screen."]
+image:img/usb02_wireframe.png[alt="User Story 2 Wireframe."]
 
 
 

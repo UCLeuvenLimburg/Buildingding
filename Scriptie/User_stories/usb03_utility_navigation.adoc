@@ -37,5 +37,8 @@ image:img/usb03_wireframe.png[alt="Wireframe user story 3"]
 
 TECHNICAL DETAILS:
 ~~~~~~~~~~~~~~~~~~
+
+- Follow User Story B01 for start point input recommendation list.
+- Follow User Stroy B02 for Nearest By Utility, Text-Based Detail page. 
 - Make a nested and logical list of utilities for selection.
 - Make sure that after clicking 'Cancel' the value of the input for start point will remain the same in the 'Find Nearest by' page.

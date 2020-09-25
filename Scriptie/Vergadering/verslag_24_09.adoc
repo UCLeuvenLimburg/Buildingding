@@ -1,0 +1,25 @@
+image:https://www.ucll.be/sites/default/files/ckeditor/ucll_logo_rgb.jpg[alt="kotlin logo.",width=170,height=75,float=left]
+
+= Verslag Vergadering
+---------------------------------------------------------
+
+DATUM: 24/09/2020
+AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
+VERONTSCHULDIGD: HAMID
+VERSLAGGEVER: FREDERIC VOGELS
+DATUM VOLGENDE VERSLAG:
+AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES
+        & LOGICAL DATA STRUCTURE
+---------------------------------------------------------
+===== KORTE VERSLAG:
+- Gesproken over vooruitgang van de Afstudeerproject, Agenda punten en de manier we het project gaan aanpakken.
+- Per node bijhouden: Directive Graphs
+- Advise gevraagd voor het modeleren van richtingen voor een 2-dimensionale coordinatie.
+* Per node een vector houden met punten (x, y) om positie van de node op een
+assenstelsel te bepalen. Zodat het bepalen van richting (bv. links, rechts Of rechtdoor) wiskundig opgelost kan worden.
+- De documentatie van het project wordt in het Engels geschreven.
+
+===== ACTIES:
+- Een korte onderzoek doen voor het implementeren van vector.
+- Onderzoek: Directive Graphs en hoe het in onze project past.
+- Documentatie van het project in het Engels geschreven worden.
