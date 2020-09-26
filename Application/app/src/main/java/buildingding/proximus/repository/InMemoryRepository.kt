@@ -23,8 +23,8 @@ class InMemoryRepository (
     )
 ) {
 
-    fun addLocation(location: Location) {
-        locations.add(location)
+    fun addLocation(location: Location): Boolean {
+        return locations.add(location)
     }
 
     fun getAllLocations(): List<Location> {
@@ -43,9 +43,11 @@ class InMemoryRepository (
         return locations.indexOf(getLocationByName(name))
     }
 
-    fun updateLocation(location: Location) {
-        locations.remove(getLocationByName(location.name))
-        locations.add(location)
+    fun updateLocation(location: Location): Boolean {
+        if(locations.remove(getLocationByName(location.name))) {
+            return locations.add(location)
+        }
+        return false
     }
 
     fun removeLocationByName(name: String) {
