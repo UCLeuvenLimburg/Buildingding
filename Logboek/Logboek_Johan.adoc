@@ -43,4 +43,13 @@ Johan Molenberghs; r0728245; 3TI/2SO
 |24/09 15:00|1|{joja}|Aanpassen basis model 
 |24/09 17:00|2|{jo}|CRUD db opzoeken lijst
 |24/09 19:00|0.25|{jo}|bijwerken logs
+|25/09 09:30|0,5|{jotja}|Scrum
+|25/09 10:00|0,5|{jot}|Jira proberen te koppelen met Github
+|25/09 10:30|1|{jo}|Herorganisatie Jira issues
+|25/09 11:30|0,5|{jo}|Opzoeking whiteboard vermits niet adequaat lokaal en administratie
+|25/09 12:30|0,5|{jo}|opzoeking optimalisatie Jira tickets
+|25/09 14:45|0,5|{all}|scouting lokalen en POI's
+|25/09 15:15|0,25|{hjo}|bespreking user stories
+|25/09 15:30|1,5|{all}|bespreking planning en conventies
+|26/09 16:30|3|{jo}|refactoring model en invoeren lokalen
 |=======================
