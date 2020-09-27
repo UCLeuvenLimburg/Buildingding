@@ -4,23 +4,23 @@ As a *user*
 
 I *want* to go to details page
 
-so that, I can see a text-based navigation between two points.
+so that, I *can see* a text-based navigation between two points.
 
 
 ACCEPTANCE CRITERIA:
 ~~~~~~~~~~~~~~~~~~~~
 
-Scenario 1:
-^^^^^^^^^^^
+Scenario 1: Find the shortest route between points.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* the user clicks on _'Find shortest Route'_ button +
 *Then* a list of steps to be taken to reach destination will be shown.
 
-Scenario 2:
-^^^^^^^^^^^
+Scenario 2:Canceling the navigation details page.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
-*Then* the applications returns back to first page.
+*Then* the applications returns to previous page.
 
 WIREFRAMES:
 ~~~~~~~~~~~

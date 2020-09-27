@@ -4,41 +4,41 @@ As a *user*
 
 I *want* to select my location in order to find a nearest by Utility
 
-so that I can see the text-based navigation detail page.
+so that I *can see* the text-based navigation detail page.
 
 
 ACCEPTANCE CRITERIA:
 ~~~~~~~~~~~~~~~~~~~~
 
-Scenario 1:
-^^^^^^^^^^^
+Scenario 1: Relatable list of code-names shown as list.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* user types the code-name of classroom that user is at the moment
 in _'Start point'_ +
 *Then* a selectable list of locations based on input value will be shown.
 
-Scenario 2:
-^^^^^^^^^^^
+Scenario 2: Utility selection from the list.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* the user selects the Utility +
 *Then* the applications returns the text-based navigation
 detail page for the nearest by chosen Utility.
 
-Scenario 3:
-^^^^^^^^^^^
+Scenario 3: Canceling the navigation details page.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
 *Then* the applications returns back to Find Nearest by page.
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb03_wireframe.png[alt="Wireframe user story 3"]
+image:img/usb03_wireframe.png[alt="User Story 3 Wireframe."]
 
 
 TECHNICAL DETAILS:
 ~~~~~~~~~~~~~~~~~~
 
 - Follow User Story B01 for start point input recommendation list.
-- Follow User Stroy B02 for Nearest By Utility, Text-Based Detail page. 
+- Follow User Stroy B02 for Nearest By Utility, Text-Based Detail page.
 - Make a nested and logical list of utilities for selection.
 - Make sure that after clicking 'Cancel' the value of the input for start point will remain the same in the 'Find Nearest by' page.
