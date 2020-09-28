@@ -8,8 +8,7 @@ AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
 VERONTSCHULDIGD:
 VERSLAGGEVER: HAMID
 DATUM VOLGENDE VERSLAG: 28/09/2020
-AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES
-        & LOGICAL DATA STRUCTURE
+AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL DATA STRUCTURE
 ---------------------------------------------------------
 ===== KORTE VERSLAG:
 - Gesproken over vooruitgang van de Afstudeerproject, Agenda punten en de manier we het project gaan aanpakken.
