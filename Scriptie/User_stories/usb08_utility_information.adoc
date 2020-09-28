@@ -30,7 +30,7 @@ Scenario 3: Invalid code-names returns error.
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb08_wireframe.png[alt="User Story 6 Wireframe."]
+image:img/usb08_wireframe.png[alt="User Story 8 Wireframe."]
 
 
 TECHNICAL DETAILS:

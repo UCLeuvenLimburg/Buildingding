@@ -2,7 +2,7 @@ USER STORY B07. Corona Proof Navigation
 ---------------------------------------
 As a *user*
 
-I *want* to select Visual navigation type
+I *want* to select Covid-19 regulations Checkbox
 
 so that I *can show the route* between the points based on Covid-19 regulations.
 
@@ -10,15 +10,15 @@ so that I *can show the route* between the points based on Covid-19 regulations.
 ACCEPTANCE CRITERIA:
 ~~~~~~~~~~~~~~~~~~~~
 
-Scenario 1: Checkbox enabled sets Covid-19 regulations up
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Scenario 1: Checkbox enabled navigates via Covid-19 regulations based path way.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Given* a user +
 *When* the user checks the checkbox 'Covid-19 regulations' +
 *Then* the application return a list of steps based on Corona regulations, on details page.
 
 WIREFRAMES:
 ~~~~~~~~~~~
-image:img/usb07_wireframe.png[alt="User Story 6 Wireframe."]
+image:img/usb07_wireframe.png[alt="User Story 7 Wireframe."]
 
 
 TECHNICAL DETAILS:
