@@ -1,0 +1,86 @@
+= Research: Find Shortest Path Problem
+
+The basic goal is to determine the shortest path between a starting node, and the rest of the graph, which is a
+theoretic problem known to graph.
+
+== Dijkstra Shortest Path Algorithm
+
+*Dijkstra* algorithm a.k.a. *SPF* algorithm (Shortest Path First) is an algorithm for finding the shortest path
+between nodes in a graph. Which in our case represents the Campus Proximus indoor path network.
+The core idea is to continuously wipe out the longer paths between the starting node and all possible destinations.
+
+image:img/dijstra_graph_example.png[[alt="not bad.",width=500,height=400, float=right]
+Given a positively weighted graph and a starting Node(C001), SPF determines the shortest path and distance from the source to all destinations in graph.
+
+- To keep track of process, two distinct sets of nodes are needed:
+. *Settled nodes*: are the ones with a known minimum distance from the source.
+. *Unsettled nodes*: gathers nodes that we can reach from the source. BUT with no knowledge about the min distance from the starting node.
+
+=== Steps to follow in order to determine SPF:
+
+. Set distance to start node to 0.
+. Set all other distances to '∞' value.
+. Add StartNode to unsettled nodes set.
+. While (unsettled nodes set !== empty):
+* Choose an evaluation node from the unsettled nodes.
+- evaluation node == node with the lowest distance from source.
+* Calculate distances to direct neighbors by keeping the lowest distance at each evaluation.
+* Add neighbors that are not settled to the unsettled nodes set.
+
+==== Initialization
+
+We need to initialize all nodes with an infinite number distance and an unknown predecessor,
+except de start node. For Node 'C001' we assign the value 0.
+All the nodes except 'C001' will be distinguished with a predecessor *'X'* and a distance *'∞'*.
+
+image:img/dijstra_graph_init.png[[alt="Dijkstra initialization process.", width=500, float=right]
+
+To complete initialization process, add node 'C001' to the unsettled nodes set. So it gets picked first in the evaluation step.
+.Initialization Notes.
+[NOTE]
+===============================
+. The distance from node C001 to C001 is 0.
+. Settled nodes set is still empty.
+===============================
+
+==== Evaluation
+
+After initializing the graph, pick the node with the lowest distance value from the unsettled nodes set, then we
+evaluate all neighboring nodes that are not in settled nodes set:
+
+image:img/dijstra_graph_evaluation.png[alt="Dijkstra Evaluation process.", width=500]
+
+Add the edge weight to the evaluation node distance, then compare it to the destination's distance.
+
+*Example:* For node 'C002': 0 + 10 < ∞ , so the new distance for 'C002' is 10 and new predecessor is 'C001'
+image:img/dijstra_graph_evaluation01.png[alt="Dijkstra Evaluation process.", width=500]
+
+- Node 'C001' is moved from unsettled set to settled set.
+- Nodes 'C002' and 'C003' are added to the unsettled set. They can be reached, but they need to be evaluated.
+- We have now two nodes in unsettled set, we take the one with the lowest distance 'C002', then we reiterate until we settle all nodes in the graph.
+- Summarize the iterations that were performed during evaluation steps:
+
+.Dijkstra Table
+[options="header,footer"]
+|=======================
+|Iteration        | Unsettled         | Settled                       | Evaluation Node   | C001    | C002      | C003      | C004        | C005        | C006
+|1                | C001              | -                             | C001              | 0       | C001 - 10 | c001 - 15 | X - ∞       | X - ∞       | X - ∞
+|2                | C002, C003        | C001                          | C002              | 0       | C001 - 10 | X - ∞     | C002 - 22   | X - ∞       | c002 - 25
+|3                | C003, C005, C004  | C001, C002                    | C003              | 0       | C001 - 10 | X - ∞     | X - ∞       | C003 - 25   | X - ∞
+|4                | C004, C006, C005  | C001, C002, C003              | C004              | 0       | C001 - 10 | X - ∞     | X - ∞       | c004 - 24   | C004 - 23
+|5                | C006, C005        | C001, C002, C003, C004        | C006              | 0       | C001 - 10 | X - ∞     | X - ∞       | X - ∞       | X - ∞
+|6                | C006              | C001, C002, C003, C004, c005  | C005              | 0       | C001 - 10 | X - ∞     | X - ∞       | X - ∞       | X - ∞
+|Final            | -                 | All                           | NONE              | 0       | C001 - 10 |c001 - 15  | C002 - 22   | c004 - 24   |C004 - 23
+|=======================
+
+.Dijkstra Table Notes.
+[NOTE]
+===============================
+- The notation C002-22, for example, means that node C002 is the immediate predecessor, with a total distance of 22 from node C001.
+- We can calculate the shortest paths from node C001 are as follows:
+* Node C002 : C001 –> C002 (total distance = 10)
+* Node C003 : C001 –> C003 (total distance = 15)
+* Node C004 : C001 –> C002 –> C004 (total distance = 22)
+* Node C005 : C001 –> C002 –> C004 –> C006 (total distance = 24)
+* Node C006 : C001 –> C002 –> C004 –> C005 (total distance = 23)
+===============================
