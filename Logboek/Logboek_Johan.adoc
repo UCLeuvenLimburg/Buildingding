@@ -52,4 +52,11 @@ Johan Molenberghs; r0728245; 3TI/2SO
 |25/09 15:15|0,25|{hjo}|bespreking user stories
 |25/09 15:30|1,5|{all}|bespreking planning en conventies
 |26/09 16:30|3|{jo}|refactoring model en invoeren lokalen
+|28/09 10:00|2,5|{jo}|testapp WPS
+|28/09 13:30|1|{jo}|testapp WPS
+|28/09 14:30|1u|{all}|Derde vergadering met klant/begeleider
+|28/09 15:30|2|{jo}|herwerken app
+|29/09 09u30|1|{jo}|herwerken app
+|29/09 16:00|0,35|{jo}|aanpassen klassendiagram volgens vergadering
+
 |=======================
