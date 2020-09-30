@@ -1,0 +1,32 @@
+USER STORY B09. AR Navigation
+-----------------------------
+As a *user*
+
+I *want* to TODO
+
+so that I *can* TODO.
+
+
+ACCEPTANCE CRITERIA:
+~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1: TODO
+^^^^^^^^^^^^^^^^^
+
+Scenario 2: TODO
+^^^^^^^^^^^^^^^^^
+
+Scenario 3: TODO
+^^^^^^^^^^^^^^^^^
+
+
+WIREFRAMES:
+~~~~~~~~~~~
+image:img/usb09_wireframe.png[alt="User Story 9 Wireframe."]
+
+
+TECHNICAL DETAILS:
+~~~~~~~~~~~~~~~~~~
+- Integrate and Embed Unity With Android for Kotlin https://medium.com/swlh/integrate-and-embed-unity-with-android-for-kotlin-af0766b17e9c[link^]
+- https://blog.raccoons.be/arcore-powered-indoor-navigation-unity[Creating an ARCore powered indoor navigation application in Unity^]
+- https://developers.google.com/ar/develop/java/quickstart[ARCore SDK overview^]
