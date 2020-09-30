@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Buildingding</string>
+    <string name="textView_welcome">Welcome to our marvelously made app to guide you across campus Proximus</string>
+    <string name="textview_start">Choose a starting point</string>
+    <string name="textview_end">Choose an endpoint</string>
+    <string name="button_start">Start navigation</string>
 </resources>
