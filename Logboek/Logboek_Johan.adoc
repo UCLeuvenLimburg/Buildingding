@@ -59,4 +59,5 @@ Johan Molenberghs; r0728245; 3TI/2SO
 |29/09 09u30|1|{jo}|herwerken app
 |29/09 16:00|0,35|{jo}|aanpassen klassendiagram volgens vergadering
 |29/09 16:20|1,02|{jo}|aanpassen model en problemen met Android studio oplossen
+|30/01 10:00|2|{jo}|BDD-47 kies locaties 
 |=======================
