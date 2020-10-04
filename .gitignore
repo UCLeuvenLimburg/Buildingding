@@ -90,3 +90,6 @@ Application/.idea
 plattegrond-proximus/leeg
 plattegrond-proximus/werk
 
+Application/app/gradlew
+Application/app/gradlew.bat
+Application/app/gradle
