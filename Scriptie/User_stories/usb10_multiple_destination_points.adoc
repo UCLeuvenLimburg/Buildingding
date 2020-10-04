@@ -1,0 +1,29 @@
+USER STORY B09. AR Navigation
+-----------------------------
+As a *user*
+
+I *want* to TODO
+
+so that I *can* TODO.
+
+
+ACCEPTANCE CRITERIA:
+~~~~~~~~~~~~~~~~~~~~
+
+Scenario 1: TODO
+^^^^^^^^^^^^^^^^^
+
+Scenario 2: TODO
+^^^^^^^^^^^^^^^^^
+
+Scenario 3: TODO
+^^^^^^^^^^^^^^^^^
+
+
+WIREFRAMES:
+~~~~~~~~~~~
+image:img/usb09_wireframe.png[alt="User Story 10 Wireframe."]
+
+
+TECHNICAL DETAILS:
+~~~~~~~~~~~~~~~~~~
