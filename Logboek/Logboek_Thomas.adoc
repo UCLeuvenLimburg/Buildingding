@@ -61,4 +61,5 @@ Voornaam Achternaam; r0123456; 3TI/SO3
 |02/10 12u30|2u|{t}|communication: updates project, algorithms and MVVM
 |02/10 14u30|2u|{all}|communication: group meeting updated state of affairs and task distribution
 |04/10 14u30|2u|{t}|thesis: research app design
+|05/10 9u30|2u|{t}|develop: Dijkstra in Kotlin
 |=======================
