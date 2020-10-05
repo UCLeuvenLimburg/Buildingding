@@ -13,23 +13,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rows = getLocationsAsFromCvsFile("locations.csv")
-        val spinner_start = findViewById<Spinner>(R.id.spinner_start)
-        val spinner_end = findViewById<Spinner>(R.id.spinner_end)
-        if (spinner_start != null && spinner_end != null) {
+        val spinnerStart = findViewById<Spinner>(R.id.spinner_start)
+        val spinnerEnd = findViewById<Spinner>(R.id.spinner_end)
+        if (spinnerStart != null && spinnerEnd != null) {
             val adapter = ArrayAdapter(
                 this,
                 android.R.layout.simple_spinner_item, rows
             )
-            spinner_start.adapter = adapter
-            spinner_end.adapter = adapter
+            spinnerStart.adapter = adapter
+            spinnerEnd.adapter = adapter
         }
     }
 
     private fun getLocationsAsFromCvsFile(file: String): List<Location> {
         val inputStream = application.assets.open(file)
         val list = csvReader().readAll(inputStream)
-        var locationMutableList = mutableListOf<Location>()
-        list.forEach { row -> locationMutableList.add(Location(row.get(0), Floor.valueOf(row.get(1)))) }
+        val locationMutableList = mutableListOf<Location>()
+        list.forEach { row -> locationMutableList.add(Location(row[0], Floor.valueOf(row[1]))) }
         return  locationMutableList.toList()
     }
 
