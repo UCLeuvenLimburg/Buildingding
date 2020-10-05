@@ -5,7 +5,7 @@ import buildingding.proximus.model.Graph
 import buildingding.proximus.model.Node
 
 
-object Oplossing {
+object Solution {
     @JvmStatic
     fun main(args: Array<String>) {
         val C001 = Node("C001")
@@ -32,7 +32,7 @@ object Oplossing {
         val m = Array(graph.nodes.size) { IntArray(graph.nodes.size) }
         for (i in m.indices) {
             val ni: Node? = graph.getNodeById(i + 1)
-            for (j in 0 until m[i].size) {
+            for (j in m[i].indices) {
                 val nj: Node? = graph.getNodeById(j + 1)
                 if (!ni!!.getAdjacentNodes().containsKey(nj)) {
                     m[i][j] = 0
