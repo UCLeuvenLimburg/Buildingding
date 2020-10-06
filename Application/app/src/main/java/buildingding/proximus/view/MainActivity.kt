@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val rows = getLocationsAsFromCvsFile("locations.csv")
+        val rows = getLocationsAsFromCSVFile("locations.csv")
         val spinnerStart = findViewById<Spinner>(R.id.spinner_start)
         val spinnerEnd = findViewById<Spinner>(R.id.spinner_end)
         if (spinnerStart != null && spinnerEnd != null) {
@@ -25,12 +25,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getLocationsAsFromCvsFile(file: String): List<Location> {
+    private fun getLocationsAsFromCSVFile(file: String): List<Location> {
         val inputStream = application.assets.open(file)
         val list = csvReader().readAll(inputStream)
         val locationMutableList = mutableListOf<Location>()
         list.forEach { row -> locationMutableList.add(Location(row[0], Floor.valueOf(row[1]))) }
         return  locationMutableList.toList()
     }
-
 }

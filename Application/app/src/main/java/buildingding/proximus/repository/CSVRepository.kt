@@ -5,14 +5,14 @@ import buildingding.proximus.model.Location
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
 import java.io.InputStream
 
-class CSVRepository(val ips: InputStream) : Throwable() {
+class CSVRepository(private val ips: InputStream) : Throwable() {
     var locations: MutableSet<Location> = mutableSetOf()
 
     init {
         try {
             //val inputStream = context.assets.open("locations.csv")
             val list = csvReader().readAll(ips)
-            list.forEach { row -> locations.add(Location(row.get(0), Floor.valueOf(row.get(1)))) }
+            list.forEach { row -> locations.add(Location(row[0], Floor.valueOf(row[1]))) }
         } catch (e:Exception){
             throw  Exception("Couldn't read locations from inputstream")
         }
@@ -22,17 +22,17 @@ class CSVRepository(val ips: InputStream) : Throwable() {
         return locations.add(location)
     }
     fun getLocationByName(name: String): Location? {
-        return locations.find { it.name.equals(name) }
+        return locations.find { it.name == name }
     }
     fun getLocationsByFloor(floor: Floor) : List<Location> {
-        return locations.filter { it -> it.floor.equals(floor) }
+        return locations.filter { it -> it.floor == floor }
     }
     fun getAllLocationsAsList() : List<Location> {
         return locations.toList()
     }
     fun updateLocation(location: Location): Location? {
         removeLocationByName(location.name)
-        if (addLocation(location)) return location else return null
+        return if (addLocation(location)) location else null
     }
     fun removeLocationByName(name: String) {
         locations.remove(getLocationByName(name))
