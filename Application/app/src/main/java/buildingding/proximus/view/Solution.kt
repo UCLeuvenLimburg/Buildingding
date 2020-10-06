@@ -6,41 +6,41 @@ import buildingding.proximus.model.*
 object Solution {
     @JvmStatic
     fun main(args: Array<String>) {
-        val C001 = Location("C001", Floor.C0)
-        val C002 = Location("C002", Floor.C0)
-        val C003 = Location("C003", Floor.C0)
-        val C004 = Location("C004", Floor.C0)
-        val C005 = Location("C005", Floor.C0)
-        val C006 = Location("C006", Floor.C0)
-        C001.addDestination(C002, 10)
-        C001.addDestination(C003, 15)
-        C002.addDestination(C004, 12)
-        C002.addDestination(C006, 15)
-        C003.addDestination(C005, 10)
-        C004.addDestination(C005, 2)
-        C004.addDestination(C006, 1)
-        C006.addDestination(C005, 5)
+        val locationC001 = Location("C001", Floor.C0)
+        val locationC002 = Location("C002", Floor.C0)
+        val locationC003 = Location("C003", Floor.C0)
+        val locationC004 = Location("C004", Floor.C0)
+        val locationC005 = Location("C005", Floor.C0)
+        val locationC006 = Location("C006", Floor.C0)
+        locationC001.addDestination(locationC002, 10)
+        locationC001.addDestination(locationC003, 15)
+        locationC002.addDestination(locationC004, 12)
+        locationC002.addDestination(locationC006, 15)
+        locationC003.addDestination(locationC005, 10)
+        locationC004.addDestination(locationC005, 2)
+        locationC004.addDestination(locationC006, 1)
+        locationC006.addDestination(locationC005, 5)
         val graph = Graph()
-        graph.addNode(C001)
-        graph.addNode(C002)
-        graph.addNode(C003)
-        graph.addNode(C004)
-        graph.addNode(C005)
-        graph.addNode(C006)
+        graph.addNode(locationC001)
+        graph.addNode(locationC002)
+        graph.addNode(locationC003)
+        graph.addNode(locationC004)
+        graph.addNode(locationC005)
+        graph.addNode(locationC006)
         val m = Array(graph.nodes.size) { IntArray(graph.nodes.size) }
         for (i in m.indices) {
             val ni: Location? = graph.getNodeById(i + 1)
             for (j in m[i].indices) {
                 val nj: Location? = graph.getNodeById(j + 1)
-                if (!ni!!.getAdjacentNodes().containsKey(nj)) {
+                if (!ni!!.getNeighbours().containsKey(nj)) {
                     m[i][j] = 0
                 } else {
-                    m[i][j] = nj?.let { ni.getAdjacentNodeDistance(it) }!!
+                    m[i][j] = nj?.let { ni.getAdjacentNeighbourDistance(it) }!!
                 }
             }
         }
-        val haha = Dijkstra(m)
+        val dijkstra = Dijkstra(m)
         println("\n All paths: \n")
-        println(haha.calculatePaths(C004.id, graph.nodes))
+        println(dijkstra.calculatePaths(locationC004.id, graph.nodes))
     }
 }

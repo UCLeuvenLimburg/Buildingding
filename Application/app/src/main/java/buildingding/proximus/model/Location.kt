@@ -2,25 +2,21 @@ package buildingding.proximus.model
 
 import java.util.concurrent.atomic.AtomicInteger
 
-class Location(val name: String, val floor: Floor, private val neighbours: List<Location> = emptyList()) {
+class Location(val name: String, val floor: Floor) {
     val id: Int
     var distance = Int.MAX_VALUE
-    private var adjacentNodes: MutableMap<Location, Int> = HashMap()
+    private var neighbours: MutableMap<Location, Int> = HashMap()
 
-    fun getAdjacentNodeDistance(node: Location): Int {
-        return adjacentNodes[node]!!
+    fun getAdjacentNeighbourDistance(node: Location): Int {
+        return neighbours[node]!!
     }
 
     fun addDestination(destination: Location, distance: Int) {
-        adjacentNodes[destination] = distance
+        neighbours[destination] = distance
     }
 
-    fun getAdjacentNodes(): Map<Location, Int> {
-        return adjacentNodes
-    }
-
-    fun getNeighbour(name: String): Location? {
-        return neighbours.find { neighbour -> neighbour.name === name }
+    fun getNeighbours(): Map<Location, Int> {
+        return neighbours
     }
 
     override fun toString(): String {
