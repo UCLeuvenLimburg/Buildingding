@@ -94,37 +94,6 @@ class Dijkstra(matrix: Array<IntArray>?) {
         return uit
     }
 
-    fun getPath(startLocation: Int, destination: Int, nodes: HashMap<Int, Node>): List<String> {
-        var out: List<String> = ArrayList()
-        val matrix = algorithm(startLocation)
-        println("Evaluation matrix: \n")
-        printIntMatrix(matrix)
-        for (i in matrix[0].indices) {
-            if (i + 1 != startLocation) {
-                if (matrix[0][i] != Int.MAX_VALUE) {
-                    val j = i + 1
-                    if (j == destination) {
-                        out = findPathString(startLocation, j, matrix, nodes)
-                    }
-                }
-            }
-        }
-        return out
-    }
-
-    private fun findPath(startLocation: Int, endLocation: Int, res: Array<IntArray>, nodes: HashMap<Int, Node>): ArrayList<Node?> {
-        var toLocation = endLocation
-        val path: ArrayList<Node?> = ArrayList()
-        path.add(nodes[toLocation])
-        while (toLocation != startLocation) {
-            var k = 1
-            while (k < res.size && res[k][toLocation - 1] == 0) k++
-            path.add(0, nodes[k])
-            toLocation = k
-        }
-        return path
-    }
-
     companion object {
         private fun printIntMatrix(matrix: Array<IntArray>) {
             var result = ""

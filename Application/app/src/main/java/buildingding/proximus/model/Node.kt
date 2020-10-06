@@ -18,10 +18,6 @@ class Node(var name: String) {
         return adjacentNodes
     }
 
-    fun setAdjacentNodes(adjacentNodes: MutableMap<Node, Int>) {
-        this.adjacentNodes = adjacentNodes
-    }
-
     companion object {
         private val count: AtomicInteger = AtomicInteger(0)
     }
