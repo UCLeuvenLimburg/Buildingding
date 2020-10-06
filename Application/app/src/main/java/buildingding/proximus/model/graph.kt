@@ -1,13 +1,13 @@
 package buildingding.proximus.model
 
 class Graph {
-    var nodes: HashMap<Int, Node> = HashMap()
+    var nodes: HashMap<Int, Location> = HashMap()
 
-    fun addNode(nodeA: Node) {
-        nodes[nodeA.id] = nodeA
+    fun addNode(node: Location) {
+        nodes[node.id] = node
     }
 
-    fun getNodeById(id: Int): Node? {
+    fun getNodeById(id: Int): Location? {
         return nodes[id]
     }
 }

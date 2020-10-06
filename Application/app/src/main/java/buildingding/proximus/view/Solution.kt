@@ -1,19 +1,17 @@
 package buildingding.proximus.view
 
-import buildingding.proximus.model.Dijkstra
-import buildingding.proximus.model.Graph
-import buildingding.proximus.model.Node
+import buildingding.proximus.model.*
 
 
 object Solution {
     @JvmStatic
     fun main(args: Array<String>) {
-        val C001 = Node("C001")
-        val C002 = Node("C002")
-        val C003 = Node("C003")
-        val C004 = Node("C004")
-        val C005 = Node("C005")
-        val C006 = Node("C006")
+        val C001 = Location("C001", Floor.C0)
+        val C002 = Location("C002", Floor.C0)
+        val C003 = Location("C003", Floor.C0)
+        val C004 = Location("C004", Floor.C0)
+        val C005 = Location("C005", Floor.C0)
+        val C006 = Location("C006", Floor.C0)
         C001.addDestination(C002, 10)
         C001.addDestination(C003, 15)
         C002.addDestination(C004, 12)
@@ -31,9 +29,9 @@ object Solution {
         graph.addNode(C006)
         val m = Array(graph.nodes.size) { IntArray(graph.nodes.size) }
         for (i in m.indices) {
-            val ni: Node? = graph.getNodeById(i + 1)
+            val ni: Location? = graph.getNodeById(i + 1)
             for (j in m[i].indices) {
-                val nj: Node? = graph.getNodeById(j + 1)
+                val nj: Location? = graph.getNodeById(j + 1)
                 if (!ni!!.getAdjacentNodes().containsKey(nj)) {
                     m[i][j] = 0
                 } else {

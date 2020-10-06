@@ -55,7 +55,7 @@ class Dijkstra(matrix: Array<IntArray>?) {
         return res
     }
 
-    private fun findPathString(startLocation: Int, endLocation: Int, res: Array<IntArray>, nodes: HashMap<Int, Node>): ArrayList<String> {
+    private fun findPathString(startLocation: Int, endLocation: Int, res: Array<IntArray>, nodes: HashMap<Int, Location>): ArrayList<String> {
         var toLocation = endLocation
         val pad: ArrayList<String> = ArrayList()
         pad.add(nodes[toLocation]!!.name)
@@ -68,7 +68,7 @@ class Dijkstra(matrix: Array<IntArray>?) {
         return pad
     }
 
-    fun calculatePaths(startLocation: Int, nodes: HashMap<Int, Node>): String {
+    fun calculatePaths(startLocation: Int, nodes: HashMap<Int, Location>): String {
         var uit = ""
         val res = algorithm(startLocation)
         println("Evaluation matrix: \n")
