@@ -3,11 +3,29 @@ package buildingding.proximus.repository
 import buildingding.proximus.model.Floor
 import buildingding.proximus.model.Location
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import java.io.File
 import java.io.InputStream
 
 class LocationRepository() : Throwable() {
     val locations: MutableSet<Location> = mutableSetOf()
+
+    fun readConnectionsFromCSV(inputStream: InputStream) {
+        try {
+            val list = csvReader().readAll(inputStream)
+            list.forEach { row ->
+                val neighbour =
+                        locations.find { neighbour ->
+                            neighbour.name == row[1]
+                        }
+                if (neighbour != null) {
+                    locations.find { location ->
+                        location.name == row[0]
+                    }?.addDestination(neighbour, row[2].toInt())
+                }
+            }
+        } catch (e: Exception) {
+            throw  Exception("Couldn't read locations from inputstream")
+        }
+    }
 
     fun readLocationsFromCSV(inputStream: InputStream) {
         try {
