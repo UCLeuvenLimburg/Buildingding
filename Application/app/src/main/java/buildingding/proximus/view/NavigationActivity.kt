@@ -1,4 +1,7 @@
 package buildingding.proximus.view
 
-class NavigationActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class NavigationActivity : AppCompatActivity() {
+
 }
