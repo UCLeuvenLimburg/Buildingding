@@ -65,4 +65,5 @@ Voornaam Achternaam; r0123456; 3TI/SO3
 |05/10 16u30|1u|{hjot}|communication: Team discussion
 |06/10 14u30|2u|{t}|develop: Algorithm refactoring
 |06/10 16u30|2u|{t}|develop: Repository refactoring
+|07/10 14u00|2u|{t}|develop: Repository refactoring
 |=======================
