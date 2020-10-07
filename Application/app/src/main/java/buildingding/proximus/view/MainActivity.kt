@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val locationRepository = LocationRepository()
         locationRepository.readLocationsFromCSV(application.assets.open("test_locations.csv"))
-        val rows = locationRepository.getAllLocationsAsList()
+        val rows = locationRepository.locations.toList()
         val spinnerStart = findViewById<Spinner>(R.id.spinner_start)
         val spinnerEnd = findViewById<Spinner>(R.id.spinner_end)
         if (spinnerStart != null && spinnerEnd != null) {

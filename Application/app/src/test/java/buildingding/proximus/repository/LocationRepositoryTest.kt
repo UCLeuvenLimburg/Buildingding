@@ -29,17 +29,17 @@ internal class LocationRepositoryTest {
 
     @Test
     fun addLocationAddsCorrectLocation() {
-        val locationCount = csvRepo.getLocations().size
+        val locationCount = csvRepo.locations.size
         csvRepo.addLocation(c004Test)
-        Assert.assertEquals(locationCount + 1, csvRepo.getLocations().size)
+        Assert.assertEquals(locationCount + 1, csvRepo.locations.size)
     }
 
     @Test
-    fun addLocationWhichWasAlreadyPresentDoenNotGetAdded() {
+    fun addLocationWhichWasAlreadyPresentDoesNotGetAdded() {
         csvRepo.addLocation(c004Test)
-        val locationCount = csvRepo.getLocations().size
+        val locationCount = csvRepo.locations.size
         csvRepo.addLocation(c004Test)
-        Assert.assertEquals(locationCount, csvRepo.getLocations().size)
+        Assert.assertEquals(locationCount, csvRepo.locations.size)
     }
 
     @Test
@@ -66,7 +66,7 @@ internal class LocationRepositoryTest {
 
     @Test
     fun getAllLocationsAsList() {
-        Assert.assertEquals(listOfAllLocations, csvRepo.getAllLocationsAsList())
+        Assert.assertEquals(listOfAllLocations, csvRepo.locations.toList())
     }
 
     @Test
@@ -78,13 +78,13 @@ internal class LocationRepositoryTest {
     @Test
     fun removeLocationByName() {
         csvRepo.removeLocationByName(nameOfLocation)
-        Assert.assertEquals(listOfAllLocationsWithC103Removed,csvRepo.getAllLocationsAsList())
+        Assert.assertEquals(listOfAllLocationsWithC103Removed,csvRepo.locations.toList())
     }
 
     @Test
     fun removeAllLocations() {
         csvRepo.removeAllLocations()
-        Assert.assertEquals(emptyList,csvRepo.getAllLocationsAsList())
+        Assert.assertEquals(emptyList,csvRepo.locations.toList())
     }
 
 

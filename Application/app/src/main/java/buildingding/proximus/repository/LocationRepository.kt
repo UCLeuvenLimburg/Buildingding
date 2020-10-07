@@ -7,7 +7,7 @@ import java.io.File
 import java.io.InputStream
 
 class LocationRepository() : Throwable() {
-    private var locations: MutableSet<Location> = mutableSetOf()
+    val locations: MutableSet<Location> = mutableSetOf()
 
     fun readLocationsFromCSV(inputStream: InputStream) {
         try {
@@ -22,20 +22,12 @@ class LocationRepository() : Throwable() {
         return locations.add(location)
     }
 
-    fun getLocations(): MutableSet<Location> {
-        return locations
-    }
-
     fun getLocationByName(name: String): Location? {
         return locations.find { it.name == name }
     }
 
     fun getLocationsByFloor(floor: Floor): List<Location> {
         return locations.filter { it -> it.floor == floor }
-    }
-
-    fun getAllLocationsAsList(): List<Location> {
-        return locations.toList()
     }
 
     fun updateLocation(location: Location): Location? {
