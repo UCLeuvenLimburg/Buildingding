@@ -1,21 +1,21 @@
 package buildingding.proximus.model
 
 class Dijkstra(matrix: Array<IntArray>?) {
-    private val toMatrix: Array<IntArray>
+    private val locationMatrix: Array<IntArray>
     private fun initMatrixDijkstra(startLocation: Int): Array<IntArray> {
-        val res = Array(toMatrix.size + 1) { IntArray(toMatrix.size) }
+        val res = Array(locationMatrix.size + 1) { IntArray(locationMatrix.size) }
         // to initialize start location first set first row with infinite value, to find the SPF
-        for (i in toMatrix.indices) res[0][i] = Int.MAX_VALUE
-        for (i in 1..toMatrix.size) {
-            for (j in toMatrix.indices) {
-                if (toMatrix[i - 1][j] == Int.MAX_VALUE) {
+        for (i in locationMatrix.indices) res[0][i] = Int.MAX_VALUE
+        for (i in 1..locationMatrix.size) {
+            for (j in locationMatrix.indices) {
+                if (locationMatrix[i - 1][j] == Int.MAX_VALUE) {
                     res[i][j] = 0
                 } else {
-                    res[i][j] = toMatrix[i - 1][j]
+                    res[i][j] = locationMatrix[i - 1][j]
                 }
             }
         }
-        for (i in toMatrix.indices) {
+        for (i in locationMatrix.indices) {
             res[i][startLocation - 1] = 0
         }
         return res
@@ -30,11 +30,11 @@ class Dijkstra(matrix: Array<IntArray>?) {
             var indexSmallestJ = 0
             var indexSmallestI = 0
             var smallest = Int.MAX_VALUE
-            for (i in toMatrix.indices) {
+            for (i in locationMatrix.indices) {
                 if (res[0][i] != Int.MAX_VALUE) {
                     // Evaluation phase:
                     // search for all nodes for which there is no shortest path yet from nodes that might still have, together with smallest distance
-                    for (j in toMatrix.indices) {
+                    for (j in locationMatrix.indices) {
                         if (res[i + 1][j] != 0 && res[0][j] == Int.MAX_VALUE) if (res[0][i] + res[i + 1][j] < smallest) {
                             indexSmallestJ = j
                             indexSmallestI = i + 1
@@ -47,7 +47,7 @@ class Dijkstra(matrix: Array<IntArray>?) {
                 ok = true
             } else {
                 res[0][indexSmallestJ] = smallest
-                for (i in 1..toMatrix.size) if (i != indexSmallestI) {
+                for (i in 1..locationMatrix.size) if (i != indexSmallestI) {
                     res[i][indexSmallestJ] = 0
                 }
             }
@@ -110,6 +110,6 @@ class Dijkstra(matrix: Array<IntArray>?) {
 
     init {
         require(!(matrix == null || matrix.isEmpty() || matrix.size != matrix[0].size))
-        toMatrix = matrix.clone()
+        locationMatrix = matrix.clone()
     }
 }
