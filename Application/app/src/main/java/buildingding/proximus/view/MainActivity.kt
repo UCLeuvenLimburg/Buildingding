@@ -21,16 +21,21 @@ class MainActivity : AppCompatActivity() {
         val spinnerEnd = findViewById<Spinner>(R.id.spinner_end)
         if (spinnerStart != null && spinnerEnd != null) {
             val adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_spinner_item, rows
+                    this,
+                    android.R.layout.simple_spinner_item, rows
             )
             spinnerStart.adapter = adapter
             spinnerEnd.adapter = adapter
         }
-        val nodes = locationRepository.locations.toList().associateBy({it.id}, {it})
+        val nodes = locationRepository.locations.toList().associateBy({ it.id }, { it })
         val graph = Graph(nodes as HashMap<Int, Location>)
         val dijkstra = Dijkstra(graph.getPriorityQueue())
+        /*
         println("\n All paths: \n")
         println(locationRepository.getLocationByName("C004")?.id?.let { dijkstra.calculatePaths(it, graph.nodes) })
+         */
+        val start = locationRepository.getLocationByName("C001")?.id
+        val end = locationRepository.getLocationByName("C004")?.id
+        val path = start?.let { end?.let { it1 -> dijkstra.getPath(it, it1, nodes) } }
     }
 }

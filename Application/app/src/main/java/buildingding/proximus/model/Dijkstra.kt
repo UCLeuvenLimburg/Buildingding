@@ -1,21 +1,21 @@
 package buildingding.proximus.model
 
 class Dijkstra(matrix: Array<IntArray>?) {
-    private val locationMatrix: Array<IntArray>
+    private val initialMatrix: Array<IntArray>
     private fun initMatrixDijkstra(startLocation: Int): Array<IntArray> {
-        val res = Array(locationMatrix.size + 1) { IntArray(locationMatrix.size) }
+        val res = Array(initialMatrix.size + 1) { IntArray(initialMatrix.size) }
         // to initialize start location first set first row with infinite value, to find the SPF
-        for (i in locationMatrix.indices) res[0][i] = Int.MAX_VALUE
-        for (i in 1..locationMatrix.size) {
-            for (j in locationMatrix.indices) {
-                if (locationMatrix[i - 1][j] == Int.MAX_VALUE) {
+        for (i in initialMatrix.indices) res[0][i] = Int.MAX_VALUE
+        for (i in 1..initialMatrix.size) {
+            for (j in initialMatrix.indices) {
+                if (initialMatrix[i - 1][j] == Int.MAX_VALUE) {
                     res[i][j] = 0
                 } else {
-                    res[i][j] = locationMatrix[i - 1][j]
+                    res[i][j] = initialMatrix[i - 1][j]
                 }
             }
         }
-        for (i in locationMatrix.indices) {
+        for (i in initialMatrix.indices) {
             res[i][startLocation - 1] = 0
         }
         return res
@@ -30,11 +30,11 @@ class Dijkstra(matrix: Array<IntArray>?) {
             var indexSmallestJ = 0
             var indexSmallestI = 0
             var smallest = Int.MAX_VALUE
-            for (i in locationMatrix.indices) {
+            for (i in initialMatrix.indices) {
                 if (res[0][i] != Int.MAX_VALUE) {
                     // Evaluation phase:
                     // search for all nodes for which there is no shortest path yet from nodes that might still have, together with smallest distance
-                    for (j in locationMatrix.indices) {
+                    for (j in initialMatrix.indices) {
                         if (res[i + 1][j] != 0 && res[0][j] == Int.MAX_VALUE) if (res[0][i] + res[i + 1][j] < smallest) {
                             indexSmallestJ = j
                             indexSmallestI = i + 1
@@ -47,7 +47,7 @@ class Dijkstra(matrix: Array<IntArray>?) {
                 ok = true
             } else {
                 res[0][indexSmallestJ] = smallest
-                for (i in 1..locationMatrix.size) if (i != indexSmallestI) {
+                for (i in 1..initialMatrix.size) if (i != indexSmallestI) {
                     res[i][indexSmallestJ] = 0
                 }
             }
@@ -76,22 +76,37 @@ class Dijkstra(matrix: Array<IntArray>?) {
         for (i in res[0].indices) {
             if (i + 1 != startLocation) {
                 if (res[0][i] == Int.MAX_VALUE) {
-                    uit += """There is no path from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()}
-"""
+                    uit += """There is no path from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()}"""
                 } else {
-                    uit += """Shortest distance from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()} = ${res[0][i]}
-"""
+                    uit += """Shortest distance from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()} = ${res[0][i]}"""
                     uit += "via "
                     val j = i + 1
                     val pad = findPathString(startLocation, j, res, nodes)
                     uit += """
                         $pad
-                        
                         """.trimIndent()
                 }
             }
         }
         return uit
+    }
+
+    fun getPath(startLocation: Int, destination: Int, locations: HashMap<Int, Location>): List<String?>? {
+        var out: List<String?> = ArrayList()
+        val matrix = algorithm(startLocation)
+        println("Evaluation matrix: \n")
+        printIntMatrix(matrix)
+        for (i in matrix[0].indices) {
+            if (i + 1 != startLocation) {
+                if (matrix[0][i] != Int.MAX_VALUE) {
+                    val j = i + 1
+                    if (j == destination) {
+                        out = findPathString(startLocation, j, matrix, locations)
+                    }
+                }
+            }
+        }
+        return out
     }
 
     companion object {
@@ -110,6 +125,6 @@ class Dijkstra(matrix: Array<IntArray>?) {
 
     init {
         require(!(matrix == null || matrix.isEmpty() || matrix.size != matrix[0].size))
-        locationMatrix = matrix.clone()
+        initialMatrix = matrix.clone()
     }
 }
