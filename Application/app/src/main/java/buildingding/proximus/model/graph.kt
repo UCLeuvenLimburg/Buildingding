@@ -1,13 +1,20 @@
 package buildingding.proximus.model
 
-class Graph {
-    var nodes: HashMap<Int, Location> = HashMap()
+class Graph(val nodes: HashMap<Int, Location>) {
 
-    fun addNode(node: Location) {
-        nodes[node.id] = node
-    }
-
-    fun getNodeById(id: Int): Location? {
-        return nodes[id]
+    fun getPriorityQueue(): Array<IntArray> {
+        val priorityQueue = Array(nodes.size) { IntArray(nodes.size) }
+        for (i in priorityQueue.indices) {
+            val ni: Location? = nodes[(i + 1)]
+            for (j in priorityQueue[i].indices) {
+                val nj: Location? = nodes[(j + 1)]
+                if (!ni!!.getNeighbours().containsKey(nj)) {
+                    priorityQueue[i][j] = 0
+                } else {
+                    priorityQueue[i][j] = nj?.let { ni.getAdjacentNeighbourDistance(it) }!!
+                }
+            }
+        }
+        return priorityQueue
     }
 }

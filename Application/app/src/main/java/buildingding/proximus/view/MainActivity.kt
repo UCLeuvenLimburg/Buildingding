@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import buildingding.proximus.R
-import buildingding.proximus.model.Floor
+import buildingding.proximus.model.Dijkstra
+import buildingding.proximus.model.Graph
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
-import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,5 +27,10 @@ class MainActivity : AppCompatActivity() {
             spinnerStart.adapter = adapter
             spinnerEnd.adapter = adapter
         }
+        val nodes = locationRepository.locations.toList().associateBy({it.id}, {it})
+        val graph = Graph(nodes as HashMap<Int, Location>)
+        val dijkstra = Dijkstra(graph.getPriorityQueue())
+        println("\n All paths: \n")
+        println(locationRepository.getLocationByName("C004")?.id?.let { dijkstra.calculatePaths(it, graph.nodes) })
     }
 }
