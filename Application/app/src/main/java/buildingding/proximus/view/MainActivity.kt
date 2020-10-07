@@ -28,12 +28,4 @@ class MainActivity : AppCompatActivity() {
             spinnerEnd.adapter = adapter
         }
     }
-
-    private fun getLocationsAsFromCSVFile(file: String): List<Location> {
-        val inputStream = application.assets.open(file)
-        val list = csvReader().readAll(inputStream)
-        val locationMutableList = mutableListOf<Location>()
-        list.forEach { row -> locationMutableList.add(Location(row[0], Floor.valueOf(row[1]))) }
-        return  locationMutableList.toList()
-    }
 }
