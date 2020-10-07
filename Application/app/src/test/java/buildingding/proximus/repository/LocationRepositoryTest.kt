@@ -10,16 +10,16 @@ import org.junit.jupiter.api.TestInstance
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class LocationRepositoryTest {
     private val csvRepo = LocationRepository()
-    private val c004Test = Location("c004",Floor.C0)
-    private val c001 = Location("c001",Floor.C0)
-    private val c002 = Location("c002",Floor.C0)
-    private val c003 = Location("c003",Floor.C0)
-    private val c103Erranous = Location("c103",Floor.C2)
-    private val c103Corrected = Location("c103",Floor.C1)
-    private val listOfLocationsOnFloorC0 = listOf(c001,c002,c003)
+    private val c004Test = Location("c004", Floor.C0)
+    private val c001 = Location("c001", Floor.C0)
+    private val c002 = Location("c002", Floor.C0)
+    private val c003 = Location("c003", Floor.C0)
+    private val c103Erranous = Location("c103", Floor.C2)
+    private val c103Corrected = Location("c103", Floor.C1)
+    private val listOfLocationsOnFloorC0 = listOf(c001, c002, c003)
     private val emptyList = emptyList<Location>()
-    private val listOfAllLocations = listOf(c001,c002,c003,c103Erranous)
-    private val listOfAllLocationsWithC103Removed = listOf(c001,c002,c003)
+    private val listOfAllLocations = listOf(c001, c002, c003, c103Erranous)
+    private val listOfAllLocationsWithC103Removed = listOf(c001, c002, c003)
     private val nameOfLocation = "c103"
 
     @Before
@@ -46,7 +46,7 @@ internal class LocationRepositoryTest {
     fun getLocationByCorrectNameReturnsExpectedLocation() {
         csvRepo.addLocation(c004Test)
         val actual = csvRepo.getLocationByName(c004Test.name)
-        Assert.assertEquals(c004Test,actual)
+        Assert.assertEquals(c004Test, actual)
     }
 
     @Test
@@ -72,19 +72,19 @@ internal class LocationRepositoryTest {
     @Test
     fun updateLocation() {
         Assert.assertEquals(c103Corrected, csvRepo.updateLocation(c103Corrected))
-        Assert.assertEquals(c103Corrected,csvRepo.getLocationByName(nameOfLocation))
+        Assert.assertEquals(c103Corrected, csvRepo.getLocationByName(nameOfLocation))
     }
 
     @Test
     fun removeLocationByName() {
         csvRepo.removeLocationByName(nameOfLocation)
-        Assert.assertEquals(listOfAllLocationsWithC103Removed,csvRepo.locations.toList())
+        Assert.assertEquals(listOfAllLocationsWithC103Removed, csvRepo.locations.toList())
     }
 
     @Test
     fun removeAllLocations() {
         csvRepo.removeAllLocations()
-        Assert.assertEquals(emptyList,csvRepo.locations.toList())
+        Assert.assertEquals(emptyList, csvRepo.locations.toList())
     }
 
 

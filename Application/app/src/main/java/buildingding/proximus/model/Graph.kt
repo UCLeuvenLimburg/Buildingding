@@ -1,6 +1,6 @@
 package buildingding.proximus.model
 
-class Graph(val nodes: HashMap<Int, Location>) {
+class Graph(private val nodes: HashMap<Int, Location>) {
 
     fun getPriorityQueue(): Array<IntArray> {
         val priorityQueue = Array(nodes.size) { IntArray(nodes.size) }
