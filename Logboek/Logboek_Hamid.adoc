@@ -1,0 +1,72 @@
+= Logboek Afstudeerproject
+Hamid Khodayari; r0716543; 3TI/6BS
+:doctype: article
+:table-stripes: even
+
+// Macro's voor betrokkenen
+// Usage: insert {shortcut} in cel
+:h: Hamid
+:jo: Johan
+:t: Thomas
+:ja: Jaron
+:hjo: Hamid, Johan
+:ht: Hamid, Thomas
+:hja: Hamid, Jaron
+:jot: Johan, Thomas
+:joja: Johan, Jaron
+:tja: Thomas, Jaron
+:hjot: Hamid, Johan, Thomas
+:htja: Hamid, Thomas, Jaron
+:hjoja: Hamid, Johan, Jaron
+:jotja: Johan, Thomas, Jaron
+:all: Hamid, Johan, Thomas, Jaron
+
+[options="header"]
+|=======================
+|Date & hour  |Duration   |Involved members     |Topics
+|21/09 1:30	  |1	        |{h} 	                |Brainstorm for project features.
+|21/09 09:45  |0.5        |{h}                  |Setting documents up for the project.
+|21/09 10:15  |0.75       |{all}                |First meeting with the client/mentor.
+|21/09 11:15  |1          |{all}                |First meeting: Assign roles, impact analysis, etc.
+|21/09 11:15  |1          |{all}                |First meeting: Assign roles, impact analysis, etc.
+|21/09    14:40 |	0.9	    | {all}               |	Second meeting of the day: brainstorm Minimum viable product, Scope and vision.
+|22/09    10:00	| 1.5     | {hjot}              |	Technical explanation of the project.
+|22/09    13:15	| 2	      | {all}               |	Scope and vision document filled.
+|22/09    15:30	| 1.5	    | {hjot}              |	Stories mapping and prioritizing.
+|22/09    20:30	| 0.75    |	{h}                 | User Story B1: Navigation
+|22/09    23:00	| 1	      | {h}                 | Research: Kotlin & Android Studio.
+|22/09    12:00	| 0.5	    | {h}                 |	User Story B1: Navigation continued
+|23/09    13:30	| 0.75    |	{all}               |	Meeting: project status & ideas
+|23/09    15:00	| 1.5	    | {h}                 |	Research: Kotlin
+|23/09    19:00	| 0.75    |	{h}                 |	Research: Kotlin continued
+|23/09    23:30	| 1.5	    | {h}                 |	Research: Kotlin continued
+|24/09    9:30	| 0.75    |	{all}               |	F2F meeting: prepretion for the meeting with the mentor
+|24/09    10:30	| 0.5	    | {all}               |	Meeting with the mentor & client
+|24/09    11:30	| 2	      | {all}               |	Brainstorm: UML Model, logical data structure, mathematical solution for path navigation.
+|24/09    15:30	| 1	      | {h}                 |	USER Story 1
+|24/09    18:30	| 2	      | {h}                 |	USER Story 2 & Research: Vector & Euclidean algorithm
+|24/09    23:00	| 0.75    |	{h}                 |	Meeting report: 24/09
+|25/09    02:00	|  1	    | {h}                 |	Story 3
+|25/09   14:00	| 1.5	    | {all}               |	Campus scout: positions of utilities & nodes
+|25/09   19:00	|  2	    | {h}                 |	Making User Stories
+|26/09   11:00	|  2	    | {h}                 |	Making User Stories Continued.
+|28/09   13:30	|  1	    | {all}               | Preparation for meeting with mentor.
+|28/09   14:30	|  1	    | {all}               |	Meeting with Mentor.
+|28/ 09  20:00	|  2     	| {h}                 |	Making user stories release 3
+|29/ 09   11:00	|  2	    | {h}                 |	Research: Dijkstra algo for usb02
+|29/ 09   13:00	|  1.5    |	{h}                 |	Research: Dijkstra algo for usb02 Continued
+|30/09    14:00	|  3 	    | {h}                 |	Dijkstra implementation for our Buildingding
+|1/10     13:00	|  2	    | {h}                 |	Dijkstra algorithm implementation with java solution.
+|1/10     23:00	| 2 	    | {h}                 |	Dijkstra algorithm implementation with java solution. DONE
+|2/10     10:00	| 3.5	    | {h}                 |	Research: 2D Navigation possibilities in Android
+|2/10     16:00	| 2.5	    | {h}                 |	Research: 2D Navigation possibilities in Android Continued.
+|2/10     21:00	| 2 	    | {h}                 |	Research: 2D Navigation VectorDrawable
+|5/10     11:00	| 1.5	    | {h}                 |	Research: 2D Navigation VectorDrawable
+|5/10     13:30	| 2.5	    | {ht}                |	Brainstorm: navigation 2D
+|5/10     19:00	| 3 	    | {h}                 |	Research: VectorDrawable Android Tutorials
+|6/10     10:00	| 2 	    | {h}                 |	Research: VectorDrawable Android From SVG files
+|6/10     13:30	| 3 	    | {ht}                |	Brainstorm: How to convert the building map into a svg file?
+|6/10     19:30	| 3 	    | {h}                 |	InkSpace: first project to examine possible outcome.
+|7/10     13:30	| 2 	    | {hjot}              |	Brainstorm: Automation of Start location, Bluetooth-options, QR-code, Wifi Access point.
+|7/10     16:30	| 3 	    | {h}                 |	First Trail: Converting Images to SVGs.
+|=======================
