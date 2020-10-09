@@ -2,11 +2,13 @@
     <string name="app_name">Buildingding</string>
     <string name="textview_start">Choose a starting point</string>
     <string name="textview_end">Choose an endpoint</string>
-    <string name="button_start">Start navigation</string>
+    <string name="button_start">Start</string>
     <string name="welcome_text">Welcome\nto\nProximus\nBuildingDing</string>
     <string name="welcome_slogan_text">Tap to be guided</string>
     <string name="button_navigation_text">NAVIGATION</string>
     <string name="ucll_logo_description">UCLL Logo</string>
     <string name="button_settings_text">SETTINGS</string>
     <string name="button_about_text">ABOUT</string>
+    <string name="startposition_text">STARTPOSITIE</string>
+    <string name="endposition_text">EINDPOSITIE</string>
 </resources>

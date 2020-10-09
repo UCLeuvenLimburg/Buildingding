@@ -3,4 +3,8 @@
     <color name="colorPrimary">#E00049</color>
     <color name="colorPrimaryDark">#E00049</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorUcllRed">#E00049</color>
+    <color name="colorUcllDarkBlue">#002757</color>
+    <color name="colorUclLightBlue">#9FDAF9</color>
+    <color name="colorWhite">#ffffff</color>
 </resources>
