@@ -3,8 +3,12 @@ package buildingding.proximus.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.Gravity
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.view.marginTop
+import androidx.core.view.setPadding
+import androidx.core.view.updatePadding
 import buildingding.proximus.R
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
@@ -24,17 +28,22 @@ class ChooseLocationsActivity : AppCompatActivity() {
         val linearLayoutLocations:LinearLayout = findViewById(R.id.scrollViewLayout)
 
         initiateLocations().forEach {
-            val button = Button(this)
+            val textView = TextView(this)
             val locationName = it.name
-            button.text = locationName
-            button.setOnClickListener {
+            textView.text = locationName
+            textView.textSize = 24f
+            textView.gravity = Gravity.CENTER
+            textView.setBackgroundColor(getColor(R.color.colorWhite))
+            textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
+            textView.setPadding(0,24,0,24)
+            textView.setOnClickListener {
                 val intent = Intent(this@ChooseLocationsActivity, NavigationActivity::class.java)
                 if (chosenStartLocation!!.isNotEmpty()) intent.putExtra("startPosition", chosenStartLocation)
                 if (chosenEndLocation!!.isNotEmpty()) intent.putExtra("endPosition", chosenEndLocation)
                 intent.putExtra(target, locationName)
                 startActivity(intent)
             }
-            linearLayoutLocations.addView(button)
+            linearLayoutLocations.addView(textView)
         }
     }
 
@@ -42,7 +51,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
         return LocationRepository()
             .readLocationsFromCSV(application.assets.open("locations.csv"))
             .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
-            .locations.toList()
+            .locations.sortedBy { it.name }.toList()
     }
 
 }
