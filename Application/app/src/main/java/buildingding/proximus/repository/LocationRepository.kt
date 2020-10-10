@@ -8,7 +8,7 @@ import java.io.InputStream
 class LocationRepository() : Throwable() {
     val locations: MutableSet<Location> = mutableSetOf()
 
-    fun readConnectionsFromCSV(inputStream: InputStream) {
+    fun readConnectionsFromCSV(inputStream: InputStream): LocationRepository {
         try {
             val list = csvReader().readAll(inputStream)
             list.forEach { row ->
@@ -22,15 +22,17 @@ class LocationRepository() : Throwable() {
                     }?.addDestination(neighbour, row[2].toInt())
                 }
             }
+            return this
         } catch (e: Exception) {
             throw  Exception("Couldn't read locations from inputstream")
         }
     }
 
-    fun readLocationsFromCSV(inputStream: InputStream) {
+    fun readLocationsFromCSV(inputStream: InputStream): LocationRepository {
         try {
             val list = csvReader().readAll(inputStream)
             list.forEach { row -> locations.add(Location(row[0], Floor.valueOf(row[1]))) }
+            return this
         } catch (e: Exception) {
             throw  Exception("Couldn't read locations from inputstream")
         }
