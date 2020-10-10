@@ -5,6 +5,24 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorUcllRed</item>
+    </style>
+
+    <style name="ThemeActionBar" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+        <item name="android:colorBackground">@color/colorUclLightBlue</item>
+    </style>
+
+    <style name="MyTheme.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="background">@color/colorUcllRed</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
 </resources>

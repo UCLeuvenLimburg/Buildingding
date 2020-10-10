@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorUcllRed"
     tools:context=".view.NavigationActivity">
 
     <ImageView
@@ -28,12 +27,12 @@
         android:text="@string/startposition_text"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/_end_position"
+        app:layout_constraintBottom_toTopOf="@+id/button_end_position"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/_end_position"
+        android:id="@+id/button_end_position"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
