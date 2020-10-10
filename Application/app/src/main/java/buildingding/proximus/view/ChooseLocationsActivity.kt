@@ -3,12 +3,16 @@ package buildingding.proximus.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Gravity
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.view.marginTop
 import androidx.core.view.setPadding
 import androidx.core.view.updatePadding
+import androidx.core.widget.doOnTextChanged
 import buildingding.proximus.R
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
