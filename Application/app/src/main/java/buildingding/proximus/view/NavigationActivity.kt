@@ -11,12 +11,11 @@ import com.google.zxing.integration.android.IntentIntegrator
 class NavigationActivity : AppCompatActivity() {
     lateinit var buttonStartPosition: Button
     lateinit var buttonEndPosition: Button
-    var startPostionString: String = ""
-    var endPostionString: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation)
+
         buttonStartPosition = findViewById(R.id.button_start_position)
         buttonStartPosition.setOnClickListener {
             val intentIntegrator = IntentIntegrator(this@NavigationActivity)
@@ -26,28 +25,35 @@ class NavigationActivity : AppCompatActivity() {
             intentIntegrator.setBarcodeImageEnabled(false)
             intentIntegrator.initiateScan()
         }
+        //todo switch to manual selection based on settings
+        /*
+        buttonStartPosition.setOnClickListener {
+            val intent = Intent(this@NavigationActivity, ChooseLocationsActivity::class.java)
+            intent.putExtra("endPosition", buttonEndPosition.text)
+            intent.putExtra("target", "startPosition")
+            startActivity(intent)
+        }
+        */
+
         buttonEndPosition = findViewById(R.id.button_end_position)
         buttonEndPosition.setOnClickListener {
             val intent = Intent(this@NavigationActivity, ChooseLocationsActivity::class.java)
-            intent.putExtra("startPosition", startPostionString)
+            intent.putExtra("startPosition", buttonStartPosition.text)
+            intent.putExtra("target", "endPosition")
             startActivity(intent)
         }
 
         if (intent.hasExtra("startPosition")) buttonStartPosition.text = intent.getStringExtra("startPosition")
         if (intent.hasExtra("endPosition")) buttonEndPosition.text = intent.getStringExtra("endPosition")
     }
-    override fun onActivityResult(
-        requestCode: Int,
-        resultCode: Int,
-        data: Intent?
-    ) {
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent? ) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             if (result.contents == null) {
                 Toast.makeText(this, "cancelled", Toast.LENGTH_SHORT).show()
             } else {
-                startPostionString = String.format(result.contents)
-                buttonStartPosition.text = startPostionString
+                buttonStartPosition.text = String.format(result.contents)
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)
