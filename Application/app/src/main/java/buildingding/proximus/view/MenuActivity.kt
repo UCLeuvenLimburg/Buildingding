@@ -7,24 +7,25 @@ import android.widget.Button
 import buildingding.proximus.R
 
 class MenuActivity : AppCompatActivity() {
-    private lateinit var buttonNavigation: Button
-    private lateinit var buttonSettings: Button
-    private lateinit var buttonAbout: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+        initiateMenuButtons()
+    }
 
-        buttonNavigation = findViewById(R.id.button_navigation)
+    private fun initiateMenuButtons () {
+        val buttonNavigation: Button = findViewById(R.id.button_navigation)
         buttonNavigation.setOnClickListener {
             val intent = Intent(this@MenuActivity, NavigationActivity::class.java)
             startActivity(intent)
         }
-        buttonSettings = findViewById(R.id.button_settings)
+        val buttonSettings: Button = findViewById(R.id.button_settings)
         buttonSettings.setOnClickListener {
             val intent = Intent(this@MenuActivity, SettingsActivity::class.java)
             startActivity(intent)
         }
-        buttonAbout = findViewById(R.id.button_about)
+        val buttonAbout: Button = findViewById(R.id.button_about)
         buttonAbout.setOnClickListener {
             val intent = Intent(this@MenuActivity, AboutActivity::class.java)
             startActivity(intent)

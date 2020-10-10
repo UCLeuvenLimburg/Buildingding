@@ -27,7 +27,6 @@ class ChooseLocationsActivity : AppCompatActivity() {
             val button = Button(this)
             val locationName = it.name
             button.text = locationName
-
             button.setOnClickListener {
                 val intent = Intent(this@ChooseLocationsActivity, NavigationActivity::class.java)
                 if (chosenStartLocation!!.isNotEmpty()) intent.putExtra("startPosition", chosenStartLocation)
@@ -35,16 +34,15 @@ class ChooseLocationsActivity : AppCompatActivity() {
                 intent.putExtra(target, locationName)
                 startActivity(intent)
             }
-
             linearLayoutLocations.addView(button)
         }
     }
 
     private fun initiateLocations(): List<Location> {
-        val locationRepository = LocationRepository()
-        locationRepository.readLocationsFromCSV(application.assets.open("locations.csv"))
-        locationRepository.readConnectionsFromCSV(application.assets.open("neighbours.csv"))
-        return locationRepository.locations.toList()
+        return LocationRepository()
+            .readLocationsFromCSV(application.assets.open("locations.csv"))
+            .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
+            .locations.toList()
     }
 
 }
