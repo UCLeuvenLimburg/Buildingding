@@ -1,0 +1,88 @@
+= Research: Indoor positioning system
+
+The goal is to find a technology wich will enable us to locate a person inside a multistory building using a smartphone.
+
+== Possible technologies
+
+After a preliminary research we came across several methods used in an indoor positioning system (I.P.S.)footnote:[https://en.wikipedia.org/wiki/Indoor_positioning_system]
+
+=== Wireless technologies
+
+==== WiFi-based positioning system
+
+Wi-Fi positioning system (WPS) is a geolocation system that uses the characteristics of nearby Wi-Fi hotspots and other wireless access points to discover where a device is located. Wi-Fi positioning takes advantage of the rapid growth in the early 21st century of wireless access points in urban areas.
+
+There are several techniques we could employ to use this technologie.
+* Signal strength based
+* Fingerprinting based
+* Angle of arrival based
+* Time of flight based
+
+Each of these methods has its own merits and drawbacks.
+
+
+==== Bluetooth
+
+Originally, Bluetooth was concerned about proximity, not about exact location. Bluetooth was not intended to offer a pinned location like GPS, however is known as a geo-fence or micro-fence solution which makes it an indoor proximity solution, not an indoor positioning solution.
+
+However, micromapping and indoor mapping has been linked to Bluetooth.
+Bluetooth speaker position and home networks could be used for broad reference. 
+
+==== Other wireless technologies
+
+* Radio frequentie identificatoin (RFID)
+* Ultrawide band (UWB)
+* Infrared (IR)
+* Gen2IR
+* Visible light communication (VLC) 
+* Ultrasound
+
+=== Other technologies
+
+Non-radio technologies can be used for positioning without using the existing wireless infrastructure. This could provide increased accuracy at the expense of costly equipment and installations. 
+
+==== Magnetic positioning
+
+Magnetic positioning can offer pedestrians with smartphones an indoor accuracy of 1–2 meters with 90% confidence level, without using the additional wireless infrastructure for positioning. Magnetic positioning is based on the iron inside buildings that create local variations in the Earth's magnetic field. Un-optimized compass chips inside smartphones can sense and record these magnetic variations to map indoor locations.
+
+==== Inertial measurements
+
+Dead reckoning is the process of calculating ones's current position by using a previously determined position by using estimations of speed and course over elapsed time.
+
+==== Positioning based on visual markers
+
+We could use the inbuild camera of the mobile device to determine the location. We can place markers like QR-codes at specific locations which encode that locations coordinates.
+
+== Our reasoning
+
+=== Wireless technology
+
+Because we were writing an application for a smartphone the use of the inbuilt wireless capabilities looked the most promising.
+We only needed external fixed beacons which could be used as a reference point.
+
+==== Bluetooth
+
+If we were to use Bluetooth, it would mean we had no pre-existing infrastructure of beacons.
+
+==== WiFi
+
+If we were to use WiFi, we could use the already present access point as the fixed reference points.
+Because WPS could use several techniques the coice of WiFi looked the most promising
+
+=== Other technology
+
+==== Magnetic positioning
+
+The mapping of the unique fingerprint of the building was deemed to complex to be accomplished during the allocated time period.
+
+==== Inertial measurements
+
+Using a smartphones inertial sensors would cause too much white noise by the appliance's gyroscopes. For example, a small tilt error in the calculated orientation would cause an accelaration onto the horizontal axes which would then be integrated twice, causing a rapidly growing error in the calculated position.footnote:[https://www.cl.cam.ac.uk//techreports/UCAM-CL-TR-696.pdf]
+
+==== Positioning based on visual markers
+
+The problem with visual markings seemed largely that the camera should always have line of sight with a marker, while the wireless option does not have this restriction.
+
+== Our Choice
+
+Since there is an existing WiFi infrastructure, the existance of several well known techniques and the users convenience had more priority we chose to use WPS.
