@@ -1,0 +1,100 @@
+= Research: Wifi Positioning System
+:toc:
+
+A deeper research of the possible techniques we could use regarding WPS
+
+== Basic concept
+
+Wi-Fi based indoor localization of a device consists in determining the position of client devices while using access points as fixed references. The four main classification groups of techniques exist to accomplish this are: received signal strength indication (RSSI), fingerprinting, angle of arrival (AoA) and time of flight (ToF) based techniques.
+
+In most cases you start by determining the distance between the target client device and a few access points. With these known distances, trilateration algorithms may be used to determine the relative position of the target device, using the known position of access points as a reference. Alternatively, the angle of arriving signals at a target client device could be employed to determine the device's location, based on triangulation algorithms.
+
+== Overview of techniques
+
+=== Signal strength based
+
+RSSI localization techniques are based on measuring signal strength from a client device to several different access points, and then combining this information with a propagation model to determine the distance between the client device and the access points. Trilateration techniques can be used to calculate the estimated client device position relative to the known position of access points.
+
+Though one of the cheapest and easiest methods to implement, its disadvantage is that it does not provide very good accuracy (median of 2-4m), because the RSSI measurements tend to fluctuate according to changes in the environment or multipath fading.
+
+=== Fingerprinting based
+
+Traditional fingerprinting is also RSSI-based, but it simply relies on the recording of the signal strength from several access points in range and storing this information in a database along with the known coordinates of the client device in an offline phase. This information can be deterministic or probabilistic. During the online tracking phase, the current RSSI vector at an unknown location is compared to those stored in the fingerprint and the closest match is returned as the estimated user location. Such systems may provide a median accuracy of 0.6m and tail accuracy of 1.3m.
+
+Its main disadvantage is that any changes of the environment such as adding or removing furniture or buildings may change the "fingerprint" that corresponds to each location, requiring an update to the fingerprint database. However, the integration with other sensor such as camera can be used in order to deal with this.
+
+=== Angle of arrival based
+
+With the advent of MIMO Wi-Fi interfaces, which use multiple antennas, it is possible to estimate the AoA of the multipath signals received at the antenna arrays in the access points, and apply triangulation to calculate the location of client devices. SpotFi, ArrayTrack and LTEye are proposed solutions which employ this kind of technique. 
+
+=== Time of flight based
+
+Time of flight (ToF) localization approach takes timestamps provided by the wireless interfaces to calculate the ToF of signals and then use this information to estimate the distance and relative position of one client device with respect to access points. The granularity of such time measurements is in the order of nanoseconds and systems which use this technique have reported localization errors in the order of 2m. Typical applications for this technology are tagging and locating assets in buildings, for which room-level accuracy (~3m) is usually enough.
+
+The time measurements taken at the wireless interfaces are based on the fact that RF waves travel close to the speed of light, which remains nearly constant in most propagation media in indoor environments. Therefore, the signal propagation speed (and consequently the ToF) is not affected so much by the environment as the RSSI measurements are.
+
+More recently, the Wi-Fi Round Trip Time standard has provided fine ToF ranging capabilities to WiFi. 
+
+==== WiFi Round Trip Time
+
+Wi-Fi Round-Trip-Time in Android Pie does not require that the phone connect to any Wi-Fi access points. Only the phone is used to determine distance, not the APs. This feature is also tied into the Android operating system's existing location system to preserve the user's privacy. Apps using round-trip delay time (RTT) need the location permission, and the device must have location-based services enabled at the system level. 
+
+== Our reasoning
+
+=== RTT
+
+Because we use API 29 and RTT is the de-facto go-to for all android apps of API level 28+, it would be the most future-proof to use Androids in-build support for RTT.footnote:[https://developer.android.com/guide/topics/connectivity/wifi-rtt]
+Since the mobile device does not have to establish a full connection with an access point, it has the added benifit for reducing the networks overhead cost.
+
+The main drawback is that the access points have to support the IEEE 802.11-2016 FTM standard.
+After contacting the network administrators on campus we were informed that no AP currently used on campus provides support for this protocol.
+
+A further investigation in said protocol revealed that this protocol is only supported by a few brands, with Google itself being the main one. This discovery will lead to other problems further along the road, which we hadn't realised just yet.
+
+=== Time of flight based
+
+The other time of flight based technique was thus a better candidate, but the accuracy was to low to be justly considered when using a 'life' tracking mode.
+
+=== Angle of arrival based
+
+The access points on campus do not have multiple antennas.
+
+=== Fingerprinting based and RSSI
+
+For this method we needed to continuously scan the access-points. There is a problem of inaccuracy though, but with the combination of other techniques this should be easy to overcome.
+
+
+== Our choice
+
+We chose to implement RSSI in combination with ToF. This would require an intermittent scan of the APs and would amplify the accuray of the estimated positions.
+
+== Implementation
+
+After creating a testing app using the WiFi-manager APIfootnote:[https://developer.android.com/guide/topics/connectivity/wifi-scan]
+we stumbled upon a serieus drawback.
+
+=== API 28+
+
+For the app to be able to have up-to-date information as to the positioning of the APs, our apllication had to be able to start a network scan, so it could receive the necessary information.
+We would need the SSID (which would identify the used network), the BSSID (which pertains to the MAC-address of the AP and is thus an unique identifier), the signal strength in negative decibel (dB) which would symbolise the distance and the timestamp of the packet which we could use for ToF.
+
+Sadly the API's function startScan()footnote:[https://developer.android.com/reference/android/net/wifi/WifiManager#startScan()] was depricated in API level 28. The cause of this deprication is officially to reduce the network overhead caused by the need to establish a connection with the APs and unofficially because Google would like everyone to use RTT. The ability to start a network scan is now the privilege of the system, not an application.
+
+This has to effect that withouth the ability to start the scan, we or had to make do with the information the system gives us, which could be severly out-of-date or downgrade our application.
+
+==== Downgrading
+
+One of the options we now had was to downgrade out application to an API lower than level 28.
+Here we faced the problem of API 28+.
+
+Since API 28 the support library has been reworked to AndroidX, these include the latest JetPack components.footnote:[https://developer.android.com/topic/libraries/support-library] The problem in downgrading our app is not the core functionality, but the third party libraries, which would mean that we would need to restart from scratch.
+
+==== Using the system info
+
+During further testing there were cases when the latest scanresult did not change for half an hour. As a tracking system this is absolutely not doable.
+
+A work around we found was to manually switch the WiFi on and off, thus triggering a network scan.
+
+== Conclusion of WPS
+
+With this in mind we started preliminary scanning of the APs to map the positions, but with too many time lost with trying to resolve the API limitations, we decided to furgo the implementation of WPS and decided to use the offline method of using positioning based on visual markers, namely QR-codes.

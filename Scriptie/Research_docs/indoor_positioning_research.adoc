@@ -1,4 +1,5 @@
 = Research: Indoor positioning system
+:toc:
 
 The goal is to find a technology wich will enable us to locate a person inside a multistory building using a smartphone.
 
