@@ -31,7 +31,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
         val target: String? = intent.getStringExtra("target")
         val linearLayoutLocations:LinearLayout = findViewById(R.id.scrollViewLayout)
 
-        initiateLocations().forEach {
+        LocationRepository.locations.forEach {
             val textView = TextView(this)
             val locationName = it.name
             textView.text = locationName
@@ -51,11 +51,6 @@ class ChooseLocationsActivity : AppCompatActivity() {
         }
     }
 
-    private fun initiateLocations(): List<Location> {
-        return LocationRepository()
-            .readLocationsFromCSV(application.assets.open("locations.csv"))
-            .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
-            .locations.sortedBy { it.name }.toList()
-    }
+
 
 }

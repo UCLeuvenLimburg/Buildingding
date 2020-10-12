@@ -5,7 +5,7 @@ import buildingding.proximus.model.Location
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
 import java.io.InputStream
 
-class LocationRepository() : Throwable() {
+object LocationRepository : Throwable() {
     val locations: MutableSet<Location> = mutableSetOf()
 
     fun readConnectionsFromCSV(inputStream: InputStream): LocationRepository {

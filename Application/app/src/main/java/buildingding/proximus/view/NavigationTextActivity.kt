@@ -15,10 +15,8 @@ class NavigationTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_text)
-        val locationRepository = LocationRepository()
-        initiateLocations(locationRepository)
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
-        calculatePath(locationRepository, intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
+        calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
                 ?.forEach{
                     val textView = TextView(this)
                     textView.text = it
@@ -31,25 +29,16 @@ class NavigationTextActivity : AppCompatActivity() {
                 }
     }
 
-    private fun calculatePath(locationRepository: LocationRepository, startLocation: String, endLocation: String): List<String?>? {
-        val nodes = locationRepository.locations.associateBy({ it.id }, { it })
+    private fun calculatePath(startLocation: String, endLocation: String): List<String?>? {
+        val nodes = LocationRepository.locations.associateBy({ it.id }, { it })
         val graph = Graph(nodes as HashMap<Int, Location>)
-        // todo fix this bug
         val dijkstra = Dijkstra(graph.getPriorityQueue())
         /*
         println("\n All paths: \n")
         println(locationRepository.getLocationByName("C004")?.id?.let { dijkstra.calculatePaths(it, graph.nodes) })
         */
-        val start = locationRepository.getLocationByName(startLocation)?.id
-        val end = locationRepository.getLocationByName(endLocation)?.id
+        val start = LocationRepository.getLocationByName(startLocation)?.id
+        val end = LocationRepository.getLocationByName(endLocation)?.id
         return start?.let<Int, List<String?>?> { end?.let { it1 -> dijkstra.getPath(it, it1, nodes) } }
-    }
-
-    //todo make locationRepository global
-    private fun initiateLocations(locationRepository: LocationRepository): List<Location> {
-        return locationRepository
-                .readLocationsFromCSV(application.assets.open("locations.csv"))
-                .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
-                .locations.sortedBy { it.name }.toList()
     }
 }
