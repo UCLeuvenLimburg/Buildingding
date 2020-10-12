@@ -48,6 +48,8 @@ class NavigationActivity : AppCompatActivity() {
         buttonStartNavigation = findViewById(R.id.button_start_navigation)
         buttonStartNavigation.setOnClickListener {
             val intent = Intent(this@NavigationActivity, NavigationTextActivity::class.java)
+            intent.putExtra("startPosition", buttonStartPosition.text)
+            intent.putExtra("endPosition", buttonEndPosition.text)
             startActivity(intent)
         }
 
