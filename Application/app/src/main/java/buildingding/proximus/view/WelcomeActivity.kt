@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import androidx.constraintlayout.widget.ConstraintLayout
 import buildingding.proximus.R
+import buildingding.proximus.model.Floor
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
 
@@ -21,9 +21,11 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun initiateLocations(): List<Location> {
+        val allowed = arrayOf(Floor.B0, Floor.C0, Floor.C1)
         return LocationRepository
                 .readLocationsFromCSV(application.assets.open("locations.csv"))
                 .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
+                .removeAllLocationsExceptFromFloors(allowed)
                 .locations.sortedBy { it.name }.toList()
     }
 

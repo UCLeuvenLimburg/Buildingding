@@ -38,7 +38,7 @@ object LocationRepository : Throwable() {
         }
     }
 
-    fun addLocation(location: Location): Boolean {
+    private fun addLocation(location: Location): Boolean {
         return locations.add(location)
     }
 
@@ -55,11 +55,16 @@ object LocationRepository : Throwable() {
         return if (addLocation(location)) location else null
     }
 
-    fun removeLocationByName(name: String) {
+    private fun removeLocationByName(name: String) {
         locations.remove(getLocationByName(name))
     }
 
     fun removeAllLocations() {
         locations.clear()
+    }
+
+    fun removeAllLocationsExceptFromFloors(floors: Array<Floor>): LocationRepository {
+        locations.removeIf { !floors.contains(it.floor) }
+        return this
     }
 }
