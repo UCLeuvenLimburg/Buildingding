@@ -19,6 +19,7 @@
         <activity android:name=".view.Navigation2DActivity"  android:theme="@style/ThemeActionBar" android:label="@string/title_2D_navigation"/>
         <activity android:name=".view.NavigationTextActivity" android:theme="@style/ThemeActionBar" android:label="@string/title_text_navigation"/>
         <activity android:name=".view.SettingsActivity" android:theme="@style/ThemeActionBar" android:label="@string/title_settings"/>
+        <activity android:name=".view.ChooseLanguageActivity" android:theme="@style/ThemeActionBar" android:label="@string/settings_option_language"/>
         <activity android:name=".view.NavigationActivity" />
         <activity android:name=".view.MenuActivity" />
         <activity android:name=".view.WelcomeActivity">
