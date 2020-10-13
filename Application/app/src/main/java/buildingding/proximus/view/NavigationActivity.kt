@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import buildingding.proximus.R
+import buildingding.proximus.model.RouteDisplay
 import buildingding.proximus.model.StartChoice
 import buildingding.proximus.repository.SettingsRepository
 import com.google.zxing.integration.android.IntentIntegrator
@@ -49,7 +50,11 @@ class NavigationActivity : AppCompatActivity() {
 
         buttonStartNavigation = findViewById(R.id.button_start_navigation)
         buttonStartNavigation.setOnClickListener {
-            val intent = Intent(this@NavigationActivity, NavigationTextActivity::class.java)
+            val intent = if (SettingsRepository.routeDisplay == RouteDisplay.Text) {
+                Intent(this@NavigationActivity, NavigationTextActivity::class.java)
+            } else {
+                Intent(this@NavigationActivity, Navigation2DActivity::class.java)
+            }
             intent.putExtra("startPosition", buttonStartPosition.text)
             intent.putExtra("endPosition", buttonEndPosition.text)
             startActivity(intent)
