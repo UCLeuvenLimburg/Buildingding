@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Buildingding</string>
+    <string name="textview_start">Kies een startpositie</string>
+    <string name="textview_end">Kies een eind positie</string>
+    <string name="button_start">Start</string>
+    <string name="welcome_text">BuildingDing</string>
+    <string name="button_navigation_text">NAVIGATIE</string>
+    <string name="ucll_logo_description">UCLL Logo</string>
+    <string name="button_settings_text">INSTELLINGEN</string>
+    <string name="button_about_text">OVER</string>
+    <string name="startposition_text">STARTPOSITIE</string>
+    <string name="endposition_text">EINDPOSITIE</string>
+    <string name="title_about">Over</string>
+    <string name="title_settings">Appinstellingen</string>
+    <string name="title_text_navigation">Textnavigatie</string>
+    <string name="title_2D_navigation">Appinstellingen</string>
+    <string name="title_choose_locations">Kies locatie</string>
+    <string name="settings_option_language">Taal</string>
+    <string name="settings_option_start_choice">Startkeuze</string>
+    <string name="settings_option_route_display">Routeweergave</string>
+</resources>
