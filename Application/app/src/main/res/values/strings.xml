@@ -3,7 +3,7 @@
     <string name="textview_start">Choose a starting point</string>
     <string name="textview_end">Choose an endpoint</string>
     <string name="button_start">Start</string>
-    <string name="welcome_text">Welcome\nto\nProximus\nBuildingDing</string>
+    <string name="welcome_text">BuildingDing</string>
     <string name="welcome_slogan_text">Tap to be guided</string>
     <string name="button_navigation_text">NAVIGATION</string>
     <string name="ucll_logo_description">UCLL Logo</string>
