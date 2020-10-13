@@ -14,17 +14,8 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        //initiateContent()
         initiateLocations()
-        startMainActivity()
-    }
-
-    private fun initiateContent() {
-        val constraintLayout:ConstraintLayout = findViewById(R.id.mainLayout)
-        constraintLayout.setOnClickListener {
-            val intent = Intent(this@WelcomeActivity, MenuActivity::class.java)
-            startActivity(intent)
-        }
+        startMenuActivity()
     }
 
     private fun initiateLocations(): List<Location> {
@@ -34,7 +25,7 @@ class WelcomeActivity : AppCompatActivity() {
                 .locations.sortedBy { it.name }.toList()
     }
 
-    private fun startMainActivity() {
+    private fun startMenuActivity() {
         val mRunnable = Runnable {
             startActivity(Intent(this, MenuActivity::class.java))
             finish()
