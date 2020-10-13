@@ -22,6 +22,8 @@ class NavigationActivity : AppCompatActivity() {
 
         buttonStartPosition = findViewById(R.id.button_start_position)
 
+
+
         if (SettingsRepository.startChoice == StartChoice.Scan) {
             buttonStartPosition.setOnClickListener {
                 val intentIntegrator = IntentIntegrator(this@NavigationActivity)
@@ -60,8 +62,10 @@ class NavigationActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        if (intent.hasExtra("startPosition")) buttonStartPosition.text = intent.getStringExtra("startPosition")
-        if (intent.hasExtra("endPosition")) buttonEndPosition.text = intent.getStringExtra("endPosition")
+        if (intent.hasExtra("startPosition")) buttonStartPosition.text =
+            intent.getStringExtra("startPosition")
+        if (intent.hasExtra("endPosition")) buttonEndPosition.text =
+            intent.getStringExtra("endPosition")
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
