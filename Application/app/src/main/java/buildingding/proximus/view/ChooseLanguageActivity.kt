@@ -30,7 +30,7 @@ class ChooseLanguageActivity : AppCompatActivity() {
             textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
             textView.setPadding(0,24,0,24)
             textView.setOnClickListener {
-                val intent = Intent(this@ChooseLanguageActivity, SettingsActivity::class.java)
+                val intent = Intent(this@ChooseLanguageActivity, MenuActivity::class.java)
                 Locale.setDefault(Locale(choice))
                 startActivity(intent)
             }
