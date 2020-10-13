@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import buildingding.proximus.R
+import buildingding.proximus.model.StartChoice
+import buildingding.proximus.repository.SettingsRepository
 import com.google.zxing.integration.android.IntentIntegrator
 
 class NavigationActivity : AppCompatActivity() {
@@ -18,24 +20,24 @@ class NavigationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_navigation)
 
         buttonStartPosition = findViewById(R.id.button_start_position)
-        /*
-        buttonStartPosition.setOnClickListener {
-            val intentIntegrator = IntentIntegrator(this@NavigationActivity)
-            intentIntegrator.setBeepEnabled(false)
-            intentIntegrator.setCameraId(0)
-            intentIntegrator.setPrompt("SCAN")
-            intentIntegrator.setBarcodeImageEnabled(false)
-            intentIntegrator.initiateScan()
-        }*/
-        //todo switch to manual selection based on settings
 
-        buttonStartPosition.setOnClickListener {
-            val intent = Intent(this@NavigationActivity, ChooseLocationsActivity::class.java)
-            intent.putExtra("endPosition", buttonEndPosition.text)
-            intent.putExtra("target", "startPosition")
-            startActivity(intent)
+        if (SettingsRepository.startChoice == StartChoice.Scan) {
+            buttonStartPosition.setOnClickListener {
+                val intentIntegrator = IntentIntegrator(this@NavigationActivity)
+                intentIntegrator.setBeepEnabled(false)
+                intentIntegrator.setCameraId(0)
+                intentIntegrator.setPrompt("SCAN")
+                intentIntegrator.setBarcodeImageEnabled(false)
+                intentIntegrator.initiateScan()
+            }
+        } else {
+            buttonStartPosition.setOnClickListener {
+                val intent = Intent(this@NavigationActivity, ChooseLocationsActivity::class.java)
+                intent.putExtra("endPosition", buttonEndPosition.text)
+                intent.putExtra("target", "startPosition")
+                startActivity(intent)
+            }
         }
-
 
         buttonEndPosition = findViewById(R.id.button_end_position)
         buttonEndPosition.setOnClickListener {
@@ -57,7 +59,7 @@ class NavigationActivity : AppCompatActivity() {
         if (intent.hasExtra("endPosition")) buttonEndPosition.text = intent.getStringExtra("endPosition")
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent? ) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             if (result.contents == null) {
