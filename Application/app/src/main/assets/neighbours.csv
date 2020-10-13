@@ -157,6 +157,7 @@ C1X_SEEE,C1X_SEE,55
 C1X_SEE,C1X_SEEE,55
 C0_stairs_E,C1_stairs_E,100
 C1_stairs_E,C101,40
+C101,C1_stairs_E,40
 C101,C1_printer,38
 C1_printer,C101,38
 C1_printer,C1X_SEE,101
