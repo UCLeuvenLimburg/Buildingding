@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Buildingding</string>
+    <string name="textview_start">Choisissez un point de départ</string>
+    <string name="textview_end">Choisissez un point de terminaison</string>
+    <string name="button_start">Commencer</string>
+    <string name="welcome_text">BuildingDing</string>
+    <string name="button_navigation_text">NAVIGATION</string>
+    <string name="ucll_logo_description">UCLL Logo</string>
+    <string name="button_settings_text">RÉGLAGES</string>
+    <string name="button_about_text">SUR</string>
+    <string name="startposition_text">POSITION DE DÉPART</string>
+    <string name="endposition_text">POSITION DE TERMINATION</string>
+    <string name="title_about">SUR</string>
+    <string name="title_settings">Paramètres de l\'application</string>
+    <string name="title_text_navigation">Navigation textuelle</string>
+    <string name="title_2D_navigation">Carte</string>
+    <string name="title_choose_locations">Choisissez un emplacement</string>
+    <string name="settings_option_language">Langue</string>
+    <string name="settings_option_start_choice">Choix de départ</string>
+    <string name="settings_option_route_display">Affichage de l\'itinéraire</string>
+</resources>
