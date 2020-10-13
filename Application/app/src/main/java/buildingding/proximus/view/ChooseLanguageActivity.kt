@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Language
 import buildingding.proximus.model.StartChoice
+import buildingding.proximus.repository.SettingsRepository
 import java.util.*
 
 class ChooseLanguageActivity : AppCompatActivity() {
@@ -32,6 +33,7 @@ class ChooseLanguageActivity : AppCompatActivity() {
             textView.setOnClickListener {
                 val intent = Intent(this@ChooseLanguageActivity, MenuActivity::class.java)
                 Locale.setDefault(Locale(choice))
+                SettingsRepository.language = Language.valueOf(choice)
                 startActivity(intent)
             }
             linearLayoutLocations.addView(textView)
