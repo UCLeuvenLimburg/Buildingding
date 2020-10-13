@@ -8,11 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.StartChoice
+import buildingding.proximus.repository.SettingsRepository
 
 class ChooseStartChoice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_locations)
+        setContentView(R.layout.activity_settings_start_choice)
         populateStartChoices()
     }
 
@@ -28,7 +29,8 @@ class ChooseStartChoice : AppCompatActivity() {
             textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
             textView.setPadding(0,24,0,24)
             textView.setOnClickListener {
-                val intent = Intent(this@ChooseStartChoice, SettingsActivity::class.java)
+                val intent = Intent(this@ChooseStartChoice, MenuActivity::class.java)
+                SettingsRepository.startChoice = StartChoice.valueOf(choice)
                 startActivity(intent)
             }
             linearLayoutLocations.addView(textView)
