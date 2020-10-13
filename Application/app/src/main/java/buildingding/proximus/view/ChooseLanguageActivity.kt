@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Language
-import buildingding.proximus.model.StartChoice
 import buildingding.proximus.repository.SettingsRepository
 import java.util.*
 
@@ -29,10 +28,14 @@ class ChooseLanguageActivity : AppCompatActivity() {
             textView.gravity = Gravity.CENTER
             textView.setBackgroundColor(getColor(R.color.colorWhite))
             textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
-            textView.setPadding(0,24,0,24)
+            textView.setPadding(0, 24, 0, 24)
             textView.setOnClickListener {
                 val intent = Intent(this@ChooseLanguageActivity, MenuActivity::class.java)
-                Locale.setDefault(Locale(choice))
+                val config = resources.configuration
+                val locale = Locale(choice.decapitalize(Locale.ROOT))
+                Locale.setDefault(locale)
+                config.locale = locale
+                resources.updateConfiguration(config, resources.displayMetrics)
                 SettingsRepository.language = Language.valueOf(choice)
                 startActivity(intent)
             }
