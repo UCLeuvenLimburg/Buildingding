@@ -19,4 +19,8 @@
     <string name="settings_option_language">Langue</string>
     <string name="settings_option_start_choice">Choix de départ</string>
     <string name="settings_option_route_display">Affichage de l\'itinéraire</string>
+    <string name="direction_first">Allez à la </string>
+    <string name="direction_second">Ensuite, marchez jusqu\'à la</string>
+    <string name="direction_third">Maintenant, allez à la </string>
+    <string name="direction_fourth">Continuer jusqu\'à ce que le </string>
 </resources>

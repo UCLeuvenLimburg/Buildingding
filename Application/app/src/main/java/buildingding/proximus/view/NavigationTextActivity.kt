@@ -10,6 +10,7 @@ import buildingding.proximus.model.Dijkstra
 import buildingding.proximus.model.Graph
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
+import buildingding.proximus.repository.TextDirections
 
 class NavigationTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,7 @@ class NavigationTextActivity : AppCompatActivity() {
         calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
                 ?.forEach {
                     val textView = TextView(this)
-                    textView.text = it
+                    textView.text = TextDirections.getNextDirection(it)
                     textView.textSize = 24f
                     textView.gravity = Gravity.CENTER
                     textView.setBackgroundColor(getColor(R.color.colorWhite))

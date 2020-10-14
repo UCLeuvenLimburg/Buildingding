@@ -19,4 +19,8 @@
     <string name="settings_option_language">Taal</string>
     <string name="settings_option_start_choice">Startkeuze</string>
     <string name="settings_option_route_display">Routeweergave</string>
+    <string name="direction_first">Ga naar de </string>
+    <string name="direction_second">Vervolgens, wandel verder tot de </string>
+    <string name="direction_third">Ga nu naar de </string>
+    <string name="direction_fourth">Ga verder door tot de </string>
 </resources>
