@@ -23,4 +23,5 @@
     <string name="direction_second">Vervolgens, wandel verder tot de </string>
     <string name="direction_third">Ga nu naar de </string>
     <string name="direction_fourth">Ga verder door tot de </string>
+    <string name="splash_screen_alt_text">Splash screen voor de app</string>
 </resources>
