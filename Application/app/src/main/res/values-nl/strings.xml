@@ -24,4 +24,8 @@
     <string name="direction_second">Vervolgens, wandel verder tot de </string>
     <string name="direction_third">Ga nu naar de </string>
     <string name="direction_fourth">Ga verder door tot de </string>
+    <string name="splash_screen_alt_text">Splash screen voor de app</string>
+    <string name="about_application_text">Deze applicatie helpt\nu om uw weg te vinden\n op Campus Proximus</string>
+    <string name="about_opdracht_text">Afstudeerproject\n2020\nUCLL</string>
+    <string name="about_team_text">Hamid Khodayari\nThomas Nelen\nJaron Trossaert\nJohan Molenberghs</string>
 </resources>
