@@ -70,8 +70,8 @@ object LocationRepository : Throwable() {
 
     fun getRealLocations(): MutableSet<Location> {
         locations.first().name.contains("X", false)
-        return locations.filter {
-            !it.name.contains("X", false)
+        return locations.filterNot {
+            it.name.contains("X", false)
         }.toMutableSet()
     }
 
