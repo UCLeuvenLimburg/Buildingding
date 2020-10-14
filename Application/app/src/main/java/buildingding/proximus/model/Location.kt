@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger
 class Location(val name: String, val floor: Floor) {
     val id: Int
     var distance = Int.MAX_VALUE
-    private var neighbours: MutableMap<Location, Int> = HashMap()
+    val neighbours: MutableMap<Location, Int> = HashMap()
 
     fun getAdjacentNeighbourDistance(node: Location): Int {
         return neighbours[node]!!
@@ -13,10 +13,6 @@ class Location(val name: String, val floor: Floor) {
 
     fun addDestination(destination: Location, distance: Int) {
         neighbours[destination] = distance
-    }
-
-    fun getNeighbours(): Map<Location, Int> {
-        return neighbours
     }
 
     override fun toString(): String {

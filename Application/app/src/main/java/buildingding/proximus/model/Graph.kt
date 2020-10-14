@@ -8,7 +8,7 @@ class Graph(private val nodes: HashMap<Int, Location>) {
             val ni: Location? = nodes[(i + 1)]
             for (j in priorityQueue[i].indices) {
                 val nj: Location? = nodes[(j + 1)]
-                if (!ni!!.getNeighbours().containsKey(nj)) {
+                if (!ni!!.neighbours.containsKey(nj)) {
                     priorityQueue[i][j] = 0
                 } else {
                     priorityQueue[i][j] = nj?.let { ni.getAdjacentNeighbourDistance(it) }!!
