@@ -17,7 +17,7 @@ class ChooseStartChoice : AppCompatActivity() {
         populateStartChoices()
     }
 
-    private fun populateStartChoices(){
+    private fun populateStartChoices() {
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         enumValues<StartChoice>().forEach {
             val textView = TextView(this)
@@ -27,7 +27,7 @@ class ChooseStartChoice : AppCompatActivity() {
             textView.gravity = Gravity.CENTER
             textView.setBackgroundColor(getColor(R.color.colorWhite))
             textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
-            textView.setPadding(0,24,0,24)
+            textView.setPadding(0, 24, 0, 24)
             textView.setOnClickListener {
                 val intent = Intent(this@ChooseStartChoice, MenuActivity::class.java)
                 SettingsRepository.startChoice = StartChoice.valueOf(choice)

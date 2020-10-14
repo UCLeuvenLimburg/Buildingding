@@ -17,7 +17,7 @@ class ChooseRouteDisplay : AppCompatActivity() {
         populateList()
     }
 
-    private fun populateList(){
+    private fun populateList() {
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         enumValues<RouteDisplay>().forEach {
             val textView = TextView(this)

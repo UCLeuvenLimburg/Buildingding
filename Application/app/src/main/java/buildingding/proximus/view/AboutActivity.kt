@@ -1,7 +1,7 @@
 package buildingding.proximus.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 
 class AboutActivity : AppCompatActivity() {

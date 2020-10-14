@@ -1,10 +1,10 @@
 package buildingding.proximus.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.RouteDisplay
 import buildingding.proximus.model.StartChoice
@@ -63,9 +63,9 @@ class NavigationActivity : AppCompatActivity() {
         }
 
         if (intent.hasExtra("startPosition")) buttonStartPosition.text =
-            intent.getStringExtra("startPosition")
+                intent.getStringExtra("startPosition")
         if (intent.hasExtra("endPosition")) buttonEndPosition.text =
-            intent.getStringExtra("endPosition")
+                intent.getStringExtra("endPosition")
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

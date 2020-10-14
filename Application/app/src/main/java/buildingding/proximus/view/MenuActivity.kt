@@ -1,9 +1,9 @@
 package buildingding.proximus.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 
 class MenuActivity : AppCompatActivity() {
@@ -14,7 +14,7 @@ class MenuActivity : AppCompatActivity() {
         initiateMenuButtons()
     }
 
-    private fun initiateMenuButtons () {
+    private fun initiateMenuButtons() {
         val buttonNavigation: Button = findViewById(R.id.button_navigation)
         buttonNavigation.setOnClickListener {
             val intent = Intent(this@MenuActivity, NavigationActivity::class.java)

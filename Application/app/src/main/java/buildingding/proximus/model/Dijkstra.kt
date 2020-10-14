@@ -76,9 +76,9 @@ class Dijkstra(matrix: Array<IntArray>?) {
         for (i in res[0].indices) {
             if (i + 1 != startLocation) {
                 if (res[0][i] == Int.MAX_VALUE) {
-                    uit += """There is no path from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()}"""
+                    uit += """There is no path from ${nodes[startLocation]!!.name} to ${nodes[i + 1]!!.name}"""
                 } else {
-                    uit += """Shortest distance from ${nodes[startLocation]!!.name.toString()} to ${nodes[i + 1]!!.name.toString()} = ${res[0][i]}"""
+                    uit += """Shortest distance from ${nodes[startLocation]!!.name} to ${nodes[i + 1]!!.name} = ${res[0][i]}"""
                     uit += "via "
                     val j = i + 1
                     val pad = findPathString(startLocation, j, res, nodes)

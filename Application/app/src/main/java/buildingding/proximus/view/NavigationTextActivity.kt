@@ -1,10 +1,10 @@
 package buildingding.proximus.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Dijkstra
 import buildingding.proximus.model.Graph
@@ -17,14 +17,14 @@ class NavigationTextActivity : AppCompatActivity() {
         setContentView(R.layout.activity_navigation_text)
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
-                ?.forEach{
+                ?.forEach {
                     val textView = TextView(this)
                     textView.text = it
                     textView.textSize = 24f
                     textView.gravity = Gravity.CENTER
                     textView.setBackgroundColor(getColor(R.color.colorWhite))
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
-                    textView.setPadding(0,24,0,24)
+                    textView.setPadding(0, 24, 0, 24)
                     linearLayoutLocations.addView(textView)
                 }
     }

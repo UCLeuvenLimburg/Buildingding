@@ -1,20 +1,12 @@
 package buildingding.proximus.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.Gravity
-import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.view.marginTop
-import androidx.core.view.setPadding
-import androidx.core.view.updatePadding
-import androidx.core.widget.doOnTextChanged
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
-import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
 
 class ChooseLocationsActivity : AppCompatActivity() {
@@ -25,11 +17,11 @@ class ChooseLocationsActivity : AppCompatActivity() {
         populateLocationList()
     }
 
-    private fun populateLocationList(){
-        val chosenStartLocation: String? = if (intent.hasExtra("startPosition"))  intent.getStringExtra("startPosition") else ""
+    private fun populateLocationList() {
+        val chosenStartLocation: String? = if (intent.hasExtra("startPosition")) intent.getStringExtra("startPosition") else ""
         val chosenEndLocation: String? = if (intent.hasExtra("endPosition")) intent.getStringExtra("endPosition") else ""
         val target: String? = intent.getStringExtra("target")
-        val linearLayoutLocations:LinearLayout = findViewById(R.id.scrollViewLayout)
+        val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
 
         LocationRepository.locations.forEach {
             val textView = TextView(this)
@@ -39,7 +31,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
             textView.gravity = Gravity.CENTER
             textView.setBackgroundColor(getColor(R.color.colorWhite))
             textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
-            textView.setPadding(0,24,0,24)
+            textView.setPadding(0, 24, 0, 24)
             textView.setOnClickListener {
                 val intent = Intent(this@ChooseLocationsActivity, NavigationActivity::class.java)
                 if (chosenStartLocation!!.isNotEmpty()) intent.putExtra("startPosition", chosenStartLocation)
@@ -50,7 +42,6 @@ class ChooseLocationsActivity : AppCompatActivity() {
             linearLayoutLocations.addView(textView)
         }
     }
-
 
 
 }

@@ -1,9 +1,9 @@
 package buildingding.proximus.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Floor
 import buildingding.proximus.model.Location
