@@ -23,8 +23,8 @@ class Dijkstra(matrix: Array<IntArray>?) {
 
     private fun algorithm(startLocation: Int): Array<IntArray> {
         val res = initMatrixDijkstra(startLocation)
-        println("Initialization matrix: \n")
-        printIntMatrix(res)
+        /*println("Initialization matrix: \n")
+        printIntMatrix(res)*/
         var ok = false
         while (!ok) {
             var indexSmallestJ = 0
@@ -71,8 +71,8 @@ class Dijkstra(matrix: Array<IntArray>?) {
     fun calculatePaths(startLocation: Int, nodes: HashMap<Int, Location>): String {
         var uit = ""
         val res = algorithm(startLocation)
-        println("Evaluation matrix: \n")
-        printIntMatrix(res)
+        /*println("Evaluation matrix: \n")
+        printIntMatrix(res)*/
         for (i in res[0].indices) {
             if (i + 1 != startLocation) {
                 if (res[0][i] == Int.MAX_VALUE) {
@@ -94,8 +94,8 @@ class Dijkstra(matrix: Array<IntArray>?) {
     fun getPath(startLocation: Int, destination: Int, locations: HashMap<Int, Location>): List<String?>? {
         var out: List<String?> = ArrayList()
         val matrix = algorithm(startLocation)
-        println("Evaluation matrix: \n")
-        printIntMatrix(matrix)
+        /*println("Evaluation matrix: \n")
+        printIntMatrix(matrix)*/
         for (i in matrix[0].indices) {
             if (i + 1 != startLocation) {
                 if (matrix[0][i] != Int.MAX_VALUE) {
