@@ -5,6 +5,7 @@ import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.marginLeft
 import buildingding.proximus.R
 import buildingding.proximus.model.Dijkstra
 import buildingding.proximus.model.Graph
@@ -27,7 +28,10 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.gravity = Gravity.CENTER
                     textView.setBackgroundColor(getColor(R.color.colorWhite))
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
-                    textView.setPadding(0, 24, 0, 24)
+                    textView.setPadding(24, 24, 24, 24)
+                    val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
+                    params.setMargins(36, 0,36,0)
+                    textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
     }
