@@ -1,0 +1,68 @@
+:nofooter:
+
+image:https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/225px-Git-logo.svg.png[alt="git logo.",width=75,height=75,float=left]
+
+Git
+------
+
+*Git* is a an open source distributed version control system.
+
+Git Features
+~~~~~~
+
+Git allows you to have multiple local branches, that can be entirely independent of each other. When pushing to the remote, you are not required to push all of your branches. Git is fast as most of the operations are performed locally. For this reason it has a speed advantage on centralized systems that constantly have to communicate with a server.
+
+Branches
+^^^^^^^^^
+
+For this project we will use four main branches. Master for fully ready releases to the public. Develop for the development of new modules to the project. Hotfix will be used to fix bugs on already created modules and lastly thesis for the documentation of the project.
+
+
+GitHub
+------
+*Git* is a platform that provides hosting for software development and version control using Git. it uses the functionality of Git, added with features of it's own.
+
+GitHub Features
+~~~~~~
+
+Issues
+^^^^^^^^^
+
+Issues are used to track todos, bugs, feature requests, and more. As issues are created, they’ll appear here in a searchable and filterable list. Issues support most image and file types for attachments.
+https://github.com/UCLeuvenLimburg/Buildingding/issues 
+
+Pull Requests
+^^^^^^^^^
+
+Pull requests create the possibility to make potential changes to a branch or repository on GitHub. These potential changes can be reviewed with collaborators before they are merged into the base branch. 
+
+Actions
+^^^^^^^^^
+
+Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow template to get started.
+https://github.com/UCLeuvenLimburg/Buildingding/actions/new
+
+Actions can also be used to automate certain parts in the process, or execute certain behaviour when a trigger condition is met. 
+
+Wiki
+^^^^^^^^^
+
+The Wiki on GitHub help you present in-depth information about your project. These's wiki's can be written in any format supported by GitHub MarkUp. 
+
+Projects
+^^^^^^^^^
+
+Projects allow tasks to be coordinated, tracked and updated in once central place, namely GitHub. Issues can be used to implement new features or fix bugs. These can then be assigned to members of the teams. A project can give an overview very similar to a typical Kanban board.
+
+Sources
+~~~~~~
+https://www.idalko.com/jira-github-integration/ 
+https://nvie.com/posts/a-successful-git-branching-model/ 
+https://www.atlassian.com/git/tutorials/using-branches
+https://allenan.com/git-branch-naming-conventions/
+https://guides.github.com/features/wikis/
+https://github.com/features/project-management
+https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request
+https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests
+https://en.wikipedia.org/wiki/GitHub
+https://git-scm.com/
