@@ -23,7 +23,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
         val target: String? = intent.getStringExtra("target")
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
 
-        LocationRepository.locations.forEach {
+        LocationRepository.getRealLocations().forEach {
             val textView = TextView(this)
             val locationName = it.name
             textView.text = locationName

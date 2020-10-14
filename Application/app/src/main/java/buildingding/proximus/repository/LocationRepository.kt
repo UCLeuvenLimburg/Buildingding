@@ -67,4 +67,15 @@ object LocationRepository : Throwable() {
         locations.removeIf { !floors.contains(it.floor) }
         return this
     }
+
+    fun getRealLocations(): MutableSet<Location> {
+        locations.first().name.contains("X", false)
+        return locations.filter {
+            !it.name.contains("X", false)
+        }.toMutableSet()
+    }
+
+    fun getRealLocationsNames(): List<String> {
+        return getRealLocations().map { it -> it.name }
+    }
 }

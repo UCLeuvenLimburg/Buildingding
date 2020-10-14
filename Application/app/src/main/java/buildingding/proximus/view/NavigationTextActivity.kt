@@ -17,7 +17,8 @@ class NavigationTextActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_text)
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
-        calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
+        val wholeRoute = calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
+        var filteredRoute = wholeRoute?.filter { LocationRepository.getRealLocationsNames().contains(it) }
                 ?.forEach {
                     val textView = TextView(this)
                     textView.text = TextDirections.getNextDirection(it)
