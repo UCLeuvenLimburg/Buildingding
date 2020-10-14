@@ -33,6 +33,7 @@ class ChooseStartChoice : AppCompatActivity() {
                 val intent = Intent(this@ChooseStartChoice, MenuActivity::class.java)
                 SettingsRepository.startChoice = StartChoice.valueOf(choice)
                 startActivity(intent)
+                finish()
             }
             linearLayoutLocations.addView(textView)
         }

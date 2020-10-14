@@ -17,10 +17,10 @@ class ChooseLanguageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_language)
         setTitle(R.string.settings_option_language)
-        populateStartChoices()
+        populateLanguages()
     }
 
-    private fun populateStartChoices() {
+    private fun populateLanguages() {
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         enumValues<Language>().forEach {
             val textView = TextView(this)
@@ -41,6 +41,7 @@ class ChooseLanguageActivity : AppCompatActivity() {
                 SettingsRepository.language = Language.valueOf(choice)
                 initiateDirections()
                 startActivity(intent)
+                finish()
             }
             linearLayoutLocations.addView(textView)
         }
