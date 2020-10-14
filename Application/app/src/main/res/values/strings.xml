@@ -24,4 +24,7 @@
     <string name="direction_third">Now go to the </string>
     <string name="direction_fourth">Continue until the </string>
     <string name="splash_screen_alt_text">Splash screen for the app</string>
+    <string name="about_application_text">This application helps\nto guide you around\nCampus Proximus</string>
+    <string name="about_opdracht_text">graduation project\nUCLL\n2020</string>
+    <string name="about_team_text">Hamid Khodayari\nThomas Nelen\nJaron Trossaert\nJohan Molenberghs</string>
 </resources>
