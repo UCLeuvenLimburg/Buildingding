@@ -9,12 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Language
 import buildingding.proximus.repository.SettingsRepository
+import buildingding.proximus.repository.TextDirections
 import java.util.*
 
 class ChooseLanguageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_language)
+        setTitle(R.string.settings_option_language)
         populateStartChoices()
     }
 
@@ -37,9 +39,16 @@ class ChooseLanguageActivity : AppCompatActivity() {
                 config.locale = locale
                 resources.updateConfiguration(config, resources.displayMetrics)
                 SettingsRepository.language = Language.valueOf(choice)
+                initiateDirections()
                 startActivity(intent)
             }
             linearLayoutLocations.addView(textView)
         }
+    }
+
+    private fun initiateDirections() {
+        val directions = listOf<String>(getString(R.string.direction_first), getString(R.string.direction_second), getString(R.string.direction_third),getString(R.string.direction_fourth))
+        TextDirections.sentences.clear()
+        TextDirections.sentences.addAll(directions)
     }
 }

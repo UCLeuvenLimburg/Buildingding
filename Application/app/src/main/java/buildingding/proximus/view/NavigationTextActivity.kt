@@ -16,6 +16,7 @@ class NavigationTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_text)
+        setTitle(R.string.title_text_navigation)
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         val wholeRoute = calculatePath(intent.getStringExtra("startPosition"), intent.getStringExtra("endPosition"))
         var filteredRoute = wholeRoute?.filter { LocationRepository.getRealLocationsNames().contains(it) }

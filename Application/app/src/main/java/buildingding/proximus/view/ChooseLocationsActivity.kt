@@ -15,6 +15,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_locations)
         populateLocationList()
+        setTitle(R.string.title_choose_locations)
     }
 
     private fun populateLocationList() {

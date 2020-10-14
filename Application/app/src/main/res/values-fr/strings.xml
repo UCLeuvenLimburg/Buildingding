@@ -13,6 +13,7 @@
     <string name="end_position_text">POSITION DE TERMINATION</string>
     <string name="title_about">SUR</string>
     <string name="title_settings">Paramètres de l\'application</string>
+    <string name="title_navigation">Navigation</string>
     <string name="title_text_navigation">Navigation textuelle</string>
     <string name="title_2D_navigation">Carte</string>
     <string name="title_choose_locations">Choisissez un emplacement</string>

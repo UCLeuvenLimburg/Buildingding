@@ -15,6 +15,7 @@ class ChooseStartChoice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_start_choice)
         populateStartChoices()
+        setTitle(R.string.settings_option_start_choice)
     }
 
     private fun populateStartChoices() {

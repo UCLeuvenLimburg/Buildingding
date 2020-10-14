@@ -15,6 +15,7 @@ class ChooseRouteDisplay : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_locations)
         populateList()
+        setTitle(R.string.settings_option_route_display)
     }
 
     private fun populateList() {

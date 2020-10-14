@@ -13,6 +13,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         populateSettings()
+        setTitle(R.string.title_settings)
     }
 
     private fun populateSettings() {
