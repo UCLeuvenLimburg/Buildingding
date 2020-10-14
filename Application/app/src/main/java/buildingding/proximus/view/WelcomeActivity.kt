@@ -1,13 +1,14 @@
 package buildingding.proximus.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
 import buildingding.proximus.model.Floor
 import buildingding.proximus.model.Location
 import buildingding.proximus.repository.LocationRepository
+import buildingding.proximus.repository.TextDirections
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var mHandler: Handler
@@ -17,6 +18,7 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
         initiateLocations()
+        initiateTextDirections()
         startMenuActivity()
     }
 
@@ -25,9 +27,14 @@ class WelcomeActivity : AppCompatActivity() {
         return LocationRepository
                 .readLocationsFromCSV(application.assets.open("locations.csv"))
                 .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
+                .removeAllLocationsExceptFromFloors(allowed)
                 .locations.sortedBy { it.name }.toList()
-                //.removeAllLocationsExceptFromFloors(allowed)
 
+    }
+
+    private fun initiateTextDirections() {
+        val directions = listOf<String>(getString(R.string.direction_first), getString(R.string.direction_second), getString(R.string.direction_third),getString(R.string.direction_fourth))
+        TextDirections.sentences.addAll(directions)
     }
 
     private fun startMenuActivity() {

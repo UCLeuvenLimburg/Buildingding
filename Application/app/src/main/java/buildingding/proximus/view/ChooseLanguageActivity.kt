@@ -18,7 +18,7 @@ class ChooseLanguageActivity : AppCompatActivity() {
         populateStartChoices()
     }
 
-    private fun populateStartChoices(){
+    private fun populateStartChoices() {
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         enumValues<Language>().forEach {
             val textView = TextView(this)

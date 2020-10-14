@@ -19,4 +19,8 @@
     <string name="settings_option_language">Language</string>
     <string name="settings_option_start_choice">Start choice</string>
     <string name="settings_option_route_display">Route display</string>
+    <string name="direction_first">Go to the </string>
+    <string name="direction_second">Then, walk on to the </string>
+    <string name="direction_third">Now go to the </string>
+    <string name="direction_fourth">Continue until the </string>
 </resources>
