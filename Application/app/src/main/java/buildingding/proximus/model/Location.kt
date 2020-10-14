@@ -1,9 +1,22 @@
 package buildingding.proximus.model
 
-// voorlopig met lege lijst van neighbours
-class Location(val name: String, val floor: Floor, val neighbours: List<Location> = emptyList()) {
-    fun getNeighbour(name: String): Location? {
-        return neighbours.find { neighbour -> neighbour.name === name }
+import java.util.concurrent.atomic.AtomicInteger
+
+class Location(val name: String, val floor: Floor) {
+    val id: Int
+    var distance = Int.MAX_VALUE
+    private var neighbours: MutableMap<Location, Int> = HashMap()
+
+    fun getAdjacentNeighbourDistance(node: Location): Int {
+        return neighbours[node]!!
+    }
+
+    fun addDestination(destination: Location, distance: Int) {
+        neighbours[destination] = distance
+    }
+
+    fun getNeighbours(): Map<Location, Int> {
+        return neighbours
     }
 
     override fun toString(): String {
@@ -26,6 +39,14 @@ class Location(val name: String, val floor: Floor, val neighbours: List<Location
         var result = name.hashCode()
         result = 31 * result + floor.hashCode()
         return result
+    }
+
+    companion object {
+        private val count: AtomicInteger = AtomicInteger(0)
+    }
+
+    init {
+        id = count.incrementAndGet()
     }
 
 }
