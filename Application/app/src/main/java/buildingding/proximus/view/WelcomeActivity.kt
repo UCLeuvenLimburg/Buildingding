@@ -25,8 +25,9 @@ class WelcomeActivity : AppCompatActivity() {
         return LocationRepository
                 .readLocationsFromCSV(application.assets.open("locations.csv"))
                 .readConnectionsFromCSV(application.assets.open("neighbours.csv"))
-                .removeAllLocationsExceptFromFloors(allowed)
                 .locations.sortedBy { it.name }.toList()
+                //.removeAllLocationsExceptFromFloors(allowed)
+
     }
 
     private fun startMenuActivity() {
