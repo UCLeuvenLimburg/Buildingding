@@ -19,11 +19,9 @@ class NavigationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation)
+        setTitle(R.string.title_settings)
 
         buttonStartPosition = findViewById(R.id.button_start_position)
-
-
-
         if (SettingsRepository.startChoice == StartChoice.Scan) {
             buttonStartPosition.setOnClickListener {
                 val intentIntegrator = IntentIntegrator(this@NavigationActivity)
