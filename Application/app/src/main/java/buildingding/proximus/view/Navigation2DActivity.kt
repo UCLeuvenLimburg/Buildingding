@@ -14,7 +14,7 @@ import com.devs.vectorchildfinder.VectorChildFinder
 import com.devs.vectorchildfinder.VectorDrawableCompat
 
 class Navigation2DActivity : AppCompatActivity() {
-    lateinit var imgB0: ImageView
+    private lateinit var imgB0: ImageView
     var res : List<String>? = null
     var path: VectorDrawableCompat.VFullPath? = null
     var vb0: VectorChildFinder? = null
@@ -31,20 +31,20 @@ class Navigation2DActivity : AppCompatActivity() {
     }
 
     private fun onButtonClick() {
-        var x = res?.size?.minus(1);
+        val x = res?.size?.minus(1)
         for (i in 1 until x!!) {
-            when (res!![i-1]?.substring(0, 2)) {
+            when (res!![i-1].substring(0, 2)) {
                 "B0" -> {
-                    var pathName = res!![i-1] + "_" + res!![i]
+                    val pathName = res!![i-1] + "_" + res!![i]
                     path = vb0?.findPathByName(pathName)
-                    path?.setStrokeColor(Color.RED)
-                    path?.setFillColor(Color.RED)
+                    path?.strokeColor = Color.RED
+                    path?.fillColor = Color.RED
                 }
                 else -> {
                 }
             }
         }
-        imgB0!!.invalidate()
+        imgB0.invalidate()
     }
 
 }
