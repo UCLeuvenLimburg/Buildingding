@@ -5,7 +5,7 @@ import buildingding.proximus.model.RouteDisplay
 import buildingding.proximus.model.StartChoice
 
 object SettingsRepository {
-    var language: Language = Language.Nl
+    var language: Language = Language.En
     var startChoice: StartChoice = StartChoice.List
     var routeDisplay: RouteDisplay = RouteDisplay.Text
 }

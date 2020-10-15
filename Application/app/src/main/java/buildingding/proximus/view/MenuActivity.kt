@@ -5,13 +5,26 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
+import buildingding.proximus.repository.SettingsRepository
 
 class MenuActivity : AppCompatActivity() {
+
+    private var originalLanguage = SettingsRepository.language.name
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         initiateMenuButtons()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val oldLanguage = originalLanguage
+        val newLanguage = SettingsRepository.language.name
+        if (oldLanguage != newLanguage) {
+            finish()
+            startActivity(intent)
+        }
     }
 
     private fun initiateMenuButtons() {

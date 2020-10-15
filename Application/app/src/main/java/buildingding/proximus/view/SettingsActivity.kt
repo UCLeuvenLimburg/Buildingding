@@ -7,14 +7,28 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
+import buildingding.proximus.repository.SettingsRepository
+
 
 class SettingsActivity : AppCompatActivity() {
+
+    private var originalLanguage = SettingsRepository.language.name
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         populateSettings()
         setTitle(R.string.title_settings)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val oldLanguage = originalLanguage
+        val newLanguage = SettingsRepository.language.name
+        if (oldLanguage != newLanguage) {
+            finish()
+            startActivity(intent)
+        }
     }
 
     private fun populateSettings() {
