@@ -41,7 +41,7 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
                     textView.setPadding(24, 24, 24, 24)
                     val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
-                    params.setMargins(36, 0,36,0)
+                    //params.setMargins(36, 0,36,0)
                     textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
