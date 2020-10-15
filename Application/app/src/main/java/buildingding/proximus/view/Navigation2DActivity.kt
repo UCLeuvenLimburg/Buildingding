@@ -3,13 +3,8 @@ package buildingding.proximus.view
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import buildingding.proximus.R
-import buildingding.proximus.model.Dijkstra
-import buildingding.proximus.model.Graph
-import buildingding.proximus.model.Location
-import buildingding.proximus.repository.LocationRepository
 import com.devs.vectorchildfinder.VectorChildFinder
 import com.devs.vectorchildfinder.VectorDrawableCompat
 
@@ -17,7 +12,7 @@ class Navigation2DActivity : AppCompatActivity() {
     var res : List<String>? = null
     var path: VectorDrawableCompat.VFullPath? = null
     var vb0: VectorChildFinder? = null
-    var imgB0: ImageView? = null
+    lateinit var imgB0: ImageView
     var pathS: VectorDrawableCompat.VFullPath? = null
     var pathE: VectorDrawableCompat.VFullPath? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +20,17 @@ class Navigation2DActivity : AppCompatActivity() {
         setContentView(R.layout.activity_navigation2_d)
         setTitle(R.string.title_2D_navigation)
         imgB0 = findViewById(R.id.image)
+        imgB0.setOnClickListener {
+            finish()
+        }
         vb0 = VectorChildFinder(this, R.drawable.ic_bb, imgB0)
 
         res = intent.getStringArrayListExtra("list")
-        onButtonClick()
+        colorPath()
 
     }
 
-    private fun onButtonClick() {
+    private fun colorPath() {
         var x = res?.size
         pathS = vb0?.findPathByName(res?.get(0))
         pathS?.setFillColor(Color.parseColor("#002757"))
