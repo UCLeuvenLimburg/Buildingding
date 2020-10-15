@@ -17,14 +17,15 @@ class ChooseLanguageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_language)
         setTitle(R.string.settings_option_language)
-        populateStartChoices()
+        populateLanguages()
     }
 
-    private fun populateStartChoices() {
+    private fun populateLanguages() {
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         enumValues<Language>().forEach {
             val textView = TextView(this)
-            val choice = it.name
+            val language = it.name
+            val choice = it.s
             textView.text = choice
             textView.textSize = 24f
             textView.gravity = Gravity.CENTER
@@ -34,13 +35,14 @@ class ChooseLanguageActivity : AppCompatActivity() {
             textView.setOnClickListener {
                 val intent = Intent(this@ChooseLanguageActivity, MenuActivity::class.java)
                 val config = resources.configuration
-                val locale = Locale(choice.decapitalize(Locale.ROOT))
+                val locale = Locale(language.decapitalize(Locale.ROOT))
                 Locale.setDefault(locale)
                 config.locale = locale
                 resources.updateConfiguration(config, resources.displayMetrics)
-                SettingsRepository.language = Language.valueOf(choice)
+                SettingsRepository.language = Language.valueOf(language)
                 initiateDirections()
                 startActivity(intent)
+                finish()
             }
             linearLayoutLocations.addView(textView)
         }

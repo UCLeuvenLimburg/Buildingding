@@ -9,83 +9,98 @@ import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class LocationRepositoryTest {
-    private val csvRepo = LocationRepository()
-    private val c004Test = Location("c004", Floor.C0)
-    private val c001 = Location("c001", Floor.C0)
-    private val c002 = Location("c002", Floor.C0)
-    private val c003 = Location("c003", Floor.C0)
-    private val c103Erranous = Location("c103", Floor.C2)
-    private val c103Corrected = Location("c103", Floor.C1)
-    private val listOfLocationsOnFloorC0 = listOf(c001, c002, c003)
-    private val emptyList = emptyList<Location>()
-    private val listOfAllLocations = listOf(c001, c002, c003, c103Erranous)
-    private val listOfAllLocationsWithC103Removed = listOf(c001, c002, c003)
-    private val nameOfLocation = "c103"
 
     @Before
     fun addLocations() {
-        csvRepo.readLocationsFromCSV(ClassLoader.getSystemResourceAsStream("test_locations.csv"))
+        LocationRepository.readLocationsFromCSV(ClassLoader.getSystemResourceAsStream("test_locations.csv"))
     }
 
     @Test
     fun addLocationAddsCorrectLocation() {
-        val locationCount = csvRepo.locations.size
-        csvRepo.addLocation(c004Test)
-        Assert.assertEquals(locationCount + 1, csvRepo.locations.size)
+        val locationCount = LocationRepository.locations.size
+        val locationC004 = location("c004", Floor.C0)
+        LocationRepository.locations.add(locationC004)
+        Assert.assertEquals(locationCount + 1, LocationRepository.locations.size)
+        Assert.assertTrue(LocationRepository.locations.contains(locationC004))
     }
 
     @Test
     fun addLocationWhichWasAlreadyPresentDoesNotGetAdded() {
-        csvRepo.addLocation(c004Test)
-        val locationCount = csvRepo.locations.size
-        csvRepo.addLocation(c004Test)
-        Assert.assertEquals(locationCount, csvRepo.locations.size)
+        val locationC004 = location("c004", Floor.C0)
+        Assert.assertTrue(LocationRepository.locations.add(locationC004))
+        val locationCount = LocationRepository.locations.size
+        Assert.assertFalse(LocationRepository.locations.add(locationC004))
+        Assert.assertEquals(locationCount, LocationRepository.locations.size)
     }
 
     @Test
     fun getLocationByCorrectNameReturnsExpectedLocation() {
-        csvRepo.addLocation(c004Test)
-        val actual = csvRepo.getLocationByName(c004Test.name)
-        Assert.assertEquals(c004Test, actual)
+        val locationC004 = location("c004", Floor.C0)
+        LocationRepository.locations.add(locationC004)
+        val actual = LocationRepository.getLocationByName(locationC004.name)
+        Assert.assertEquals(locationC004, actual)
     }
 
     @Test
     fun getLocationByIncorrectNameReturnsNull() {
-        Assert.assertNull(csvRepo.getLocationByName(c004Test.name))
+        val locationC004 = location("c004", Floor.C0)
+        Assert.assertNull( LocationRepository.getLocationByName(locationC004.name))
     }
 
     @Test
     fun getLocationsByCorrectFloorReturnsCorrectList() {
-        Assert.assertEquals(listOfLocationsOnFloorC0, csvRepo.getLocationsByFloor(Floor.C0))
+        val c001 = location("c001", Floor.C0)
+        val c002 = location("c002", Floor.C0)
+        val c003 = location("c003", Floor.C0)
+        val listOfLocationsOnFloorC0 = listOf(c001, c002, c003)
+        Assert.assertEquals(listOfLocationsOnFloorC0, LocationRepository.getLocationsByFloor(Floor.C0))
     }
 
     @Test
     fun getLocationsByEmptyFloorReturnsEmptyList() {
-        Assert.assertEquals(emptyList, csvRepo.getLocationsByFloor(Floor.C1))
+        val emptyList = emptyList<Location>()
+        Assert.assertEquals(emptyList, LocationRepository.getLocationsByFloor(Floor.C1))
     }
 
     @Test
     fun getAllLocationsAsList() {
-        Assert.assertEquals(listOfAllLocations, csvRepo.locations.toList())
+        val c001 = location("c001", Floor.C0)
+        val c002 = location("c002", Floor.C0)
+        val c003 = location("c003", Floor.C0)
+        val c103Erranous = location("c103", Floor.C2)
+        val listOfAllLocations = listOf(c001, c002, c003, c103Erranous)
+        Assert.assertEquals(listOfAllLocations, LocationRepository.locations.toList())
     }
 
     @Test
     fun updateLocation() {
-        Assert.assertEquals(c103Corrected, csvRepo.updateLocation(c103Corrected))
-        Assert.assertEquals(c103Corrected, csvRepo.getLocationByName(nameOfLocation))
+        val locationC103 = location("c103", Floor.C1)
+        val nameOfLocation = "c103"
+        Assert.assertEquals(locationC103, LocationRepository.updateLocation(locationC103))
+        Assert.assertEquals(locationC103, LocationRepository.getLocationByName(nameOfLocation))
     }
 
     @Test
     fun removeLocationByName() {
-        csvRepo.removeLocationByName(nameOfLocation)
-        Assert.assertEquals(listOfAllLocationsWithC103Removed, csvRepo.locations.toList())
+        val nameOfLocation = "c103"
+        val locationC103 = location("c103", Floor.C1)
+        val c001 = Location("c001", Floor.C0)
+        val c002 = Location("c002", Floor.C0)
+        val c003 = Location("c003", Floor.C0)
+        val listOfAllLocationsWithC103Removed = listOf(c001, c002, c003)
+        LocationRepository.locations.add(locationC103)
+        Assert.assertTrue(LocationRepository.locations.remove(nameOfLocation))
+        Assert.assertEquals(listOfAllLocationsWithC103Removed, LocationRepository.locations.toList())
     }
 
     @Test
     fun removeAllLocations() {
-        csvRepo.removeAllLocations()
-        Assert.assertEquals(emptyList, csvRepo.locations.toList())
+        val emptyList = emptyList<Location>()
+        LocationRepository.removeAllLocations()
+        Assert.assertEquals(emptyList, LocationRepository.locations.toList())
     }
 
-
+    private fun location(name: String, floor: Floor): Location {
+        return Location(name, floor)
+    }
 }

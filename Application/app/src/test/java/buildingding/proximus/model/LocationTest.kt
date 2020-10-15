@@ -2,36 +2,32 @@ package buildingding.proximus.model
 
 import org.junit.Assert
 import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class LocationTest {
-    private val c001Name = "c001"
-    private val c001 = Location(c001Name,Floor.C0)
-    private val c002Name = "c001"
-    private val c001OtherFloor = Location(c001Name,Floor.C1)
-    private val c002 = Location(c002Name,Floor.C0)
-
-
-    @Test
-    fun testToString() {
-        Assert.assertEquals(c001Name,c001.toString())
-    }
 
     @Test
     fun testSameLocationIsEqual() {
-        Assert.assertEquals(c001,c001)
+        val locationC001 = location("C001", Floor.C0)
+        Assert.assertEquals(locationC001, locationC001)
     }
 
     @Test
     fun testSameNameDifferentFloorIsNotEqual() {
-        Assert.assertNotEquals(c001,c001OtherFloor)
+        val locationFloorC0 = location("C001", Floor.C0)
+        val locationFloorC1 = location("C001", Floor.C1)
+        Assert.assertNotEquals(locationFloorC0, locationFloorC1)
     }
 
     @Test
     fun testSameFloorDifferentNameIsNotEqual() {
-        Assert.assertEquals(c001,c002)
+        val locationC001 = location("C001", Floor.C0)
+        val locationC002 = location("C002", Floor.C0)
+        Assert.assertEquals(locationC001, locationC002)
     }
 
+    private fun location(name: String, floor: Floor): Location {
+        return Location(name, floor)
+    }
 }

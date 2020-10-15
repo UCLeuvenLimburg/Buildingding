@@ -33,6 +33,7 @@ class ChooseRouteDisplay : AppCompatActivity() {
                 val intent = Intent(this@ChooseRouteDisplay, MenuActivity::class.java)
                 SettingsRepository.routeDisplay = RouteDisplay.valueOf(choice)
                 startActivity(intent)
+                finish()
             }
             linearLayoutLocations.addView(textView)
         }

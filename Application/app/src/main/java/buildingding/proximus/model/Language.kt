@@ -1,5 +1,5 @@
 package buildingding.proximus.model
 
-enum class Language {
-    En, Nl, Fr
+enum class Language(val s: String) {
+    En("English"), Nl("Nederlands"), Fr("Français");
 }

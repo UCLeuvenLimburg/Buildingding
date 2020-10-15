@@ -39,6 +39,7 @@ class ChooseLocationsActivity : AppCompatActivity() {
                 if (chosenEndLocation!!.isNotEmpty()) intent.putExtra("endPosition", chosenEndLocation)
                 intent.putExtra(target, locationName)
                 startActivity(intent)
+                finish()
             }
             linearLayoutLocations.addView(textView)
         }

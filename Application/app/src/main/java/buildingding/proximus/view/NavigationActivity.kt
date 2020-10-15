@@ -37,6 +37,7 @@ class NavigationActivity : AppCompatActivity() {
                 intent.putExtra("endPosition", buttonEndPosition.text)
                 intent.putExtra("target", "startPosition")
                 startActivity(intent)
+                finish()
             }
         }
 
@@ -46,6 +47,7 @@ class NavigationActivity : AppCompatActivity() {
             intent.putExtra("startPosition", buttonStartPosition.text)
             intent.putExtra("target", "endPosition")
             startActivity(intent)
+            finish()
         }
 
         buttonStartNavigation = findViewById(R.id.button_start_navigation)
