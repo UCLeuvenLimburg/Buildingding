@@ -27,4 +27,5 @@
     <string name="about_application_text">This application helps\nto guide you around\nCampus Proximus</string>
     <string name="about_opdracht_text">graduation project\nUCLL\n2020</string>
     <string name="about_team_text">Hamid Khodayari\nThomas Nelen\nJaron Trossaert\nJohan Molenberghs</string>
+    <string name="show_map">Show map</string>
 </resources>
