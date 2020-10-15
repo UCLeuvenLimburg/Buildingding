@@ -33,7 +33,7 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun initiateTextDirections() {
-        val directions = listOf<String>(getString(R.string.direction_first), getString(R.string.direction_second), getString(R.string.direction_third),getString(R.string.direction_fourth))
+        val directions = listOf<String>(getString(R.string.direction_first), getString(R.string.direction_second), getString(R.string.direction_third),getString(R.string.direction_fourth),getString(R.string.direction_fifth),getString(R.string.direction_sixth))
         TextDirections.addDirections(directions)
     }
 

@@ -23,7 +23,9 @@
     <string name="direction_first">Allez à la </string>
     <string name="direction_second">Ensuite, marchez jusqu\'à la</string>
     <string name="direction_third">Maintenant, allez à la </string>
-    <string name="direction_fourth">Continuer jusqu\'à ce que le </string>
+    <string name="direction_fourth">Continuer jusqu\'à le </string>
+    <string name="direction_fifth">Promenez-vous vers le </string>
+    <string name="direction_sixth">Ensuite, il faut passer à la </string>
     <string name="splash_screen_alt_text">Écran de démarrage pour l\'appli</string>
     <string name="about_application_text">Cette application vous aide\nà naviguer sur\nle Campus Proximus</string>
     <string name="about_opdracht_text">Projet de diplôme\n2020\nUCLL</string>
