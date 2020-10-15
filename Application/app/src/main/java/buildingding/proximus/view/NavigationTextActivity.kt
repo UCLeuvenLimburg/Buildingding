@@ -42,11 +42,18 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.setBackgroundColor(getColor(R.color.colorWhite))
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
                     textView.setPadding(24, 24, 24, 24)
+<<<<<<< HEAD
                     val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
                     params.setMargins(36, 0, 36, 0)
+=======
+                    val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
+>>>>>>> 344a7b9f0bafcd3909ca0a867966fc7fea2d558c
                     textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
+        linearLayoutLocations.setOnClickListener {
+            showMap(it)
+        }
         TextDirections.resetDirections()
     }
 
@@ -64,7 +71,7 @@ class NavigationTextActivity : AppCompatActivity() {
     }
 
     fun showMap(view: View?) {
-        val intent = Intent(this, Navigation2DActivity::class.java)
+        val intent = Intent(this@NavigationTextActivity, Navigation2DActivity::class.java)
         intent.putExtra("list", myList)
         startActivity(intent)
     }
