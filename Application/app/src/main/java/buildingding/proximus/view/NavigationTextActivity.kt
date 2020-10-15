@@ -34,6 +34,7 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
+        TextDirections.resetDirections()
     }
 
     private fun calculatePath(startLocation: String, endLocation: String): List<String?>? {
