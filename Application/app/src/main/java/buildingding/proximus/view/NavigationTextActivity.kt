@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginLeft
 import buildingding.proximus.R
 import buildingding.proximus.model.Dijkstra
 import buildingding.proximus.model.Graph
@@ -17,22 +16,25 @@ import buildingding.proximus.repository.TextDirections
 
 
 class NavigationTextActivity : AppCompatActivity() {
-    var myList = ArrayList<String>()
+    private var myList = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_text)
         setTitle(R.string.title_text_navigation)
         val linearLayoutLocations: LinearLayout = findViewById(R.id.scrollViewLayout)
         val wholeRoute = calculatePath(
-            intent.getStringExtra("startPosition"), intent.getStringExtra(
+                intent.getStringExtra("startPosition"), intent.getStringExtra(
                 "endPosition"
-            )
+        )
         )
         myList = wholeRoute as ArrayList<String>
-        var filteredRoute = wholeRoute?.filter { LocationRepository.getRealLocationsNames().contains(
-            it
-        ) }
-                ?.forEach {
+        val filteredRoute = wholeRoute.filter {
+            LocationRepository.getRealLocationsNames().contains(
+                    it
+            )
+        }
+                .drop(1)
+                .forEach {
                     val textView = TextView(this)
                     textView.text = TextDirections.getNextDirection(it)
                     textView.textSize = 24f
@@ -40,8 +42,8 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.setBackgroundColor(getColor(R.color.colorWhite))
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
                     textView.setPadding(24, 24, 24, 24)
-                    val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
-                    params.setMargins(36, 0,36,0)
+                    val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
+                    params.setMargins(36, 0, 36, 0)
                     textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
@@ -60,6 +62,7 @@ class NavigationTextActivity : AppCompatActivity() {
         val end = LocationRepository.getLocationByName(endLocation)?.id
         return start?.let<Int, List<String?>?> { end?.let { it1 -> dijkstra.getPath(it, it1, nodes) } }
     }
+
     fun showMap(view: View?) {
         val intent = Intent(this, Navigation2DActivity::class.java)
         intent.putExtra("list", myList)
