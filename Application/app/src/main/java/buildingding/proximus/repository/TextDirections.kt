@@ -4,7 +4,7 @@ package buildingding.proximus.repository
 import java.util.*
 
 object TextDirections {
-    private val initialSentences: Queue<String> = LinkedList<String>()
+    val initialSentences: Queue<String> = LinkedList<String>()
     val sentences: Queue<String> = LinkedList<String>()
 
     fun getNextDirection(location: String?): String {
