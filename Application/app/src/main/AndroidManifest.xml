@@ -21,7 +21,6 @@
         <activity android:name=".view.SettingsActivity" android:theme="@style/ThemeActionBar" android:label="@string/title_settings"/>
         <activity android:name=".view.ChooseLanguageActivity" android:theme="@style/ThemeActionBar" android:label="@string/settings_option_language"/>
         <activity android:name=".view.ChooseStartChoice" android:theme="@style/ThemeActionBar" android:label="@string/settings_option_start_choice"/>
-        <activity android:name=".view.ChooseRouteDisplay" android:theme="@style/ThemeActionBar" android:label="@string/settings_option_route_display"/>
         <activity android:name=".view.NavigationActivity" />
         <activity android:name=".view.MenuActivity" />
         <activity android:name=".view.WelcomeActivity">
