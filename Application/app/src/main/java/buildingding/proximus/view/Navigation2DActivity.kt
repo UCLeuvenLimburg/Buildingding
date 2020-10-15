@@ -14,20 +14,17 @@ import com.devs.vectorchildfinder.VectorChildFinder
 import com.devs.vectorchildfinder.VectorDrawableCompat
 
 class Navigation2DActivity : AppCompatActivity() {
+    lateinit var imgB0: ImageView
     var res : List<String>? = null
     var path: VectorDrawableCompat.VFullPath? = null
     var vb0: VectorChildFinder? = null
-    var vc0: VectorChildFinder? = null
-    var imgB0: ImageView? = null
-    var imgC0: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation2_d)
         setTitle(R.string.title_2D_navigation)
         imgB0 = findViewById(R.id.image)
-        imgC0 = findViewById(R.id.image1)
         vb0 = VectorChildFinder(this, R.drawable.ic_bb, imgB0)
-        vc0 = VectorChildFinder(this, R.drawable.c0, imgC0)
+
         res = intent.getStringArrayListExtra("list")
         onButtonClick()
 
@@ -43,19 +40,11 @@ class Navigation2DActivity : AppCompatActivity() {
                     path?.setStrokeColor(Color.RED)
                     path?.setFillColor(Color.RED)
                 }
-                "C0" -> {
-
-                    path = vc0?.findPathByName(res!![i])
-                    path?.setStrokeColor(Color.RED)
-                    path?.setFillColor(Color.RED)
-
-                }
                 else -> {
                 }
             }
         }
         imgB0!!.invalidate()
-        imgC0!!.invalidate()
     }
 
 }

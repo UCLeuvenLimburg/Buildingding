@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginLeft
 import buildingding.proximus.R
 import buildingding.proximus.model.Dijkstra
 import buildingding.proximus.model.Graph
@@ -41,10 +40,12 @@ class NavigationTextActivity : AppCompatActivity() {
                     textView.setTextColor(getColor(R.color.colorUcllDarkBlue))
                     textView.setPadding(24, 24, 24, 24)
                     val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
-                    //params.setMargins(36, 0,36,0)
                     textView.layoutParams = params
                     linearLayoutLocations.addView(textView)
                 }
+        linearLayoutLocations.setOnClickListener {
+            showMap(it)
+        }
         TextDirections.resetDirections()
     }
 
@@ -60,8 +61,9 @@ class NavigationTextActivity : AppCompatActivity() {
         val end = LocationRepository.getLocationByName(endLocation)?.id
         return start?.let<Int, List<String?>?> { end?.let { it1 -> dijkstra.getPath(it, it1, nodes) } }
     }
+
     fun showMap(view: View?) {
-        val intent = Intent(this, Navigation2DActivity::class.java)
+        val intent = Intent(this@NavigationTextActivity, Navigation2DActivity::class.java)
         intent.putExtra("list", myList)
         startActivity(intent)
     }

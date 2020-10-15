@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:id="@+id/scrollViewLayout"
             android:layout_width="match_parent"
@@ -26,12 +27,4 @@
             android:showDividers="middle" />
 
     </ScrollView>
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/show_map"
-        android:onClick="showMap"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="5dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
