@@ -8,8 +8,8 @@
 
     <ScrollView
         android:id="@+id/scrollLocations"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="415dp"
+        android:layout_height="610dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,4 +24,12 @@
             android:showDividers="middle" />
 
     </ScrollView>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/show_map"
+        android:onClick="showMap"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="5dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

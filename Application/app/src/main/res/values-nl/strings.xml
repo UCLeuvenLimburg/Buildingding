@@ -28,4 +28,5 @@
     <string name="about_application_text">Deze applicatie helpt\nu om uw weg te vinden\n op Campus Proximus</string>
     <string name="about_opdracht_text">Afstudeerproject\n2020\nUCLL</string>
     <string name="about_team_text">Hamid Khodayari\nThomas Nelen\nJaron Trossaert\nJohan Molenberghs</string>
+    <string name="show_map">Kaart weergeven</string>
 </resources>
