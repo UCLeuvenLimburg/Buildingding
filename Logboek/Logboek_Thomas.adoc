@@ -94,5 +94,5 @@ Voornaam Achternaam; r0123456; 3TI/SO3
 |16/10 12u00|1u|{t}|thesis: in orde brengen backlog
 |16/10 14u30|4u|{t}|thesis: installatiehandleiding, en diverse documenten in orde brengen
 |16/10 19u15|1u|{t}|thesis: Peer assessment.
-|16/10 21u00|1.5u|{ht}|thesis: Verbeteren einddocument
+|16/10 21u00|2u|{ht}|thesis: Verbeteren einddocument
 |=======================

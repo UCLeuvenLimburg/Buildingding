@@ -144,7 +144,7 @@ There are on average one thousand people present on campus, of which 50 or more 
 
 * CO-2: The system shall use Kotlin as the main programming language.
 
-* CO-3: The app utilizes the Wi-Fi Round Trip Time Android standard to help localize the user with Time of Flight ranging capabilities.
+* CO-3: The app utilises the Wi-Fi Round Trip Time Android standard to help localise the user with Time of Flight ranging capabilities.
 
 ==== 1.3.4. Assumptions
 * The operation of the app depends on the usage consistency of the current Cisco access points which broadcast their BSSID.
@@ -287,7 +287,7 @@ so that I *can see* a text-based navigation between two points.
 *Scenario 2: Cancelling the navigation details page* +
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
-*Then* the application returns to previous page.
+*Then* the applications returns to previous page.
 
 ==== 3.2.2. Wireframes
 image::usb02_wireframe.png[alt="User Story 2 Wireframe."]
@@ -323,13 +323,13 @@ in _'Start point'_ +
 *Scenario 2: Utility selection from the list* +
 *Given* a user +
 *When* the user selects the Utility +
-*Then* the application returns the text-based navigation
+*Then* the applications returns the text-based navigation
 detail page for the nearest by chosen Utility.
 
 *Scenario 3: Canceling the navigation details page* +
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
-*Then* the application returns back to Find Nearest by page.
+*Then* the applications returns back to Find Nearest by page.
 
 ==== 3.3.2. Wireframes
 image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
@@ -588,18 +588,18 @@ AGENDA: Demo Applicatie, Kleine aanpassingen & voorbreiding afstudeerproject pre
 Buildingding is a Proof of Concept application made for Campus Proximus to help people navigate through the campus. The application is not yet available on the Play Store.
 
 ==== 6.1.2. Git and GitHub
-First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be present in your system.
+First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be installed.
 
 image::git.png[500, 500]
 
-After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally.
+After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally. 
 
 ----
 git clone https://github.com/UCLeuvenLimburg/Buildingding.git
 ----
 
 ==== 6.1.3. Android Studio
-Now that we have our application on our device, we still need an emulator for a mobile device and a way to run it. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program.
+Now that we have our application on our device, we still need a way to run it and an emulator for a mobile device. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program. 
 
 image::android_studio.png[500, 500]
 
@@ -610,7 +610,7 @@ image::android_studio_open_project.png[500, 500]
 ==== 6.1.4. Running the application
 To run the project we need an emulator, which we can easily set-up in Android studio. Locate the AVD manager. Next choose create a new virtual device. Any device should work, but we recommend the Pixel 3a. After selecting a device click next, and choose the release "Q" with API level 29.
 
-Now that we have done all these steps we can run the application by clicking the green triangle.
+Now that we have a device selected. Now that we have done all these steps we can run the application by clicking the green triangle.
 
 image::start.png[500, 500]
 
@@ -618,11 +618,11 @@ image::start.png[500, 500]
 
 ==== 6.2.1. Buildingding: purpose
 
-The purpose of Buildingding is to help the user navigate Campus Proximus. Which is especially helpful with the standing circulation planning due to the pandemic concerning 'COVID-19'. This application was written as a graduation project for UCLL Applied Informatics in 2020 by order of Dr. Vogels F.
+The purpose of Buildingding is to help the user navigate Campus Proximus. Which is especially helpfull with the standing cirucaltion planning due to the pandemic concerning 'COVID-19'. This applicatoin was written as a graduation project for UCLL Applied Informatics in 2020 by order of Dr Vogels F.
 
-The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code present at the current location to set the starting location, but still has to choose the destination from a list.
+The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code presetn at the current location to set the starting location, but still has to choose the destination from a list.
 
-Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualization on a map.
+Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualisation on a map.
 
 The application does not use real-time tracking.
 
@@ -644,7 +644,7 @@ You can start the application by tapping the Buildingding icon on your screen. (
 
 image:1_homescreen.png[width=100%, scalewidth=40cm]
 
-If the icon is missing, you can search for Buildingding by
+If the icon is missing, you can search for Buildingding by 
 
 . Swiping 'up' on your main screen.
 . Entering the term 'buildingding' in the searchbar
@@ -652,7 +652,7 @@ If the icon is missing, you can search for Buildingding by
 
 image:2_1_appscreen.png[width=100%, scalewidth=40cm] image:2_2_appscreen.png[width=100%, scalewidth=40cm] image:2_3_appscreen.png[width=100%, scalewidth=40cm]
 
-You will then be shown a welcome screen for two seconds after which you will enter the main menu
+You will then be shown a welcome screen for 2 seconds after which you will enter the main menu
 
 image:3_1_splashscreen.png[width=100%, scalewidth=40cm] image:3_2_homescreen.png[width=100%, scalewidth=40cm]
 
@@ -672,11 +672,11 @@ To choose a start location you have to tap the button marked "START POSITION"
 
 image:5_1_navigation_start_position.png[width=100%, scalewidth=40cm]
 
-Depending on the applied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds your previous choice.
+Depending on the apllied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds you previous choice.
 
 ====== 6.2.4.1.1. Choosing a starting location from the list
 
-If the setting "List" is applied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
+If the setting "List" is apllied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
 
 image:5_2_start_location_list.png[width=100%, scalewidth=40cm] image:5_3_start_location_list_scrolled.png[width=100%, scalewidth=40cm] image:5_5_chosen_start.png[width=100%, scalewidth=40cm]
 
@@ -700,21 +700,18 @@ image:5_8_start_navigation.png[width=100%, scalewidth=40cm]
 
 After tapping this button you will see a scrollable list of locations, which you have to follow to reach your destination. If you tap a location in this list, you will be shown a map of the floor with the highlighted route. The starting location will be marked green and the destination will be red. If you tap this map, you will return to the list overview.
 
-image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm]
+image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm] 
 image:6_8_2D_navigation_tilted.png[]
 
 <<<
 
 ==== 6.2.5. Changing the Settings
 
-To change the settings you should tap the button marked "SETTINGS" on the main menu.
-To reach the main menu, you can use the back button on your mobile device.
-(image may differ on your device.) It could be possible you need to tap the back button multiple times.
+To change the settings you should tap the button marked "SETTINGS" on the main menu. To reach the main menu, you can use the back button on your mobile device. (image may differ on your device.) It could be possible you need to tap the back button multiple times.
 
 image:7_change_settings.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm]
 
-When you tap on the "SETTINGS" button, you will be shown a list of possible settings.
- At the moment these are:
+When you tap on the "SETTINGS" button, you will be shown a list of possible settings. At the moment these are:
 
 * Language: this will change the language used in Buildingding
 * Start choice: this will change the way you can set the starting point.
@@ -727,7 +724,7 @@ image:9_1_settingsscreen.png[width=100%, scalewidth=40cm]image:back_button.png[w
 
 ===== 6.2.5.1. Changing the language
 
-If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilize the back button (image may differ on your device.) At the moment the choices are:
+If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the choices are:
 
 * English
 * Nederlands
@@ -740,9 +737,7 @@ image:9_2_languagescreen.png[width=100%, scalewidth=40cm] image:back_button.png[
 
 ===== 6.2.5.2. Changing the start location input method
 
-To change the input method, you should tap the corresponding button.
-To cancel a change, you can utilize the back button (image may differ on your device.)
-At the moment the choices are:
+To change the input method, you should tap the corresponding button. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the coices are:
 
 * Scan
 * List (default)
@@ -753,7 +748,435 @@ image:9_3_startchoicescreen.png[width=100%, scalewidth=40cm]image:back_button.pn
 
 ==== 6.2.6. About screen
 
-The third option on the main menu will show you brief information about the application.
-You can exit this using the back button.
+The third option on the main menu will show you a brief information about the application. You can exit this using the back button.
 
-image:8_about_menu.png[width=100%, scalewidth=40cm] image:10_aboutscreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm]
+image:8_about_menu.png[width=100%, scalewidth=40cm] image:10_aboutscreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm] 
+
+== 7. Research docs
+
+=== 7.1. Git research
+
+==== 7.1.1. Git
+
+*Git* is a an open source distributed version control system.
+
+==== 7.1.2. Git Features
+
+Git allows you to have multiple local branches, that can be entirely independent of each other. When pushing to the remote, you are not required to push all of your branches. Git is fast as most of the operations are performed locally. For this reason it has a speed advantage on centralized systems that constantly have to communicate with a server.
+
+==== 7.1.3. Project implementation
+
+For this project we will use four main branches. Master for fully ready releases to the public. Develop for the development of new modules to the project. Hotfix will be used to fix bugs on already created modules and lastly thesis for the documentation of the project.
+
+==== 7.1.4. GitHub
+
+*GitHub* is a platform that provides hosting for software development and version control using Git. it uses the functionality of Git, added with features of it's own.
+
+===== 7.1.4.1. GitHub Features
+
+====== 7.1.4.1.1. Issues
+
+Issues are used to track todos, bugs, feature requests, and more. As issues are created, they’ll appear here in a searchable and filterable list. Issues support most image and file types for attachments.
+https://github.com/UCLeuvenLimburg/Buildingding/issues 
+
+====== 7.1.4.1.2. Pull Requests
+
+Pull requests create the possibility to make potential changes to a branch or repository on GitHub. These potential changes can be reviewed with collaborators before they are merged into the base branch. 
+
+====== 7.1.4.1.3. Actions
+
+Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow template to get started.
+https://github.com/UCLeuvenLimburg/Buildingding/actions/new
+
+Actions can also be used to automate certain parts in the process, or execute certain behaviour when a trigger condition is met. 
+
+====== 7.1.4.1.4. Wiki
+
+The Wiki on GitHub help you present in-depth information about your project. These's wiki's can be written in any format supported by GitHub MarkUp. 
+
+====== 7.1.4.1.5. Projects
+
+Projects allow tasks to be coordinated, tracked and updated in once central place, namely GitHub. Issues can be used to implement new features or fix bugs. These can then be assigned to members of the teams. A project can give an overview very similar to a typical Kanban board.
+
+==== 7.1.5. Sources
+
+https://www.idalko.com/jira-github-integration/ 
+https://nvie.com/posts/a-successful-git-branching-model/ 
+https://www.atlassian.com/git/tutorials/using-branches
+https://allenan.com/git-branch-naming-conventions/
+https://guides.github.com/features/wikis/
+https://github.com/features/project-management
+https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/creating-an-issue-or-pull-request
+https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests
+https://en.wikipedia.org/wiki/GitHub
+https://git-scm.com/
+
+=== 7.2. Kotlin research
+
+*Kotlin* is a cross-platform, statically typed, general-purpose programming language with type inference like Java, C++, which is based on JVM (Java Virtual Machine).
+
+Kotlin is designed to interoperate with Java, and the JVM of Kotlin's standard library depends on the Java Class library.
+Kotlin targets the JVM, but also compiles to JS such as frontend web applications using https://en.wikipedia.org/wiki/React_(web_framework)[React^], or Machine code via  https://en.wikipedia.org/wiki/LLVM[LLVM compiler infrastructure project ^], for example for native iOS apps sharing business logic with Android apps.
+
+Switching from Java to Kotlin is very easy as we just need to install a plugin. On 7 May 2019, Google announced that they are making Kotlin an officially supported language for Android application development.footnote:[https://en.wikipedia.org/wiki/Kotlin_(programming_language)[Kotlin (programming language) - Wikipedia^]]
+
+
+.Try Kotlin Playground
+[NOTE]
+===============================
+*NOTE* Kotlin Playground is an online sandbox to explore the Kotlin programming language. Browse code samples directly in the browser.
+
+Go to: https://play.kotlinlang.org/[Kotlin Playground^]
+===============================
+
+=== 7.3. Shortest path research
+The basic goal is to determine the shortest path between a starting node, and the rest of the graph, which is a
+theoretic problem known to graph.
+
+==== 7.3.1. Dijkstra Shortest Path Algorithm
+
+*Dijkstra* algorithm a.k.a. *SPF* algorithm (Shortest Path First) is an algorithm for finding the shortest path
+between nodes in a graph. Which in our case represents the Campus Proximus indoor path network.
+The core idea is to continuously wipe out the longer paths between the starting node and all possible destinations.
+
+image::dijstra_graph_example.png[[alt="not bad.",width=500,height=400]
+
+Given a positively weighted graph and a starting Node(C001), SPF determines the shortest path and distance from the source to all destinations in graph.
+
+===== 7.3.1.1. Initialization
+
+We need to initialize all nodes with an infinite number distance and an unknown predecessor,
+except de start node. For Node 'C001' we assign the value 0.
+All the nodes except 'C001' will be distinguished with a predecessor *'X'* and a distance *'∞'*.
+
+image::dijstra_graph_init.png[[alt="Dijkstra initialization process.", width=500]
+
+.Initialization Notes.
+[NOTE]
+===============================
+. The distance from node C001 to C001 is 0.
+===============================
+
+===== 7.3.1.2. Evaluation
+
+After initializing the graph, pick the node with the lowest distance value, then we
+evaluate all neighboring nodes:
+
+image::dijstra_graph_evaluation.png[alt="Dijkstra Evaluation process.", width=500]
+
+Add the edge weight to the evaluation node distance, then compare it to the destination's distance. +
+*Example:* For node 'C002': 0 + 10 < ∞ , so the new distance for 'C002' is 10 and new predecessor is 'C001'
+
+image::dijstra_graph_evaluation01.png[alt="Dijkstra Evaluation process.", width=500]
+
+- Node 'C001' is moved from unsettled set to settled set.
+- Nodes 'C002' and 'C003' are added to the unsettled set. They can be reached, but they need to be evaluated.
+- We have now two nodes in unsettled set, we take the one with the lowest distance 'C002', then we reiterate until we settle all nodes in the graph.
+- Summarize the iterations that were performed during evaluation steps:
+
+.Dijkstra Table
+[options="header,footer"]
+|=======================
+| C001    | C002      | C003      | C004        | C005        | C006
+| 0       | C001 - 10 | c001 - 15 | X - ∞       | X - ∞       | X - ∞
+| 0       | C001 - 10 | X - ∞     | C002 - 22   | X - ∞       | c002 - 25
+| 0       | C001 - 10 | X - ∞     | X - ∞       | C003 - 25   | X - ∞
+| 0       | C001 - 10 | X - ∞     | X - ∞       | c004 - 24   | C004 - 23
+| 0       | C001 - 10 | X - ∞     | X - ∞       | X - ∞       | X - ∞
+| 0       | C001 - 10 | X - ∞     | X - ∞       | X - ∞       | X - ∞
+| 0       | C001 - 10 |c001 - 15  | C002 - 22   | c004 - 24   |C004 - 23
+|=======================
+
+.Dijkstra Table Notes.
+[NOTE]
+===============================
+- The notation C002-22, for example, means that node C002 is the immediate predecessor, with a total distance of 22 from node C001.
+- We can calculate the shortest paths from node C001 are as follows:
+* Node C002 : C001 –> C002 (total distance = 10)
+* Node C003 : C001 –> C003 (total distance = 15)
+* Node C004 : C001 –> C002 –> C004 (total distance = 22)
+* Node C005 : C001 –> C002 –> C004 –> C006 (total distance = 24)
+* Node C006 : C001 –> C002 –> C004 –> C005 (total distance = 23)
+===============================
+
+=== 7.4. Indoor positioning research
+The goal is to find a technology wich will enable us to locate a person inside a multistory building using a smartphone.
+
+==== 7.4.1. Possible technologies
+
+After a preliminary research we came across several methods used in an indoor positioning system (I.P.S.)footnote:[https://en.wikipedia.org/wiki/Indoor_positioning_system]
+
+===== 7.4.1.1. Wireless technologies
+
+====== 7.4.1.1.1. WiFi-based positioning system
+
+Wi-Fi positioning system (WPS) is a geolocation system that uses the characteristics of nearby Wi-Fi hotspots and other wireless access points to discover where a device is located. Wi-Fi positioning takes advantage of the rapid growth in the early 21st century of wireless access points in urban areas.
+
+There are several techniques we could employ to use this technologie.
+* Signal strength based
+* Fingerprinting based
+* Angle of arrival based
+* Time of flight based
+
+Each of these methods has its own merits and drawbacks.
+
+====== 7.4.1.1.2. Bluetooth
+
+Originally, Bluetooth was concerned about proximity, not about exact location. Bluetooth was not intended to offer a pinned location like GPS, however is known as a geo-fence or micro-fence solution which makes it an indoor proximity solution, not an indoor positioning solution.
+
+However, micromapping and indoor mapping has been linked to Bluetooth.
+Bluetooth speaker position and home networks could be used for broad reference. 
+
+====== 7.4.1.1.3. Other wireless technologies
+
+* Radio frequentie identificatoin (RFID)
+* Ultrawide band (UWB)
+* Infrared (IR)
+* Gen2IR
+* Visible light communication (VLC) 
+* Ultrasound
+
+===== 7.4.1.2. Other technologies
+
+Non-radio technologies can be used for positioning without using the existing wireless infrastructure. This could provide increased accuracy at the expense of costly equipment and installations. 
+
+====== 7.4.1.2.1. Magnetic positioning
+
+Magnetic positioning can offer pedestrians with smartphones an indoor accuracy of 1–2 meters with 90% confidence level, without using the additional wireless infrastructure for positioning. Magnetic positioning is based on the iron inside buildings that create local variations in the Earth's magnetic field. Un-optimized compass chips inside smartphones can sense and record these magnetic variations to map indoor locations.
+
+====== 7.4.1.2.2. Inertial measurements
+
+Dead reckoning is the process of calculating ones's current position by using a previously determined position by using estimations of speed and course over elapsed time.
+
+====== 7.4.1.2.3. Positioning based on visual markers
+
+We could use the inbuild camera of the mobile device to determine the location. We can place markers like QR-codes at specific locations which encode that locations coordinates.
+
+==== 7.4.2. Our reasoning
+
+===== 7.4.2.1. Wireless technology
+
+Because we were writing an application for a smartphone the use of the inbuilt wireless capabilities looked the most promising.
+We only needed external fixed beacons which could be used as a reference point.
+
+====== 7.4.2.1.1. Bluetooth
+
+If we were to use Bluetooth, it would mean we had no pre-existing infrastructure of beacons.
+
+====== 7.4.2.1.2. WiFi
+
+If we were to use WiFi, we could use the already present access point as the fixed reference points.
+Because WPS could use several techniques the coice of WiFi looked the most promising
+
+===== 7.4.2.2. Other technology
+
+====== 7.4.2.2.1. Magnetic positioning
+
+The mapping of the unique fingerprint of the building was deemed to complex to be accomplished during the allocated time period.
+
+====== 7.4.2.2.2. Inertial measurements
+
+Using a smartphones inertial sensors would cause too much white noise by the appliance's gyroscopes. For example, a small tilt error in the calculated orientation would cause an accelaration onto the horizontal axes which would then be integrated twice, causing a rapidly growing error in the calculated position.footnote:[https://www.cl.cam.ac.uk//techreports/UCAM-CL-TR-696.pdf]
+
+====== 7.4.2.2.3. Positioning based on visual markers
+
+The problem with visual markings seemed largely that the camera should always have line of sight with a marker, while the wireless option does not have this restriction.
+
+==== 7.4.3. Our Choice
+
+Since there is an existing WiFi infrastructure, the existance of several well known techniques and the users convenience had more priority we chose to use WPS.
+
+=== 7.5. Wifi Positioning System research
+
+A deeper research of the possible techniques we could use regarding WPS
+
+==== 7.5.1. Basic concept
+
+Wi-Fi based indoor localization of a device consists in determining the position of client devices while using access points as fixed references. The four main classification groups of techniques exist to accomplish this are: received signal strength indication (RSSI), fingerprinting, angle of arrival (AoA) and time of flight (ToF) based techniques.
+
+In most cases you start by determining the distance between the target client device and a few access points. With these known distances, trilateration algorithms may be used to determine the relative position of the target device, using the known position of access points as a reference. Alternatively, the angle of arriving signals at a target client device could be employed to determine the device's location, based on triangulation algorithms.
+
+==== 7.5.2. Overview of techniques
+
+===== 7.5.2.1. Signal strength based
+
+RSSI localization techniques are based on measuring signal strength from a client device to several different access points, and then combining this information with a propagation model to determine the distance between the client device and the access points. Trilateration techniques can be used to calculate the estimated client device position relative to the known position of access points.
+
+Though one of the cheapest and easiest methods to implement, its disadvantage is that it does not provide very good accuracy (median of 2-4m), because the RSSI measurements tend to fluctuate according to changes in the environment or multipath fading.
+
+===== 7.5.2.2. Fingerprinting based
+
+Traditional fingerprinting is also RSSI-based, but it simply relies on the recording of the signal strength from several access points in range and storing this information in a database along with the known coordinates of the client device in an offline phase. This information can be deterministic or probabilistic. During the online tracking phase, the current RSSI vector at an unknown location is compared to those stored in the fingerprint and the closest match is returned as the estimated user location. Such systems may provide a median accuracy of 0.6m and tail accuracy of 1.3m.
+
+Its main disadvantage is that any changes of the environment such as adding or removing furniture or buildings may change the "fingerprint" that corresponds to each location, requiring an update to the fingerprint database. However, the integration with other sensor such as camera can be used in order to deal with this.
+
+===== 7.5.2.3. Angle of arrival based
+
+With the advent of MIMO Wi-Fi interfaces, which use multiple antennas, it is possible to estimate the AoA of the multipath signals received at the antenna arrays in the access points, and apply triangulation to calculate the location of client devices. SpotFi, ArrayTrack and LTEye are proposed solutions which employ this kind of technique. 
+
+===== 7.5.2.4. Time of flight based
+
+Time of flight (ToF) localization approach takes timestamps provided by the wireless interfaces to calculate the ToF of signals and then use this information to estimate the distance and relative position of one client device with respect to access points. The granularity of such time measurements is in the order of nanoseconds and systems which use this technique have reported localization errors in the order of 2m. Typical applications for this technology are tagging and locating assets in buildings, for which room-level accuracy (~3m) is usually enough.
+
+The time measurements taken at the wireless interfaces are based on the fact that RF waves travel close to the speed of light, which remains nearly constant in most propagation media in indoor environments. Therefore, the signal propagation speed (and consequently the ToF) is not affected so much by the environment as the RSSI measurements are.
+
+More recently, the Wi-Fi Round Trip Time standard has provided fine ToF ranging capabilities to WiFi. 
+
+====== 7.5.2.5. WiFi Round Trip Time
+
+Wi-Fi Round-Trip-Time in Android Pie does not require that the phone connect to any Wi-Fi access points. Only the phone is used to determine distance, not the APs. This feature is also tied into the Android operating system's existing location system to preserve the user's privacy. Apps using round-trip delay time (RTT) need the location permission, and the device must have location-based services enabled at the system level. 
+
+==== 7.5.3. Our reasoning
+
+===== 7.5.3.1. RTT
+
+Because we use API 29 and RTT is the de-facto go-to for all android apps of API level 28+, it would be the most future-proof to use Androids in-build support for RTT.footnote:[https://developer.android.com/guide/topics/connectivity/wifi-rtt]
+Since the mobile device does not have to establish a full connection with an access point, it has the added benifit for reducing the networks overhead cost.
+
+The main drawback is that the access points have to support the IEEE 802.11-2016 FTM standard.
+After contacting the network administrators on campus we were informed that no AP currently used on campus provides support for this protocol.
+
+A further investigation in said protocol revealed that this protocol is only supported by a few brands, with Google itself being the main one. This discovery will lead to other problems further along the road, which we hadn't realised just yet.
+
+===== 7.5.3.2. Time of flight based
+
+The other time of flight based technique was thus a better candidate, but the accuracy was to low to be justly considered when using a 'life' tracking mode.
+
+===== 7.5.3.3. Angle of arrival based
+
+The access points on campus do not have multiple antennas.
+
+===== 7.5.3.4. Fingerprinting based and RSSI
+
+For this method we needed to continuously scan the access-points. There is a problem of inaccuracy though, but with the combination of other techniques this should be easy to overcome.
+
+
+==== 7.5.4. Our choice
+
+We chose to implement RSSI in combination with ToF. This would require an intermittent scan of the APs and would amplify the accuray of the estimated positions.
+
+==== 7.5.5. Implementation
+
+After creating a testing app using the WiFi-manager APIfootnote:[https://developer.android.com/guide/topics/connectivity/wifi-scan]
+we stumbled upon a serieus drawback.
+
+===== 7.5.5.1. API 28+
+
+For the app to be able to have up-to-date information as to the positioning of the APs, our apllication had to be able to start a network scan, so it could receive the necessary information.
+We would need the SSID (which would identify the used network), the BSSID (which pertains to the MAC-address of the AP and is thus an unique identifier), the signal strength in negative decibel (dB) which would symbolise the distance and the timestamp of the packet which we could use for ToF.
+
+Sadly the API's function startScan()footnote:[https://developer.android.com/reference/android/net/wifi/WifiManager] was depricated in API level 28. The cause of this deprication is officially to reduce the network overhead caused by the need to establish a connection with the APs and unofficially because Google would like everyone to use RTT. The ability to start a network scan is now the privilege of the system, not an application.
+
+This has to effect that withouth the ability to start the scan, we or had to make do with the information the system gives us, which could be severly out-of-date or downgrade our application.
+
+====== 7.5.5.1.1. Downgrading
+
+One of the options we now had was to downgrade out application to an API lower than level 28.
+Here we faced the problem of API 28+.
+
+Since API 28 the support library has been reworked to AndroidX, these include the latest JetPack components.footnote:[https://developer.android.com/topic/libraries/support-library] The problem in downgrading our app is not the core functionality, but the third party libraries, which would mean that we would need to restart from scratch.
+
+====== 7.5.5.1.2. Using the system info
+
+During further testing there were cases when the latest scanresult did not change for half an hour. As a tracking system this is absolutely not doable.
+
+A work around we found was to manually switch the WiFi on and off, thus triggering a network scan.
+
+==== 7.5.6 Conclusion of WPS
+
+With this in mind we started preliminary scanning of the APs to map the positions, but with too much time lost with trying to resolve the API limitations, we decided to furgo the implementation of WPS and decided to use the offline method of using positioning based on visual markers, namely QR-codes.
+
+=== 7.6. 2D Navigation research
+
+2-Dimensional Navigation
+
+The goal is to visualize the route to the destination in a 2 Dimensional image. So the user is able to see a map between two points.
+
+==== 7.6.1. Introduction to Vector Drawables
+
+*Vector Drawables*, as their name implies, are based on vector graphics, as opposed to raster graphics. We all are familiar with raster graphics in the assortment of PNG, JPEG and other image files.
+
+* Raster graphics describe the actual color value of each pixel of an image, whereas vector graphics contain the recipe, using a series of draw commands, to create the result.
+* To display the result, the system converts it back at runtime to the same pixel data through a process called rasterization.
+* The recipes that make vector drawables are directly written in an XML format.
+
+.battery.xml
+[source,xml]
+----
+<!-- res/drawable/battery_charging.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    <!-- intrinsic size of the drawable -->
+    android:height="24dp"
+    android:width="24dp"
+    <!-- size of the virtual canvas -->
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+   <group
+         android:name="rotationGroup"
+         android:pivotX="10.0"
+         android:pivotY="10.0"
+         android:rotation="15.0" >
+      <path
+        android:name="vect"
+        android:fillColor="#FF000000"
+        android:pathData="M15.67,4H14V2h-4v2H8.33C7.6,4 7,4.6 7,5.33V9h4.93L13,7v2h4V5.33C17,4.6 16.4,4 15.67,4z"
+        android:fillAlpha=".3"/>
+      <path
+        android:name="draw"
+        android:fillColor="#FF000000"
+        android:pathData="M13,12.5h2L11,20v-5.5H9L11.93,9H7v11.67C7,21.4 7.6,22 8.33,22h7.33c0.74,0 1.34,-0.6 1.34,-1.33V9h-4v3.5z"/>
+   </group>
+</vector>
+----
+
+===== 7.6.1.1. The problem with PNG's
+
+The PNG format assets being used in Android apps have an native size and their quality is dependent on pixels. Each PNG asset that we use is specific to a certain density, which is why we provide
+different versions of the same image for different screen densities. Simple said, we generate multiple copies of the same image with different sizes.
+
+image:https://miro.medium.com/max/2716/0*K4GMcQPsBQpZ9-l2[alt="Battery Charging PNG.", width=500]
+
+
+===== 7.6.1.2. Vector Assets: the Solution
+
+To overcome the raster graphics, where an image defines set of pixels in grid, we can use vector drawable to define image using points, lines and curves along with color information.
+Image scalability is one of the most important features as different devices have different dimension. Vector assets scales with no pixelation or blur issue, as it defines an image in xml file where
+the image shape is defined based on which it's rendered on the screen.
+
+
+====== 7.6.1.2.1. Vector asset benefits:
+
+Vector assets are more preferable than traditional bitmaps because they are sharp, small and animatable.
+
+* Sharp: Vector assets are independent of pixels and textual, so they will be sharper on any density.
+* Small: A single version of vector asset instead of mulbitple PNG's, so the size of assets on APK will be very less.
+* Animatable: Textual and contains paths that we can use for animations.
+
+image:rastervector.png[alt="Vector Versus Raster Graphics", width=400]
+
+
+====== 7.6.1.2.2. Vector Assets Rendering Process:
+
+The vector will be compiled to binary format at compile time and at runtime, the app loads this up, generates a model object from binary code,
+and perform some canvas operations to draw the individual paths to the screen.
+
+image:renderVector.png[alt="Vector Assets rendering process image.", width=400]
+
+====== 7.6.1.2.3. Vector Formats: SVG & Android Vector Drawables
+
+*SVG* is an acronym for **S**calable **V**ector **G**raphics which is an older and standardized practice on the web to provide scalable images.
+The SVG's contain a path specification which is a drawing command that builds most of the SVG image.
+
+Android supports its own format called *vector drawable*, which is a XML file that consists of a single vector node and consists of one or multiple path elements in it.
+Vector drawables are defined in the tree hierarchy similar to SVG format. Vector drawable is made up of path and group.
+
+* Each *path* contains the geometry of the object's outline.
+* *Group*: contains details for transformation.
+
+.Convert SVG To Vector Drawable Android.
+[NOTE]
+===============================
+With the help of the Vector Asset tool, we can convert the SVG’s to vector drawables in seconds.
+
+Visit this  https://developer.android.com/studio/write/vector-asset-studio[link^] for more information.
+===============================
