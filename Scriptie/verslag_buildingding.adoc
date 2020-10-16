@@ -468,3 +468,106 @@ image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
 
 ==== 3.8.3. Technical details
 - Use Event Listeners for displaying the details of the selected utility.
+
+=== 4. UML Domain class diagram
+image:uml.png[]
+
+=== 5. Promotor meetings
+
+==== 5.1. Meeting 24/09
+---------------------------------------------------------
+
+DATUM: 24/09/2020
+AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
+VERONTSCHULDIGD:
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: 28/09/2020
+AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL DATA STRUCTURE
+---------------------------------------------------------
+===== 5.1.1. Kort verslag
+- Gesproken over de vooruitgang van het afstudeerproject, agenda punten en de manier waarop we het project gaan aanpakken.
+- Per node bijhouden: Directive Graphs
+- Advies gekregen over het modeleren van richtingen voor 2-dimensionale coordinatie.
+* Per node een vector bijhouden met punten (x, y) om positie van de node op een assenstelsel te bepalen. Zodat het bepalen van richting (bv. links, rechts Of rechtdoor) wiskundig opgelost kan worden.
+- De documentatie van het project wordt in het Engels geschreven.
+
+===== 5.1.2. Acties
+- Een kort onderzoek doen voor het implementeren van vector.
+- Onderzoek: Directive Graphs en hoe het in onze project past.
+- Documentatie van het project in het Engels schrijven.
+
+==== 5.2. Meeting 28/09
+---------------------------------------------------------
+
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: JOHAN, THOMAS
+DATUM VOLGENDE VERSLAG: 12/10/2020
+AGENDA: Planning, manier van werken, Testing
+---------------------------------------------------------
+===== 5.2.1. Kort verslag
+- Demonstreren van project UML
+- Bijhouden van data binnen de applicatie
+- Bespreking uitwerking algoritme
+- Waterfall manier van werken bespreken
+
+===== 5.2.2. Acties
+- UML vereenvoudigen, er zijn een heel aantal klassen die overbodig zijn
+- Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
+- Kleine app maken om te beginnen, en daarna uitbreidingen maken
+- Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
+- Databanke aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
+- versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
+
+==== 5.3. Meeting 12/10
+---------------------------------------------------------
+
+DATUM: 12/10/2020
+AANWEZIGEN: THOMAS, HAMID
+VERONTSCHULDIGD: JOHAN, JARON
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: 14/10/2020
+AGENDA: Technisch review and details
+---------------------------------------------------------
+===== 5.3.1. Kort verslag
+- Dijkstra: de obstakels en trage werking
+- Algorithm: A* en de mogelijkheden voor onze app
+- 2-D Navigatie: PNGs geven problemen voor het weergeven van routes
+
+===== 5.3.2. Acties
+- Dijkstra: Minder gebruik maken van for loops.
+* Functioneel programmeren
+* Gebruik een controle of een node al bezocht is
+* Verwijder de printMatrix() method - vertraging reden voor dijkstra.
+- 2-D Navigatie: Voor android toestellen best vector drawables gebruiken
+* Je moet een xml bestand hebben i.p.v. meerdere pngs te genereren.
+* Beeld kwaliteit is beter, minder opslagruimte nemend, kan animaties toegevoegd worden.
+
+=== 5.4. Meeting 14/10
+---------------------------------------------------------
+
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: NA
+AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject presentatie
+---------------------------------------------------------
+===== 5.4.1. Kort verslag
+- Demonstreren van de BuildingDing App
+- Instellingen features: Taal veranderen naar Frans, Engels en Nederlands
+- Text based navigatie: Een mooie oplijsting van route beschrijving
+- 2-D Navigatie: volgens de circulatie plan
+
+===== 5.4.2. Acties
+- Instellingen:
+* De talen worden niet veranderd in hele applicatie na de 'terug gaan' knop te druken.
+* Keuze voor navigatie type verwijderen en een mogelijkheid in text based view vinden.
+- Text based Navigatie: best dat in deze pagina een verwijzing is naar 2-D navigatie.
+- 2-D Navigatie: Werk proof of concept, dus alleen kunnen demonestereren bv. alleen b0 block.
+- Afstudeerproject presentatie: maak het niet te technisch, alleen: problemen en de invloed daarvan, communicatie tussen teamleden, onderzoeken enz.
+
+== 6. Manuals
+
+=== 6.1 Technical manual
