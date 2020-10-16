@@ -482,7 +482,7 @@ DATUM VOLGENDE VERSLAG: /
 AGENDA: INLEIDING, VERWACHTINGEN PROJECT, TECHNICAL DETAILS, CHALLENGES
 ---------------------------------------------------------
 ==== 5.1.1. Kort verslag
-- Verwachtingen van het project: Er is veel vrijheid in de ontwikkeling van de applicatie. Enerzijds gaat het om onderzoek naar mogelijke technologieeën en hun bruikbaarheid bij het maken van een navigatieapplicatie. Dit onderzoek moet zoveel mogelijk omgezet worden naar een effectieve applicatie om de weg in Campus proximus te vinden. Wekelijks vergaderen om resultaten te bespreken, net zoals de verwachtingen en plannen van de week daarop. 
+- Verwachtingen van het project: Er is veel vrijheid in de ontwikkeling van de applicatie. Enerzijds gaat het om onderzoek naar mogelijke technologieeën en hun bruikbaarheid bij het maken van een navigatieapplicatie. Dit onderzoek moet zoveel mogelijk omgezet worden naar een effectieve applicatie om de weg in Campus proximus te vinden. Wekelijks vergaderen om resultaten te bespreken, net zoals de verwachtingen en plannen van de week daarop.
 - Technical details: Hele team heeft een android toestel. De development van het project zal daarom in Android Studio gebeuren met Kotlin. Er is een git-repo om de vooruitgang in op te slaan. Jira wordt gebruikt als kanbanbord.
 - Challenges: Augmented reality gebruiken om de weg naar de gewenste bestemming weer te geven. Een "neural network" opstellen en Access Points gebruiken om de huidige locatie van een gebruiker te gebruiken. Een 2D plattegrond van de school, met de locatie van de gebruiker en een richtingsaanwijzing voor de bestemming.
 
@@ -499,7 +499,7 @@ AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL 
 ==== 5.2.1. Kort verslag
 - Gesproken over de vooruitgang van het afstudeerproject, agenda punten en de manier waarop we het project gaan aanpakken.
 - Per node bijhouden: Directive Graphs
-- Advies gekregen over het modeleren van richtingen voor 2-dimensionale coordinatie.
+- Advies gekregen over het modeleren van richtingen voor 2-dimensionale coördinaten.
 * Per node een vector bijhouden met punten (x, y) om positie van de node op een assenstelsel te bepalen. Zodat het bepalen van richting (bv. links, rechts Of rechtdoor) wiskundig opgelost kan worden.
 - De documentatie van het project wordt in het Engels geschreven.
 
@@ -511,7 +511,7 @@ AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL 
 === 5.3. Meeting 28/09
 ---------------------------------------------------------
 
-DATUM: 14/10/2020
+DATUM: 28/09/2020
 AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
 VERONTSCHULDIGD:
 VERSLAGGEVER: JOHAN, THOMAS
@@ -529,8 +529,8 @@ AGENDA: Planning, manier van werken, Testing
 - Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
 - Kleine app maken om te beginnen, en daarna uitbreidingen maken
 - Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
-- Databanke aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
-- versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
+- Databank aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
+- verschillende modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
 
 === 5.4. Meeting 12/10
 ---------------------------------------------------------
@@ -564,7 +564,7 @@ AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
 VERONTSCHULDIGD:
 VERSLAGGEVER: HAMID
 DATUM VOLGENDE VERSLAG: NA
-AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject presentatie
+AGENDA: Demo Applicatie, Kleine aanpassingen & voorbreiding afstudeerproject presentatie
 ---------------------------------------------------------
 ==== 5.5.1. Kort verslag
 - Demonstreren van de BuildingDing App
@@ -577,7 +577,7 @@ AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject pres
 * De talen worden niet veranderd in hele applicatie na de 'terug gaan' knop te druken.
 * Keuze voor navigatie type verwijderen en een mogelijkheid in text based view vinden.
 - Text based Navigatie: best dat in deze pagina een verwijzing is naar 2-D navigatie.
-- 2-D Navigatie: Werk proof of concept, dus alleen kunnen demonestereren bv. alleen b0 block.
+- 2-D Navigatie: Werk proof of concept, dus alleen kunnen Demonstreren bv. alleen b0 block.
 - Afstudeerproject presentatie: maak het niet te technisch, alleen: problemen en de invloed daarvan, communicatie tussen teamleden, onderzoeken enz.
 
 == 6. Manuals
