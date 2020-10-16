@@ -3,6 +3,7 @@
 :imagesdir: ./img
 :nofooter:
 :toc:
+:toclevels: 3
 
 
 == Buildingding: purpose
@@ -47,19 +48,48 @@ image:3_1_splashscreen.png[300,300] image:3_2_homescreen.png[300,300]
 
 == Navigation
 
+To start the navigation you should tap the navigation button in the main menu. After which you will be shown the main navigation screen.
+
+image:4_1_navigation_menu.png[300,300] image:4_2_navigation_main.png[300,300]
+
+On this screen can start choosing locations, or go back to the main menu
+
 === Choosing a starting location
+
+To choose a start location you have to tap the button marked "START POSITION"
+
+image:5_1_navigation_start_position.png[300,300]
+
+Depending on the apllied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds you previous choice.
 
 ==== Choosing a starting location from the list
 
+If the setting "List" is apllied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
+
+image:5_2_start_location_list.png[300,300] image:5_3_start_location_list_scrolled.png[300,300] image:5_5_chosen_start.png[300,300]
+
 ==== Scanning a QR-code
+
+If the setting "Scan" is applied, you will have to scan a QR-code, after which you will be taken back to the main navigation screen.
+
+image:5_4_start_location_QR.png[300,300] image:5_4_start_location_QR_scan.png[300,300] image:5_5_chosen_start.png[300,300]
 
 === Choosing a destination
 
+After choosing the start position, you should choose a destination by tapping the button marked "END POSITION". Doing so will show you a scrollable list of possible locations. When you tap on a location, you will be back on the main navigation screen, where you can change the locations, or start the navigation.
+
+image:5_6_navigation_end_position.png[300,300] image:5_8_choose_locationscreen.png[300,300] image:5_9_choose_locationscreen_scroll.png[300,300] image:5_7_chosen_end.png[300,300]
+
 === Starting the navigation
 
-==== Displaying the directions in a list
+To start the navigation you should then tap the button marked "START"
 
-==== Displaying the directions on a map
+image:5_8_start_navigation.png[300,300]
+
+After tapping this button you will see a scrollable list of locations, which you have to follow to reach your destination. If you tap a location in this list, you will be shown a map of the floor with the highlighted route. The starting location will be marked green and the destination will be red. If you tap this map, you will return to the list overview.
+
+image:6_1_path as list.png[300,300] image:6_2_path as list_scrolled.png[300,300] image:6_7_2D_navigation.png[300,300] 
+image:6_8_2D_navigation_tilted.png[]
 
 == Changing the Settings
 
