@@ -43,6 +43,7 @@ The goal is to visualize the route to the destination in a 2 Dimensional image. 
 
 The PNG format assets being used in Android apps have an native size and their quality is dependent on pixels. Each PNG asset that we use is specific to a certain density, which is why we provide
 different versions of the same image for different screen densities. Simple said, we generate multiple copies of the same image with different sizes.
+
 image:https://miro.medium.com/max/2716/0*K4GMcQPsBQpZ9-l2[alt="Battery Charging PNG.", width=500]
 
 
