@@ -24,25 +24,26 @@ Johan Molenberghs; r0728245; 3TI/2SO
 [options="header"]
 |=======================
 |Datum & uur|Duur|Betrokkenen|Topics
-|21/09 09:45|0.5|{jo}|Opzoeken tools (JIRA, confluence)
-|21/09 10:15|0.75|{all}|Eerste vergadering met klant/begeleider 
+|21/09 09:45|0,5|{jo}|Opzoeken tools (JIRA, confluence)
+|21/09 10:15|0,75|{all}|Eerste vergadering met klant/begeleider 
 |21/09 11:15|1|{all}|Eerste meeting, toewijzing rollen, bespreking aanpak
-|21/09 13:15|1.25||{jo}|Opzoeken Wi-Fi positioning system, methodes
+|21/09 13:15|1,25|{jo}|Opzoeken Wi-Fi positioning system, methodes
 |21/09 14:30|1|{all}|Tweede meeting: brainstorm MVPm scope & vision
-|22/09 09:00|1||{jo}|Opzoeken WPS en Asciidoc
+|22/09 09:00|1|{jo}|Opzoeken WPS en Asciidoc
 |22/09 10:00|2|{all}|Technische inleiding, setup ide, …
 |22/09 13:00|3.25|{all}|Scope & Vision
 |22/09 16:30|1|{all}|User Story mapping
-|23/09 09:30|2||{jo}|Onderzoek WPS
-|23/09 12:45|0.75||{jo}|Onderzoek WPS
-|23/09 13:30|0.75|{all}|Scrum + status project bespreken, brainstorm
-|23/09 14:30|1||{jo}|Opschonen en onderzoek Jira
-|23/09 15:30|2.5||{jo}|Opmaken basis model 
-|24/09 10u30|0.5|{all}|Tweede vergadering met klant/begeleider
+|23/09 09:30|2|{jo}|Onderzoek WPS
+|23/09 12:45|0,75|{jo}|Onderzoek WPS
+|23/09 13:30|0,75|{all}|Scrum + status project bespreken, brainstorm
+|23/09 14:30|1|{jo}|Opschonen en onderzoek Jira
+|23/09 15:30|2,5|{jo}|Opmaken basis model 
+|24/09 09:30|1|{all}|voorbereiding vergadering met klant
+|24/09 10u30|0,5|{all}|Tweede vergadering met klant/begeleider
 |24/09 11u00|2|{all}|Hervorming datarepresentatie en verfijning user story map
 |24/09 15:00|1|{joja}|Aanpassen basis model 
 |24/09 17:00|2|{jo}|CRUD db opzoeken lijst
-|24/09 19:00|0.25|{jo}|bijwerken logs
+|24/09 19:00|0,25|{jo}|bijwerken logs
 |25/09 09:30|0,5|{jotja}|Scrum
 |25/09 10:00|0,5|{jot}|Jira proberen te koppelen met Github
 |25/09 10:30|1|{jo}|Herorganisatie Jira issues
@@ -53,46 +54,55 @@ Johan Molenberghs; r0728245; 3TI/2SO
 |25/09 15:30|1,5|{all}|bespreking planning en conventies
 |26/09 16:30|3|{jo}|refactoring model en invoeren lokalen
 |28/09 10:00|2,5|{jo}|testapp WPS
-|28/09 13:30|1|{jo}|testapp WPS
+|28/09 13:30|0,5|{jo}|testapp WPS
+|28/09 14:00|0,5|{all}|voorbereiding vergadering met klant/begeleider
 |28/09 14:30|1u|{all}|Derde vergadering met klant/begeleider
 |28/09 15:30|2|{jo}|herwerken app
 |29/09 09u30|1|{jo}|herwerken app
 |29/09 16:00|0,35|{jo}|aanpassen klassendiagram volgens vergadering
 |29/09 16:20|1,02|{jo}|aanpassen model en problemen met Android studio oplossen
 |30/09 10:00|2|{jo}|BDD-47 kies locaties
-thuis
-|01/10 13:00
-
-|02/10 |BDD-59 implementatie testing
-|02/10 14u30|2u|{all}|bespreking staat project en taak verdeling
-campus
-|04/10 |BDD-59 implementatie testing van bestaande klassen
-|04/10 |input locaties in locations.csv
-|04/10 |uitlijnen tekst in gui
-|05/10 |onderzoek oplossing WPS probleem
-|05/10 16u30|1u|{hjot}|Team bespreking
-|06/10 08:30 |0,5|{jo}|basis class WPS
-|06/10 09:00 |wifi localisation
-|06/10 14:30
-|07/10 13:30 campus
+|01/10 13:00|3|{jo}|onderzoek app WPS
+|02/10 12:30|2|{jo}|BDD-59 implementatie testing
+|02/10 14u30|2|{all}|bespreking staat project en taak verdeling
+|04/10 10:00|2|{jo}|BDD-59 implementatie testing van bestaande klassen
+|04/10 13:00|3|{jo}|input locaties in locations,csv
+|04/10 16:00|1|{jo}|uitlijnen tekst in gui
+|05/10 10:00|2|{jo}|onderzoek oplossing WPS probleem
+|05/10 13:30|3|{jo}|Wifiscanner test app
+|05/10 16u30|1|{hjot}|Team bespreking
+|06/10 08:30|0,5|{jo}|basis class WPS
+|06/10 09:00|2|{jo}|wifi localisation
+|06/10 15:30|3.5|{jo}|wifi localisation
+|07/10 13:30|2|{hjot}|brainstom automatisatie start locatis, bluetooth, QR, WPS
 |08/10 10:30|1|{jo}|herwerking code accesspoints
 |08/10 13:00|1|{jo}|scannen accesspoints
-|08/10 14:00|0,5|{jot}bespreking met begeleider
-|08/10 14:30||{jo}|testapplicatie QR code
-|09/10 08:30|aanmaken QR codes
-|09/10 12:00
-|09/10 14:00|3|testapplicatie QR code
-|09/10 12u30|1.5u|{hjot}|Team meeting en taak verdeling
+|08/10 14:00|0,5|{jot}|bespreking met begeleider
+|08/10 14:30|3|{jo}|testapplicatie QR code
+|09/10 08:30|2|{jo}|aanmaken QR codes
+|09/10 10:60|2|{jo}|testapplicatie QR code
+|09/10 12u30|1,5|{hjot}|Team meeting en taak verdeling
 |09/10 14:00|2|{jot}|wireframes voor GUI
 |09/10 16:00|1,5|{jo}|integratie QR in applicatie
-|10/10 07:30|0,5 |{jo}|GUI aanpassen naar huisstijl
+|10/10 07:30|0,5|{jo}|GUI aanpassen naar huisstijl
 |10/10 08:30|3,5|{jo}|integratie activities op basis van wireframes
 |10/10 13:00|4|{jo}|verder uitwerken GUI
-|12/10 scripties
+|12/10 10:00|2|{jo}|uitschrijven reseachdocumenten
+|12/10 13:00|2,5|{jo}|uitschrijven reseachdocumenten
 |13/10 10:00|2|{jo}|start eindpresentatie
 |13/10 14:00|0,5|{jo}|welkomscherm is nu timer based
-|13/10 15:00|1{jo}|bijwerken logs
+|13/10 15:00|1|{jo}|bijwerken logs
 |13/10 16:30|1|{all}|bespreking stand van zaken
-|12/10 17:30|0,25|{hjo}|bespreking visualiatie nodes
-|12/10 17:45|0,5|{jo}|i18n
+|13/10 17:30|0,25|{hjo}|bespreking visualiatie nodes
+|13/10 17:45|0,5|{jo}|i18n
+|14/10 11:00|0,25|{hjo}|uitleg "D visualisation
+|14/10 11:15|0,25|{jo}|bijwerken log      
+|14/10 11:30|1|{jo}|test 2D
+|14/10 16:30|2|{all}|Meeting Vogels: demo application
+|15/10 10:00|3|{hjo}|Aligning the 2-D navigation with text based and how to visualize it
+|15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
+|15/10 16:00|1|{all}|Presentatie afstudeerproject
+|16/10 10:00|2|{all}|Documentatie: gebruikershandleiding
+|16/10 13:00|7.25|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|16/10 21:00|3|{all}|Verdere documentatie
 |=======================

@@ -1,0 +1,36 @@
+= Installation manual image:ucll.jpg[role="right",150,150]
+:doctype: article
+:imagesdir: ../img
+:nofooter:
+
+== Introduction
+Buildingding is a Proof of Concept application made for Campus Proximus to help people navigate through the campus. The application is not yet available on the Play Store.
+
+== Git and GitHub
+First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be installed.
+
+image::git.png[500, 500]
+
+
+After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally. 
+
+----
+git clone https://github.com/UCLeuvenLimburg/Buildingding.git
+----
+
+== Android Studio
+Now that we have our application on our device, we still need a way to run it and an emulator for a mobile device. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program. 
+
+image::android_studio.png[500, 500]
+
+The next step is to open android studio, choose to open an existing project and locate the cloned repository to put this project in Android Studio.
+
+image::android_studio_open_project.png[500, 500]
+
+
+== Running the application
+To run the project we need an emulator, which we can easily set-up in Android studio. Locate the AVD manager. Next choose create a new virtual device. Any device should work, but we recommend the Pixel 3a. After selecting a device click next, and choose the release "Q" with API level 29.
+
+Now that we have a device selected. Now that we have done all these steps we can run the application by clicking the green triangle.
+
+image::start.png[500, 500]

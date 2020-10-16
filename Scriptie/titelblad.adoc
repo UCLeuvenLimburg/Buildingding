@@ -1,0 +1,47 @@
+:toc: macro
+:toclevels: 5
+:icons: font
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+
+image::ucll_pink.png[role="left",200,200]
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-center]
+AFSTUDEERPROJECT TOEGEPASTE INFORMATICA +
+Schooljaar 2020-2021
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+image::bdd_logo.png[400,400,float="center",align="center"]
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+[.text-right]
+*_Auteurs:_* +
+Hamid Khodayari +
+Thomas Nelen +
+Johan Molenberghs +
+Jaron Trossaert
+
+{nbsp} +
+{nbsp} +
+
+[.text-right]
+*_Promotor:_* +
+Frédéric Vogels

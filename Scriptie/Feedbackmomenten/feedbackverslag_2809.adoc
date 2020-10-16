@@ -1,0 +1,27 @@
+image:https://www.ucll.be/sites/default/files/ckeditor/ucll_logo_rgb.jpg[alt="kotlin logo.",width=170,height=75,float=left]
+
+= Verslag Vergadering
+---------------------------------------------------------
+
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: JOHAN, THOMAS
+DATUM VOLGENDE VERSLAG: 12/10/2020
+AGENDA: Planning, manier van werken, Testing
+---------------------------------------------------------
+===== KORT VERSLAG:
+
+- Demonstreren van project UML
+- Bijhouden van data binnen de applicatie
+- Bespreking uitwerking algoritme
+- Waterfall manier van werken bespreken
+
+===== ACTIES:
+
+- UML vereenvoudigen, er zijn een heel aantal klassen die overbodig zijn
+- Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
+- Kleine app maken om te beginnen, en daarna uitbreidingen maken
+- Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
+- Databanke aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
+- versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen

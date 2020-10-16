@@ -1,0 +1,27 @@
+image:https://www.ucll.be/sites/default/files/ckeditor/ucll_logo_rgb.jpg[alt="kotlin logo.",width=170,height=75,float=left]
+
+= Verslag Vergadering
+---------------------------------------------------------
+
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: NA
+AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject presentatie
+---------------------------------------------------------
+===== KORT VERSLAG:
+
+- Demonstreren van de BuildingDing App
+- Instellingen features: Taal veranderen naar Frans, Engels en Nederlands
+- Text based navigatie: Een mooie oplijsting van route beschrijving
+- 2-D Navigatie: volgens de circulatie plan
+
+===== ACTIES:
+
+- Instellingen:
+* De talen worden niet veranderd in hele applicatie na de 'terug gaan' knop te druken.
+* Keuze voor navigatie type verwijderen en een mogelijkheid in text based view vinden.
+- Text based Navigatie: best dat in deze pagina een verwijzing is naar 2-D navigatie.
+- 2-D Navigatie: Werk proof of concept, dus alleen kunnen demonestereren bv. alleen b0 block.
+- Afstudeerproject presentatie: maak het niet te technisch, alleen: problemen en de invloed daarvan, communicatie tussen teamleden, onderzoeken enz.
