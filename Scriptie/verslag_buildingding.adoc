@@ -1007,6 +1007,8 @@ Wi-Fi based indoor localization of a device consists in determining the position
 
 In most cases you start by determining the distance between the target client device and a few access points. With these known distances, trilateration algorithms may be used to determine the relative position of the target device, using the known position of access points as a reference. Alternatively, the angle of arriving signals at a target client device could be employed to determine the device's location, based on triangulation algorithms.
 
+<<<
+
 ==== 7.5.2. Overview of techniques
 
 ===== 7.5.2.1. Signal strength based
@@ -1380,6 +1382,8 @@ r0728245 +
 |16/10 21:00|3|{all}|Verdere documentatie
 |=======================
 
+<<<
+
 === 8.3. Thomas Nelen
 
 r0705835 +
@@ -1462,6 +1466,8 @@ r0705835 +
 |16/10 21u00|2u|{ht}|thesis: Verbeteren einddocument
 |=======================
 
+<<<
+
 === 8.4. Jaron Trossaert
 
 r0374256 +
@@ -1511,7 +1517,7 @@ r0374256 +
 |12/10 10u00|8.5u|{ja}|Refactoring van grafen
 |13/10 11u00|4u|{ja}|Refactoring grafen (cont.)
 |13/10 16u30|1u|{all}|Bespreking stand van zaken
-|14/10 12u30|4u|{ja}|Afwerken graafmodule
+|14/10 12u30|4u|{ja}|Ontwerpen logo
 |14/10 16u30|2u|{all}|Meeting Vogels: demo application
 |14/10 20u00|3u|{joja}|Maken eindpresentatie
 |15/10 13u00|2u|{all}|Voorbereiden presentatie eindwerk
