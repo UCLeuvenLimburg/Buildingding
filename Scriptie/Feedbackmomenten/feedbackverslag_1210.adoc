@@ -1,0 +1,27 @@
+image:https://www.ucll.be/sites/default/files/ckeditor/ucll_logo_rgb.jpg[alt="kotlin logo.",width=170,height=75,float=left]
+
+= Verslag Vergadering
+---------------------------------------------------------
+
+DATUM: 12/10/2020
+AANWEZIGEN: THOMAS, HAMID
+VERONTSCHULDIGD: JOHAN, JARON
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: 14/10/2020
+AGENDA: Technisch review and details
+---------------------------------------------------------
+===== KORT VERSLAG:
+
+- Dijkstra: de obstakels en trage werking
+- Algorithm: A* en de mogelijkheden voor onze app
+- 2-D Navigatie: PNGs geven problemen voor het weergeven van routes
+
+===== ACTIES:
+
+- Dijkstra: Minder gebruik maken van for loops.
+* Functioneel programmeren
+* Gebruik een controle of een node al bezocht is
+* Verwijder de printMatrix() method - vertraging reden voor dijkstra.
+- 2-D Navigatie: Voor android toestellen best vector drawables gebruiken
+* Je moet een xml bestand hebben i.p.v. meerdere pngs te genereren.
+* Beeld kwaliteit is beter, minder opslagruimte nemend, kan animaties toegevoegd worden.
