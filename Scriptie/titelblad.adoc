@@ -33,6 +33,8 @@ image::bdd_logo.png[400,400,float="center",align="center"]
 {nbsp} +
 {nbsp} +
 {nbsp} +
+{nbsp} +
+{nbsp} +
 
 [.text-right]
 *_Auteurs:_* +
