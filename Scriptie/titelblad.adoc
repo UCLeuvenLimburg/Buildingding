@@ -1,14 +1,36 @@
-= AFSTUDEERPROJECT TOEGEPASTE INFORMATICA image:ucll_pink.png[role="left",150,150]
-Schooljaar 2020-2021
-:toc: preamble
+:toc: macro
 :toclevels: 5
 :icons: font
 :doctype: article
 :imagesdir: ./img
 :nofooter:
 
+image::ucll_pink.png[float="left, role="left",200,200]
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-center]
+AFSTUDEERPROJECT TOEGEPASTE INFORMATICA +
+Schooljaar 2020-2021
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
 image::bdd_logo.png[400,400,float="center",align="center"]
 
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 {nbsp} +
 {nbsp} +
 
