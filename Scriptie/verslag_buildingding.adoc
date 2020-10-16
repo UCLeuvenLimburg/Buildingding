@@ -885,11 +885,6 @@ Add the edge weight to the evaluation node distance, then compare it to the dest
 
 image::dijstra_graph_evaluation01.png[alt="Dijkstra Evaluation process.", width=500]
 
-- Node 'C001' is moved from unsettled set to settled set.
-- Nodes 'C002' and 'C003' are added to the unsettled set. They can be reached, but they need to be evaluated.
-- We have now two nodes in unsettled set, we take the one with the lowest distance 'C002', then we reiterate until we settle all nodes in the graph.
-- Summarize the iterations that were performed during evaluation steps:
-
 .Dijkstra Table
 [options="header,footer"]
 |=======================
@@ -1376,6 +1371,7 @@ r0728245 +
 |14/10 11:15|0,25|{jo}|bijwerken log      
 |14/10 11:30|1|{jo}|test 2D
 |14/10 16:30|2|{all}|Meeting Vogels: demo application
+|14/10 20:00|3|{joja}|Maken eindpresentatie
 |15/10 10:00|3|{hjo}|Aligning the 2-D navigation with text based and how to visualize it
 |15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
 |15/10 16:00|1|{all}|Presentatie afstudeerproject
@@ -1496,14 +1492,31 @@ r0374256 +
 |25/09 10u00|2u|{ja}|Aanmaken default plattegronden
 |25/09 14u00|1.5u|{all}|Scouten en uitmappen op campus
 |25/09 15u30|1u|{all}|Algemene vergadering voor planning week 2
-|28/09 14:00|0,5|{all}|voorbereiding vergadering met klant/begeleider
+|28/09 14u00|0.5u|{all}|voorbereiding vergadering met klant/begeleider
 |28/09 14u30|1u|{all}|Derde vergadering met klant/begeleider
-|02/10 14u30|2|{all}|Bespreking staat project en taak verdeling
-|13/10 16:30|1|{all}|Bespreking stand van zaken
-|14/10 16:30|2|{all}|Meeting Vogels: demo application
-|15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
-|15/10 16:00|1|{all}|Presentatie afstudeerproject
-|16/10 10:00|2|{all}|Documentatie: gebruikershandleiding
-|16/10 13:00|7.25|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
-|16/10 21:00|3|{all}|Verdere documentatie
+|28/09 16u30|3u|{ja}|Dijkstra research
+|29/09 12u30|6u|{ja}|A* research
+|30/09 09u00|3u|{ja}|Kotlin app tutorials
+|30/09 13u00|5u|{ja}|Heuristic research
+|01/10 10u00|3u|{ja}|Graph tool research
+|01/10 13u30|3u|{ja}|Cleaning up code
+|02/10 14u00|4u|{ja}|Research 2D navigatie
+|05/10 09u30|3u|{ja}|Vector drawables
+|05/10 15u00|2u|{ja}|Vector drawables (cont.)
+|06/10 10u00|2.5u|{ja}|Solo feature brainstorm sessie
+|06/10 13u00|1u|{ja}|Inkspace intro
+|07/10 10u00|6u|{ja}|Graph b0
+|08/10 10u00|7u|{ja}|Graph b0 + c0
+|09/10 10u30|6.5u|{ja}|Graph c1
+|12/10 10u00|8.5u|{ja}|Refactoring van grafen
+|13/10 11u00|4u|{ja}|Refactoring grafen (cont.)
+|13/10 16u30|1u|{all}|Bespreking stand van zaken
+|14/10 12u30|4u|{ja}|Afwerken graafmodule
+|14/10 16u30|2u|{all}|Meeting Vogels: demo application
+|14/10 20u00|3u|{joja}|Maken eindpresentatie
+|15/10 13u00|2u|{all}|Voorbereiden presentatie eindwerk
+|15/10 16u00|1u|{all}|Presentatie afstudeerproject
+|16/10 10u00|2u|{all}|Documentatie: gebruikershandleiding
+|16/10 13u00|7.25u|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|16/10 21u00|3u|{all}|Verdere documentatie
 |=======================
