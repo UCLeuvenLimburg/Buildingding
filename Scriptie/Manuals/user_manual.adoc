@@ -1,0 +1,72 @@
+= Buildingding: User manual image:ucll.jpg[role="right",150,150]
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+:toc:
+
+
+== Buildingding: purpose
+
+The purpose of Buildinding is to help the user navigate Campus Proximus. Which is especially helpfull with the standing cirucaltion planning due to the pandemic concerning 'COVID-19'. This applicatoin was written as a graduation project for UCLL Applied Informatices in 2020 by order of Dr Vogels F.
+
+The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code presetn at the current location to set the starting location, but still has to choose the destination from a list.
+
+Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualisation on a map.
+
+The application does not use real-time tracking.
+
+This application is suited for Android 10 and higher.
+
+The supported languages are:
+
+* English
+* Dutch
+* French
+
+== Installing Buildinding
+
+Buildingding can be obtained from its developers. See contact information below.
+
+== Starting Buildingding
+
+You can start the application by tapping the Buildingding icon on your screen. (Layouts may differ on your device)
+
+image:1_homescreen.png[300,300]
+
+If the icon is missing, you can search for Buildingding by 
+
+. Swiping 'up' on your main screen.
+. Entering the term 'buildinding' in the searchbar
+. Tapping the Buildingding icon
+
+image:2_1_appscreen.png[300,300] image:2_2_appscreen.png[300,300] image:2_3_appscreen.png[300,300]
+
+You will then be shown a welcome screen for 2 seconds after which you will enter the main menu
+
+image:3_1_splashscreen.png[300,300] image:3_2_homescreen.png[300,300]
+
+== Navigation
+
+=== Choosing a starting location
+
+==== Choosing a starting location from the list
+
+==== Scanning a QR-code
+
+=== Choosing a destination
+
+=== Starting the navigation
+
+==== Displaying the directions in a list
+
+==== Displaying the directions on a map
+
+== Changing the Settings
+
+=== Changing the language
+
+=== Changing the start location input method
+
+== Troubleshooting
+
+== Contact
