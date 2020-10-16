@@ -1,11 +1,11 @@
 :toc: macro
-:toclevels: 5
+:toclevels: 2
 :icons: font
 :doctype: article
 :imagesdir: ./img
 :nofooter:
 
-image::ucll_pink.png[float="left, role="left",200,200]
+image::ucll_pink.png[role="left",200,200]
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -31,9 +31,6 @@ image::bdd_logo.png[400,400,float="center",align="center"]
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-
 
 [.text-right]
 *_Auteurs:_* +
@@ -124,8 +121,8 @@ Additionally, correct app usage reduces interaction with the receptionists for r
 |=======================
 |Stakeholder|Major Value|Attitudes|Major Interests|Constraints
 |First-year students, trainees, guests, new lecturers|Reduced stress when looking for a classroom.|Strong enthusiasm, can traverse through the campus more easily.|Simplicity of use; time and effort savings to find specific locations on campus.|Parties should be made aware of the existence of the application beforehand.
-|Reception staff|Less frequently distracted from work to give directions.|Concern about not being aware of guests currently on campus; otherwise receptive.|Reducing the total workload with minimal changes to payroll.|Communication with third parties to create application awareness. 
-|Attendees on campus|In case of emergency, quickly find the nearest exit.|Strong commitment through release 2; may not be used frequently.|Simplicity of use; extra means of safety when traversing campus grounds.|Need to have application installed and mobile device nearby when an emergency arises. 
+|Reception staff|Less frequently distracted from work to give directions.|Concern about not being aware of guests currently on campus; otherwise receptive.|Reducing the total workload with minimal changes to payroll.|Communication with third parties to create application awareness.
+|Attendees on campus|In case of emergency, quickly find the nearest exit.|Strong commitment through release 2; may not be used frequently.|Simplicity of use; extra means of safety when traversing campus grounds.|Need to have application installed and mobile device nearby when an emergency arises.
 |Students|Find infrequently used locations more easily.|Receptive through release 1; may not use application frequently.|Minimal effort needed; become more knowledgeable of campus features and their respective locations.|Need to have application installed and device within reach.
 |Application maintenance team|No benefit; needs to maintain the application to ensure routes are up to date in case of unconventional situations.|Not happy about the obligatory software work; recognize the value to the organization and its users.|Minimal new technology needed; concern about difficulty of editing and updating the application.|Might not have the staff or knowhow necessary to make changes to the application.
 |=======================
@@ -147,7 +144,7 @@ There are on average one thousand people present on campus, of which 50 or more 
 
 * CO-2: The system shall use Kotlin as the main programming language.
 
-* CO-3: The app utilises the Wi-Fi Round Trip Time Android standard to help localise the user with Time of Flight ranging capabilities.
+* CO-3: The app utilizes the Wi-Fi Round Trip Time Android standard to help localize the user with Time of Flight ranging capabilities.
 
 ==== 1.3.4. Assumptions
 * The operation of the app depends on the usage consistency of the current Cisco access points which broadcast their BSSID.
@@ -206,8 +203,8 @@ image::kanban_backlog.png[float="center",align="center"]
 image::story_map_v2.png[float="center",align="center"]
 
 === 2.3. User story priority list
-|=======================
 [options="header"]
+|=======================
 |Must have
 |Show list of start locations
 |Show list of end locations
@@ -218,8 +215,9 @@ image::story_map_v2.png[float="center",align="center"]
 |Start navigation
 |=======================
 
+[options="header"]
 |=======================
-6.|Should have
+|Should have
 |Basic location info
 |2D visual navigation
 |End navigation
@@ -228,12 +226,534 @@ image::story_map_v2.png[float="center",align="center"]
 |Automated localisation
 |=======================
 
+[options="header"]
 |=======================
-16.|Should have
-|Basic location info
-|2D visual navigation
-|End navigation
-|Change destination
-|Corona based directions
-|Automated localisation
+|Nice to have
+|Compass-based map rotation
+|Restroom hotkey
+|AR text-based directions
+|"Point me to the nearest free classroom"
+|Schedule integration
+|Find people on campus
+|Text-to-speech based directions
+|Alternative starting position
+|Multi-language support
+|Voice assist
+|Time tracking
+|Time estimates
+|Find location by room name
+|Update current location
+|Find optimised path to destination with constraints
+|AR arrow-based directions
+|Colour-blind support
 |=======================
+
+== 3. User stories
+
+=== 3.1. User story B01: Localisation
+As a *user*
+
+I *want* to select locations from input list
+
+so that I *can navigate* between the points.
+
+==== 3.1.1. Acceptance criteria
+*Scenario 1:  Valid starting point and destination point list* +
+*Given* a user +
+*When* user types the code-name of classroom as _'Choose starting point'_
+or code-name of destination in _'Choose destination'._ +
+*Then* a selectable list of locations based on input value will be shown.
+
+==== 3.1.2. Wireframes
+image::usb01_wireframe.png[alt="User Story 1 Wireframe."]
+
+==== 3.1.3. Technical details
+- Use this topic to make the input autocomplete option: https://www.geeksforgeeks.org/autocompletetextview-in-kotlin/[AutoCompleteTextView in Kotlin
+^]
+
+=== 3.2. User story B02: Text-based Navigation
+As a *user*
+
+I *want* to go to details page
+
+so that I *can see* a text-based navigation between two points.
+
+==== 3.2.1. Acceptance criteria
+*Scenario 1: Find the shortest route between points* +
+*Given* a user +
+*When* the user clicks on _'Find shortest Route'_ button +
+*Then* a list of steps to be taken to reach destination will be shown.
+
+*Scenario 2: Cancelling the navigation details page* +
+*Given* a user +
+*When* the user clicks on _'Cancel'_ button on details page +
+*Then* the application returns to previous page.
+
+==== 3.2.2. Wireframes
+image::usb02_wireframe.png[alt="User Story 2 Wireframe."]
+
+==== 3.2.3. Technical details
+- https://www.geeksforgeeks.org/check-possible-move-given-coordinate-desired-coordinate/?ref=lbp[Check if possible to move from given coordinate to desired coordinate^]
+ (Java)
+- This example will help you understand the Vector implementation on a Java application: https://noobtuts.com/java/vector2-class[vector2 Class^]
+- To know the directions of the path such as, left, right or straight.
+You can use https://www.intmath.com/vectors/3-vectors-2-dimensions.php[Vectors in 2-D^]
+* Giving the location coordination parameters (x, y)
+* Using magnitude and direction of a 2-dimensional Vector
+. Clockwise direction of the angle: right
+. Counterclockwise direction of the angle: left
+* A vector showing the position of a point A with coordinates (2, 3) and a point O with coordinates (0,0)
+
+image::vector.png[alt="A vector in the Cartesian plane, showing the position of a point A with coordinates (2, 3).", width=200]
+
+=== 3.3. User story B03: Utility-based Navigation
+As a *user*
+
+I *want* to select my location in order to find a nearest by Utility
+
+so that I *can see* the text-based navigation detail page.
+
+==== 3.3.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* user types the code-name of classroom that user is at the moment
+in _'Start point'_ +
+*Then* a selectable list of locations based on input value will be shown.
+
+*Scenario 2: Utility selection from the list* +
+*Given* a user +
+*When* the user selects the Utility +
+*Then* the application returns the text-based navigation
+detail page for the nearest by chosen Utility.
+
+*Scenario 3: Canceling the navigation details page* +
+*Given* a user +
+*When* the user clicks on _'Cancel'_ button on details page +
+*Then* the application returns back to Find Nearest by page.
+
+==== 3.3.2. Wireframes
+image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
+
+==== 3.3.3. Technical details
+- Follow User Story B01 for start point input recommendation list.
+- Follow User Story B02 for Nearest By Utility, Text-Based Detail page.
+- Make a nested and logical list of utilities for selection.
+- Make sure that after clicking 'Cancel' the value of the input for start point will remain the same in the 'Find Nearest by' page.
+
+=== 3.4. User story B04: Basic Information about Location
+As a *user*
+
+I *want* to select a location
+
+so that I *can see* basic Information about that particular location.
+
+==== 3.4.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* the user types the code-name of location +
+*Then* a selectable list of locations based on input value will be shown.
+
+*Scenario 2: Details of the locations is shown* +
+*Given* a user +
+*When* the user selects the location code-name +
+*Then* the application returns the basic details on the detail section of the page.
+
+*Scenario 3: Invalid code-names returns error* +
+*Given* a user +
+*When* the user enters invalid code-name  +
+*Then* the application returns 'No location found by this code-name'.
+
+==== 3.4.2. Wireframes
+image:usb04_wireframe.png[alt="User Story 4 Wireframe."]
+
+==== 3.4.3. Technical details
+- Follow User Story B01 for location's code-name input recommendation list.
+- Use Event Listeners for displaying the details of the selected location.
+* Working of event Listeners with https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_parameters[JavaScript^]
+
+=== 3.5. User story B05: Automate Starting Point
+As a *user*
+
+I *want* to select my starting location automatically
+
+so that I *can navigate* between the points.
+
+==== 3.5.1. Acceptance criteria
+*Scenario 1: Checkbox enabled sets my location automatically* +
+*Given* a user +
+*When* the user checks the checkbox 'Automate Location' +
+*Then* the input value becomes the current location of the person.
+
+*Scenario 2: Disabled GPS on device puts checkbox out of action and gives an error message* +
+*Given* a user +
+*When* the user's GPS is not available +
+*Then* the checkbox is disabled and a message is shown 'Allow the application to use your location information.'.
+
+==== 3.5.2. Wireframes
+image:usb05_wireframe.png[alt="User Story 5 Wireframe."]
+
+==== 3.5.3. Technical details
+* Options to automate user location:
+. WI-FI location: ranging with RTT https://developer.android.com/things/sdk/drivers/location[Android Developers^]
+. Android Location user drivers allow the app to publish updates to the device's physical location through the https://developer.android.com/things/sdk/drivers/location[Android locations Services.^]
+
+=== 3.6. User story B06: Select Visual Navigation
+As a *user*
+
+I *want* to select Visual navigation type
+
+so that I *can show the route* between the points in a basic 2-Dimensional map.
+
+==== 3.6.1. Acceptance criteria
+*Scenario 1: Visualize in 2D map* +
+*Given* a user +
+*When* the user clicks the _'Visualize in 2D'_ button +
+*Then* a 2D map of the route is shown on the 2D map page.
+
+*Scenario 2: Cancelling the navigation details page* +
+*Given* a user +
+*When* the user clicks the _'Cancel'_ button on 2D map page +
+*Then* the application returns to the previous page.
+
+==== 3.6.2. Wireframes
+image:usb06_wireframe.png[alt="User Story 6 Wireframe."]
+
+=== 3.7. User story B07: Corona Proof Navigation
+As a *user*
+
+I *want* to select the Covid-19 regulations Checkbox
+
+so that I *can show the route* between the points based on Covid-19 regulations.
+
+==== 3.7.1. Acceptance criteria
+*Scenario 1: Checkbox enabled navigation via Covid-19 regulations based pathway* +
+*Given* a user +
+*When* the user checks the checkbox 'Covid-19 regulations' +
+*Then* the application return a list of steps based on Corona regulations, on details page.
+
+==== 3.7.2. Wireframes
+image:usb07_wireframe.png[alt="User Story 7 Wireframe."]
+
+==== 3.7.3. Technical details
+- Use a directed graph for setting the paths between the nodes.
+
+=== 3.8. User story B08: Utility Information
+As a *user*
+
+I *want* to select a Utility
+
+so that I *can see* the basic Information about that particular Utility.
+
+==== 3.8.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* the user types the code-name of Utility +
+*Then* a selectable list of utilities based on input value will be shown.
+
+*Scenario 2: Details of the Utility is shown* +
+*Given* a user +
+*When* the user selects the utility code-name +
+*Then* the application returns the basic details on the detail section of the page.
+
+*Scenario 3: Invalid code-names returns error* +
+*Given* a user +
+*When* the user enters invalid code-name  +
+*Then* the application returns 'No Utility found by this code-name'.
+
+==== 3.8.2. Wireframes
+image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
+
+==== 3.8.3. Technical details
+- Use Event Listeners for displaying the details of the selected utility.
+
+== 4. UML Domain class diagram
+image:uml.png[]
+
+== 5. Promotor meetings
+
+=== 5.1. Intro meeting 21/09
+---------------------------------------------------------
+
+DATUM: 21/09/2020
+AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
+VERONTSCHULDIGD:
+VERSLAGGEVER: Thomas
+DATUM VOLGENDE VERSLAG: /
+AGENDA: INLEIDING, VERWACHTINGEN PROJECT, TECHNICAL DETAILS, CHALLENGES
+---------------------------------------------------------
+==== 5.1.1. Kort verslag
+- Verwachtingen van het project: Er is veel vrijheid in de ontwikkeling van de applicatie. Enerzijds gaat het om onderzoek naar mogelijke technologieeën en hun bruikbaarheid bij het maken van een navigatieapplicatie. Dit onderzoek moet zoveel mogelijk omgezet worden naar een effectieve applicatie om de weg in Campus proximus te vinden. Wekelijks vergaderen om resultaten te bespreken, net zoals de verwachtingen en plannen van de week daarop.
+- Technical details: Hele team heeft een android toestel. De development van het project zal daarom in Android Studio gebeuren met Kotlin. Er is een git-repo om de vooruitgang in op te slaan. Jira wordt gebruikt als kanbanbord.
+- Challenges: Augmented reality gebruiken om de weg naar de gewenste bestemming weer te geven. Een "neural network" opstellen en Access Points gebruiken om de huidige locatie van een gebruiker te gebruiken. Een 2D plattegrond van de school, met de locatie van de gebruiker en een richtingsaanwijzing voor de bestemming.
+
+=== 5.2. Meeting 24/09
+---------------------------------------------------------
+
+DATUM: 24/09/2020
+AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
+VERONTSCHULDIGD:
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: 28/09/2020
+AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL DATA STRUCTURE
+---------------------------------------------------------
+==== 5.2.1. Kort verslag
+- Gesproken over de vooruitgang van het afstudeerproject, agenda punten en de manier waarop we het project gaan aanpakken.
+- Per node bijhouden: Directive Graphs
+- Advies gekregen over het modeleren van richtingen voor 2-dimensionale coördinaten.
+* Per node een vector bijhouden met punten (x, y) om positie van de node op een assenstelsel te bepalen. Zodat het bepalen van richting (bv. links, rechts Of rechtdoor) wiskundig opgelost kan worden.
+- De documentatie van het project wordt in het Engels geschreven.
+
+==== 5.2.2. Acties
+- Een kort onderzoek doen voor het implementeren van vector.
+- Onderzoek: Directive Graphs en hoe het in onze project past.
+- Documentatie van het project in het Engels schrijven.
+
+=== 5.3. Meeting 28/09
+---------------------------------------------------------
+
+DATUM: 28/09/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: JOHAN, THOMAS
+DATUM VOLGENDE VERSLAG: 12/10/2020
+AGENDA: Planning, manier van werken, Testing
+---------------------------------------------------------
+==== 5.3.1. Kort verslag
+- Demonstreren van project UML
+- Bijhouden van data binnen de applicatie
+- Bespreking uitwerking algoritme
+- Waterfall manier van werken bespreken
+
+==== 5.3.2. Acties
+- UML vereenvoudigen, er zijn een heel aantal klassen die overbodig zijn
+- Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
+- Kleine app maken om te beginnen, en daarna uitbreidingen maken
+- Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
+- Databank aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
+- verschillende modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
+
+=== 5.4. Meeting 12/10
+---------------------------------------------------------
+
+DATUM: 12/10/2020
+AANWEZIGEN: THOMAS, HAMID
+VERONTSCHULDIGD: JOHAN, JARON
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: 14/10/2020
+AGENDA: Technisch review and details
+---------------------------------------------------------
+==== 5.4.1. Kort verslag
+- Dijkstra: de obstakels en trage werking
+- Algorithm: A* en de mogelijkheden voor onze app
+- 2-D Navigatie: PNGs geven problemen voor het weergeven van routes
+
+==== 5.4.2. Acties
+- Dijkstra: Minder gebruik maken van for loops.
+* Functioneel programmeren
+* Gebruik een controle of een node al bezocht is
+* Verwijder de printMatrix() method - vertraging reden voor dijkstra.
+- 2-D Navigatie: Voor android toestellen best vector drawables gebruiken
+* Je moet een xml bestand hebben i.p.v. meerdere pngs te genereren.
+* Beeld kwaliteit is beter, minder opslagruimte nemend, kan animaties toegevoegd worden.
+
+=== 5.5. Meeting 14/10
+---------------------------------------------------------
+
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: HAMID
+DATUM VOLGENDE VERSLAG: NA
+AGENDA: Demo Applicatie, Kleine aanpassingen & voorbreiding afstudeerproject presentatie
+---------------------------------------------------------
+==== 5.5.1. Kort verslag
+- Demonstreren van de BuildingDing App
+- Instellingen features: Taal veranderen naar Frans, Engels en Nederlands
+- Text based navigatie: Een mooie oplijsting van route beschrijving
+- 2-D Navigatie: volgens de circulatie plan
+
+==== 5.5.2. Acties
+- Instellingen:
+* De talen worden niet veranderd in hele applicatie na de 'terug gaan' knop te druken.
+* Keuze voor navigatie type verwijderen en een mogelijkheid in text based view vinden.
+- Text based Navigatie: best dat in deze pagina een verwijzing is naar 2-D navigatie.
+- 2-D Navigatie: Werk proof of concept, dus alleen kunnen Demonstreren bv. alleen b0 block.
+- Afstudeerproject presentatie: maak het niet te technisch, alleen: problemen en de invloed daarvan, communicatie tussen teamleden, onderzoeken enz.
+
+== 6. Manuals
+
+=== 6.1. Technical manual
+
+==== 6.1.1. Introduction
+Buildingding is a Proof of Concept application made for Campus Proximus to help people navigate through the campus. The application is not yet available on the Play Store.
+
+==== 6.1.2. Git and GitHub
+First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be present in your system.
+
+image::git.png[500, 500]
+
+After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally.
+
+----
+git clone https://github.com/UCLeuvenLimburg/Buildingding.git
+----
+
+==== 6.1.3. Android Studio
+Now that we have our application on our device, we still need an emulator for a mobile device and a way to run it. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program.
+
+image::android_studio.png[500, 500]
+
+The next step is to open android studio, choose to open an existing project and locate the cloned repository to put this project in Android Studio.
+
+image::android_studio_open_project.png[500, 500]
+
+==== 6.1.4. Running the application
+To run the project we need an emulator, which we can easily set-up in Android studio. Locate the AVD manager. Next choose create a new virtual device. Any device should work, but we recommend the Pixel 3a. After selecting a device click next, and choose the release "Q" with API level 29.
+
+Now that we have done all these steps we can run the application by clicking the green triangle.
+
+image::start.png[500, 500]
+
+=== 6.2. User manual
+
+==== 6.2.1. Buildingding: purpose
+
+The purpose of Buildingding is to help the user navigate Campus Proximus. Which is especially helpful with the standing circulation planning due to the pandemic concerning 'COVID-19'. This application was written as a graduation project for UCLL Applied Informatics in 2020 by order of Dr. Vogels F.
+
+The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code present at the current location to set the starting location, but still has to choose the destination from a list.
+
+Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualization on a map.
+
+The application does not use real-time tracking.
+
+This application is suited for Android 10 and higher.
+
+The supported languages are:
+
+* English
+* Dutch
+* French
+
+==== 6.2.2. Installing Buildingding
+
+To help you installing Buildingding, please refer to the installation manual.
+
+==== 6.2.3. Starting Buildingding
+
+You can start the application by tapping the Buildingding icon on your screen. (Layouts may differ on your device)
+
+image:1_homescreen.png[width=100%, scalewidth=40cm]
+
+If the icon is missing, you can search for Buildingding by
+
+. Swiping 'up' on your main screen.
+. Entering the term 'buildingding' in the searchbar
+. Tapping the Buildingding icon
+
+image:2_1_appscreen.png[width=100%, scalewidth=40cm] image:2_2_appscreen.png[width=100%, scalewidth=40cm] image:2_3_appscreen.png[width=100%, scalewidth=40cm]
+
+You will then be shown a welcome screen for two seconds after which you will enter the main menu
+
+image:3_1_splashscreen.png[width=100%, scalewidth=40cm] image:3_2_homescreen.png[width=100%, scalewidth=40cm]
+
+==== 6.2.4. Navigation
+
+To start the navigation you should tap the navigation button in the main menu. After which you will be shown the main navigation screen.
+
+image:4_1_navigation_menu.png[width=100%, scalewidth=40cm] image:4_2_navigation_main.png[width=100%, scalewidth=40cm]
+
+On this screen can start choosing locations, or go back to the main menu
+
+<<<
+
+===== 6.2.4.1. Choosing a starting location
+
+To choose a start location you have to tap the button marked "START POSITION"
+
+image:5_1_navigation_start_position.png[width=100%, scalewidth=40cm]
+
+Depending on the applied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds your previous choice.
+
+====== 6.2.4.1.1. Choosing a starting location from the list
+
+If the setting "List" is applied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
+
+image:5_2_start_location_list.png[width=100%, scalewidth=40cm] image:5_3_start_location_list_scrolled.png[width=100%, scalewidth=40cm] image:5_5_chosen_start.png[width=100%, scalewidth=40cm]
+
+====== 6.2.4.1.2. Scanning a QR-code
+
+If the setting "Scan" is applied, you will have to scan a QR-code, after which you will be taken back to the main navigation screen.
+
+image:5_4_start_location_QR.png[width=100%, scalewidth=40cm] image:5_4_start_location_QR_scan.png[width=100%, scalewidth=40cm] image:5_5_chosen_start.png[width=100%, scalewidth=40cm]
+
+===== 6.2.4.2. Choosing a destination
+
+After choosing the start position, you should choose a destination by tapping the button marked "END POSITION". Doing so will show you a scrollable list of possible locations. When you tap on a location, you will be back on the main navigation screen, where you can change the locations, or start the navigation.
+
+image:5_6_navigation_end_position.png[width=100%, scalewidth=40cm] image:5_8_choose_locationscreen.png[width=100%, scalewidth=40cm] image:5_9_choose_locationscreen_scroll.png[width=100%, scalewidth=40cm] image:5_7_chosen_end.png[width=100%, scalewidth=40cm]
+
+===== 6.2.4.3. Starting the navigation
+
+To start the navigation you should then tap the button marked "START"
+
+image:5_8_start_navigation.png[width=100%, scalewidth=40cm]
+
+After tapping this button you will see a scrollable list of locations, which you have to follow to reach your destination. If you tap a location in this list, you will be shown a map of the floor with the highlighted route. The starting location will be marked green and the destination will be red. If you tap this map, you will return to the list overview.
+
+image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm]
+image:6_8_2D_navigation_tilted.png[]
+
+<<<
+
+==== 6.2.5. Changing the Settings
+
+To change the settings you should tap the button marked "SETTINGS" on the main menu.
+To reach the main menu, you can use the back button on your mobile device.
+(image may differ on your device.) It could be possible you need to tap the back button multiple times.
+
+image:7_change_settings.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm]
+
+When you tap on the "SETTINGS" button, you will be shown a list of possible settings.
+ At the moment these are:
+
+* Language: this will change the language used in Buildingding
+* Start choice: this will change the way you can set the starting point.
+
+To change the desired setting you can tap the correct button, otherwise you can cancel by tapping the back button (image may differ on your device.) When you have made a choice, you will be returned to the main menu.
+
+image:9_1_settingsscreen.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm]
+
+<<<
+
+===== 6.2.5.1. Changing the language
+
+If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilize the back button (image may differ on your device.) At the moment the choices are:
+
+* English
+* Nederlands
+* Francais
+
+If one of these languages is the main language of your device, Buildingding will default to this language.
+When you have made a choice, you will be returned to the main menu in the appropriate language.
+
+image:9_2_languagescreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm] image:3_2_homescreen.png[width=100%, scalewidth=40cm]
+
+===== 6.2.5.2. Changing the start location input method
+
+To change the input method, you should tap the corresponding button.
+To cancel a change, you can utilize the back button (image may differ on your device.)
+At the moment the choices are:
+
+* Scan
+* List (default)
+
+When you have made a choice, you will be returned to the main menu.
+
+image:9_3_startchoicescreen.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm] image:3_2_homescreen.png[width=100%, scalewidth=40cm]
+
+==== 6.2.6. About screen
+
+The third option on the main menu will show you brief information about the application.
+You can exit this using the back button.
+
+image:8_about_menu.png[width=100%, scalewidth=40cm] image:10_aboutscreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm]
