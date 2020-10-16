@@ -89,5 +89,6 @@ Hamid Khodayari; r0716543; 3TI/6BS
 |15/10    14:00	| 2.5 	  | {all}               | Preparation for graduation project presentations.
 |16/10    10:00	| 3 	    | {h}                 | Finalizing the logbook, meeting reports, Research documents in github.
 |16/10    14:00	| 4.5 	  | {ht}                | Finalizing the logbook, meeting reports, Research documents in github and checking with {t}
+|16/10    19:00	|4    	  | {all}               | Checking spellings and corrections.
 
 |=======================
