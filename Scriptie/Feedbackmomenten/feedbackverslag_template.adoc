@@ -1,6 +1,6 @@
 = Verslag vergadering image:ucll.jpg[role="right",150,150]
 :doctype: article
-:imagesdir: ./img
+:imagesdir: ../img
 :nofooter:
 
 // Macro's voor aanwezigen/verontschuldigd
