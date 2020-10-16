@@ -5,7 +5,7 @@
 :imagesdir: ./img
 :nofooter:
 
-image::ucll_pink.png[float="left, role="left",200,200]
+image::ucll_pink.png[role="left",200,200]
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -31,9 +31,6 @@ image::bdd_logo.png[400,400,float="center",align="center"]
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-
 
 [.text-right]
 *_Auteurs:_* +
@@ -470,12 +467,27 @@ image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
 ==== 3.8.3. Technical details
 - Use Event Listeners for displaying the details of the selected utility.
 
-=== 4. UML Domain class diagram
+== 4. UML Domain class diagram
 image:uml.png[]
 
-=== 5. Promotor meetings
+== 5. Promotor meetings
 
-==== 5.1. Meeting 24/09
+=== 5.1. Intro meeting 21/09
+---------------------------------------------------------
+
+DATUM: 21/09/2020
+AANWEZIGEN: HAMID, THOMAS, JOHAN, JARON
+VERONTSCHULDIGD:
+VERSLAGGEVER: Thomas
+DATUM VOLGENDE VERSLAG: /
+AGENDA: INLEIDING, VERWACHTINGEN PROJECT, TECHNICAL DETAILS, CHALLENGES
+---------------------------------------------------------
+==== 5.1.1. Kort verslag
+- Verwachtingen van het project: Er is veel vrijheid in de ontwikkeling van de applicatie. Enerzijds gaat het om onderzoek naar mogelijke technologieeën en hun bruikbaarheid bij het maken van een navigatieapplicatie. Dit onderzoek moet zoveel mogelijk omgezet worden naar een effectieve applicatie om de weg in Campus proximus te vinden. Wekelijks vergaderen om resultaten te bespreken, net zoals de verwachtingen en plannen van de week daarop. 
+- Technical details: Hele team heeft een android toestel. De development van het project zal daarom in Android Studio gebeuren met Kotlin. Er is een git-repo om de vooruitgang in op te slaan. Jira wordt gebruikt als kanbanbord.
+- Challenges: Augmented reality gebruiken om de weg naar de gewenste bestemming weer te geven. Een "neural network" opstellen en Access Points gebruiken om de huidige locatie van een gebruiker te gebruiken. Een 2D plattegrond van de school, met de locatie van de gebruiker en een richtingsaanwijzing voor de bestemming.
+
+=== 5.2. Meeting 24/09
 ---------------------------------------------------------
 
 DATUM: 24/09/2020
@@ -485,19 +497,19 @@ VERSLAGGEVER: HAMID
 DATUM VOLGENDE VERSLAG: 28/09/2020
 AGENDA: BASIS DOCUMENTATIE, UML MVP, USER STORY MAPPING, USER STORIES & LOGICAL DATA STRUCTURE
 ---------------------------------------------------------
-===== 5.1.1. Kort verslag
+==== 5.2.1. Kort verslag
 - Gesproken over de vooruitgang van het afstudeerproject, agenda punten en de manier waarop we het project gaan aanpakken.
 - Per node bijhouden: Directive Graphs
 - Advies gekregen over het modeleren van richtingen voor 2-dimensionale coordinatie.
 * Per node een vector bijhouden met punten (x, y) om positie van de node op een assenstelsel te bepalen. Zodat het bepalen van richting (bv. links, rechts Of rechtdoor) wiskundig opgelost kan worden.
 - De documentatie van het project wordt in het Engels geschreven.
 
-===== 5.1.2. Acties
+==== 5.2.2. Acties
 - Een kort onderzoek doen voor het implementeren van vector.
 - Onderzoek: Directive Graphs en hoe het in onze project past.
 - Documentatie van het project in het Engels schrijven.
 
-==== 5.2. Meeting 28/09
+=== 5.3. Meeting 28/09
 ---------------------------------------------------------
 
 DATUM: 14/10/2020
@@ -507,13 +519,13 @@ VERSLAGGEVER: JOHAN, THOMAS
 DATUM VOLGENDE VERSLAG: 12/10/2020
 AGENDA: Planning, manier van werken, Testing
 ---------------------------------------------------------
-===== 5.2.1. Kort verslag
+==== 5.3.1. Kort verslag
 - Demonstreren van project UML
 - Bijhouden van data binnen de applicatie
 - Bespreking uitwerking algoritme
 - Waterfall manier van werken bespreken
 
-===== 5.2.2. Acties
+==== 5.3.2. Acties
 - UML vereenvoudigen, er zijn een heel aantal klassen die overbodig zijn
 - Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
 - Kleine app maken om te beginnen, en daarna uitbreidingen maken
@@ -521,7 +533,7 @@ AGENDA: Planning, manier van werken, Testing
 - Databanke aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
 - versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
 
-==== 5.3. Meeting 12/10
+=== 5.4. Meeting 12/10
 ---------------------------------------------------------
 
 DATUM: 12/10/2020
@@ -531,12 +543,12 @@ VERSLAGGEVER: HAMID
 DATUM VOLGENDE VERSLAG: 14/10/2020
 AGENDA: Technisch review and details
 ---------------------------------------------------------
-===== 5.3.1. Kort verslag
+==== 5.4.1. Kort verslag
 - Dijkstra: de obstakels en trage werking
 - Algorithm: A* en de mogelijkheden voor onze app
 - 2-D Navigatie: PNGs geven problemen voor het weergeven van routes
 
-===== 5.3.2. Acties
+==== 5.4.2. Acties
 - Dijkstra: Minder gebruik maken van for loops.
 * Functioneel programmeren
 * Gebruik een controle of een node al bezocht is
@@ -545,7 +557,7 @@ AGENDA: Technisch review and details
 * Je moet een xml bestand hebben i.p.v. meerdere pngs te genereren.
 * Beeld kwaliteit is beter, minder opslagruimte nemend, kan animaties toegevoegd worden.
 
-=== 5.4. Meeting 14/10
+=== 5.5. Meeting 14/10
 ---------------------------------------------------------
 
 DATUM: 14/10/2020
@@ -555,13 +567,13 @@ VERSLAGGEVER: HAMID
 DATUM VOLGENDE VERSLAG: NA
 AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject presentatie
 ---------------------------------------------------------
-===== 5.4.1. Kort verslag
+==== 5.5.1. Kort verslag
 - Demonstreren van de BuildingDing App
 - Instellingen features: Taal veranderen naar Frans, Engels en Nederlands
 - Text based navigatie: Een mooie oplijsting van route beschrijving
 - 2-D Navigatie: volgens de circulatie plan
 
-===== 5.4.2. Acties
+==== 5.5.2. Acties
 - Instellingen:
 * De talen worden niet veranderd in hele applicatie na de 'terug gaan' knop te druken.
 * Keuze voor navigatie type verwijderen en een mogelijkheid in text based view vinden.
@@ -571,4 +583,37 @@ AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject pres
 
 == 6. Manuals
 
-=== 6.1 Technical manual
+=== 6.1. Technical manual
+
+=== 6.1.1. Introduction
+Buildingding is a Proof of Concept application made for Campus Proximus to help people navigate through the campus. The application is not yet available on the Play Store.
+
+=== 6.1.2. Git and GitHub
+First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be installed.
+
+image::git.png[500, 500]
+
+
+After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally. 
+
+----
+git clone https://github.com/UCLeuvenLimburg/Buildingding.git
+----
+
+== Android Studio
+Now that we have our application on our device, we still need a way to run it and an emulator for a mobile device. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program. 
+
+image::android_studio.png[500, 500]
+
+The next step is to open android studio, choose to open an existing project and locate the cloned repository to put this project in Android Studio.
+
+image::android_studio_open_project.png[500, 500]
+
+
+== Running the application
+To run the project we need an emulator, which we can easily set-up in Android studio. Locate the AVD manager. Next choose create a new virtual device. Any device should work, but we recommend the Pixel 3a. After selecting a device click next, and choose the release "Q" with API level 29.
+
+Now that we have a device selected. Now that we have done all these steps we can run the application by clicking the green triangle.
+
+image::start.png[500, 500]
+
