@@ -1,0 +1,17 @@
+﻿Use cases,Localisation,,,Navigation,,,Information
+User tasks,Starting position,End position,Current position,Start navigation,Cancel navigation,Modify navigation,Receive information
+"Release 1
+30/09",Choose listed starting location,Choose listed end location,,Text-based navigation,Finish navigation,,
+,,,,,,,
+,,,,,,,
+"Release 2
+07/10",,,,Coronaproof navigation,Force stop navigation,,
+,,,,,,,
+,,,,,,,
+"Release 3
+14/10",,,Find current location,Select navigation type,,,
+,,,,Visual navigation (2D),,,
+,,,,,,,
+Backlog,Automate starting location,,,Utility-based navigation,,Add multiple stops,Basic information
+,,,,AR navigation,,Change destination,Utility information
+,,,,,,,"""Did you know?"""
