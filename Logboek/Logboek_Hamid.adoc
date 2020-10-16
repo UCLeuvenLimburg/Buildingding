@@ -74,11 +74,11 @@ Hamid Khodayari; r0716543; 3TI/6BS
 |9/10     10:00	| 3 	    | {h}                 |	Converting map c2 to svg.
 |9/10     15:30	| 4.5	    | {h}                 |	Converting map b0 to svg.
 |10/10    10:00	| 3.5	    | {h}                 |	ActivityClass: 2-D Navigation
-|10/10    16:30	| 5 	    | {h}                 |	ActivityClass: 2-D Navigation - Drawing on a canvas
-|11/10    10:30	| 3 	    | {h}                 |	PNG's aanmaken voor de 2-d navigation
-|11/10    16:30	| 5.5	    | {h}                 |	PNG's aanmaken voor de 2-d navigation - Drawing on a canvas
+|10/10    16:30	| 2.5 	  | {h}                 |	ActivityClass: 2-D Navigation - Drawing on a canvas
+|11/10    10:30	| 3 	    | {h}                 |	Using PNG's for 2-D Navigation
+|11/10    16:30	| 2.5	    | {h}                 |	Making PNG's de 2-d navigation - Drawing on a canvas
 |12/10    10:30	| 2.5	    | {h}                 |	Research: Possible formats for the 2-D navigation
-|12/10    13:45	| 1 	    | {ht}                | Meeting with Vogels: PNG's not usable.
+|12/10    13:45	| 1 	    | {ht}                | Meeting with Mr. Vogels: PNG's not usable.
 |12/10    15:30	| 2.5	    | {h}                 | Back to SVG's: finding a new approch to save maps as vector drawables
 |13/10    10:30	| 2.5	    | {h}                 | Making the vector drawables out of SVGs.
 |13/10    16:30	| 4.5	    | {h}                 | Making the vector drawables out of SVGs continued.
