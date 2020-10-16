@@ -121,8 +121,8 @@ Additionally, correct app usage reduces interaction with the receptionists for r
 |=======================
 |Stakeholder|Major Value|Attitudes|Major Interests|Constraints
 |First-year students, trainees, guests, new lecturers|Reduced stress when looking for a classroom.|Strong enthusiasm, can traverse through the campus more easily.|Simplicity of use; time and effort savings to find specific locations on campus.|Parties should be made aware of the existence of the application beforehand.
-|Reception staff|Less frequently distracted from work to give directions.|Concern about not being aware of guests currently on campus; otherwise receptive.|Reducing the total workload with minimal changes to payroll.|Communication with third parties to create application awareness. 
-|Attendees on campus|In case of emergency, quickly find the nearest exit.|Strong commitment through release 2; may not be used frequently.|Simplicity of use; extra means of safety when traversing campus grounds.|Need to have application installed and mobile device nearby when an emergency arises. 
+|Reception staff|Less frequently distracted from work to give directions.|Concern about not being aware of guests currently on campus; otherwise receptive.|Reducing the total workload with minimal changes to payroll.|Communication with third parties to create application awareness.
+|Attendees on campus|In case of emergency, quickly find the nearest exit.|Strong commitment through release 2; may not be used frequently.|Simplicity of use; extra means of safety when traversing campus grounds.|Need to have application installed and mobile device nearby when an emergency arises.
 |Students|Find infrequently used locations more easily.|Receptive through release 1; may not use application frequently.|Minimal effort needed; become more knowledgeable of campus features and their respective locations.|Need to have application installed and device within reach.
 |Application maintenance team|No benefit; needs to maintain the application to ensure routes are up to date in case of unconventional situations.|Not happy about the obligatory software work; recognize the value to the organization and its users.|Minimal new technology needed; concern about difficulty of editing and updating the application.|Might not have the staff or knowhow necessary to make changes to the application.
 |=======================
@@ -260,9 +260,8 @@ so that I *can navigate* between the points.
 ==== 3.1.1. Acceptance criteria
 *Scenario 1:  Valid starting point and destination point list* +
 *Given* a user +
-*When* user types the code-name of classroom that user is at the moment
-in _'Choose starting point'_  or code-name of classroom
-that he wants to be in _'Choose destination'._ +
+*When* user types the code-name of classroom as _'Choose starting point'_
+or code-name of destination in _'Choose destination'._ +
 *Then* a selectable list of locations based on input value will be shown.
 
 ==== 3.1.2. Wireframes
@@ -277,7 +276,7 @@ As a *user*
 
 I *want* to go to details page
 
-so that, I *can see* a text-based navigation between two points.
+so that I *can see* a text-based navigation between two points.
 
 ==== 3.2.1. Acceptance criteria
 *Scenario 1: Find the shortest route between points* +
@@ -337,7 +336,7 @@ image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
 
 ==== 3.3.3. Technical details
 - Follow User Story B01 for start point input recommendation list.
-- Follow User Stroy B02 for Nearest By Utility, Text-Based Detail page.
+- Follow User Story B02 for Nearest By Utility, Text-Based Detail page.
 - Make a nested and logical list of utilities for selection.
 - Make sure that after clicking 'Cancel' the value of the input for start point will remain the same in the 'Find Nearest by' page.
 
@@ -346,7 +345,7 @@ As a *user*
 
 I *want* to select a location
 
-so that I *can see* a basic Information about that particular locations.
+so that I *can see* basic Information about that particular location.
 
 ==== 3.4.1. Acceptance criteria
 *Scenario 1: Relatable list of code-names shown as list* +
@@ -357,12 +356,12 @@ so that I *can see* a basic Information about that particular locations.
 *Scenario 2: Details of the locations is shown* +
 *Given* a user +
 *When* the user selects the location code-name +
-*Then* the applications returns the basic details on the detail section of the page.
+*Then* the application returns the basic details on the detail section of the page.
 
 *Scenario 3: Invalid code-names returns error* +
 *Given* a user +
 *When* the user enters invalid code-name  +
-*Then* the applications returns 'No location found by this code-name'.
+*Then* the application returns 'No location found by this code-name'.
 
 ==== 3.4.2. Wireframes
 image:usb04_wireframe.png[alt="User Story 4 Wireframe."]
@@ -408,13 +407,13 @@ so that I *can show the route* between the points in a basic 2-Dimensional map.
 ==== 3.6.1. Acceptance criteria
 *Scenario 1: Visualize in 2D map* +
 *Given* a user +
-*When* the user clicks on _'Visualize in 2D'_ button +
+*When* the user clicks the _'Visualize in 2D'_ button +
 *Then* a 2D map of the route is shown on the 2D map page.
 
 *Scenario 2: Cancelling the navigation details page* +
 *Given* a user +
-*When* the user clicks on _'Cancel'_ button on 2D map page +
-*Then* the applications returns to previous page.
+*When* the user clicks the _'Cancel'_ button on 2D map page +
+*Then* the application returns to the previous page.
 
 ==== 3.6.2. Wireframes
 image:usb06_wireframe.png[alt="User Story 6 Wireframe."]
@@ -422,7 +421,7 @@ image:usb06_wireframe.png[alt="User Story 6 Wireframe."]
 === 3.7. User story B07: Corona Proof Navigation
 As a *user*
 
-I *want* to select Covid-19 regulations Checkbox
+I *want* to select the Covid-19 regulations Checkbox
 
 so that I *can show the route* between the points based on Covid-19 regulations.
 
@@ -443,7 +442,7 @@ As a *user*
 
 I *want* to select a Utility
 
-so that I *can see* a basic Information about that particular Utility.
+so that I *can see* the basic Information about that particular Utility.
 
 ==== 3.8.1. Acceptance criteria
 *Scenario 1: Relatable list of code-names shown as list* +
@@ -454,12 +453,12 @@ so that I *can see* a basic Information about that particular Utility.
 *Scenario 2: Details of the Utility is shown* +
 *Given* a user +
 *When* the user selects the utility code-name +
-*Then* the applications returns the basic details on the detail section of the page.
+*Then* the application returns the basic details on the detail section of the page.
 
 *Scenario 3: Invalid code-names returns error* +
 *Given* a user +
 *When* the user enters invalid code-name  +
-*Then* the applications returns 'No Utility found by this code-name'.
+*Then* the application returns 'No Utility found by this code-name'.
 
 ==== 3.8.2. Wireframes
 image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
