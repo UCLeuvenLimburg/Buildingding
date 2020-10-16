@@ -1,4 +1,4 @@
-= Buildingding: User manual image:ucll.jpg[role="right",150,150]
+= Buildingding: User manual
 :doctype: article
 :imagesdir: ./img
 :nofooter:
@@ -26,7 +26,7 @@ The supported languages are:
 
 == Installing Buildinding
 
-Buildingding can be obtained from its developers. See contact information below.
+To help you installing Buildinding, please refer to the installation manual.
 
 == Starting Buildingding
 
@@ -93,10 +93,45 @@ image:6_8_2D_navigation_tilted.png[]
 
 == Changing the Settings
 
+To change the settings you should tap the button marked "SETTINGS" on the main menu. To reach the main menu, you can use the back button on your mobile device. (image may differ on your device.) It could be possible you need to tap the back button multiple times.
+
+image:7_change_settings.png[300,300]image:back_button.png[300,300]
+
+When you tap on the "SETTINGS" button, you will be shown a list of possible settings. At the moment these are:
+
+* Language: this will change the language used in Buildinding
+* Start choice: this will change the way you can set the starting point.
+
+To change the desired setting you can tap the correct button, otherwise you can cancel by tapping the back button (image may differ on your device.) When you have made a choice, you will be returned to the main menu.
+
+image:9_1_settingsscreen.png[300,300]image:back_button.png[300,300]
+
 === Changing the language
+
+If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the coices are:
+
+* English
+* Nederlands
+* Francias
+
+If one of these languages is the main language of your device, Buildinding will default to this language.
+When you have made a choice, you will be returned to the main menu in the appropriate language.
+
+image:9_2_languagescreen.png[300,300] image:back_button.png[300,300] image:3_2_homescreen.png[300,300]
 
 === Changing the start location input method
 
-== Troubleshooting
+To change the input method, you should tap the corresponding button. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the coices are:
 
-== Contact
+* Scan
+* List (default)
+
+When you have made a choice, you will be returned to the main menu.
+
+image:9_3_startchoicescreen.png[300,300]image:back_button.png[300,300] image:3_2_homescreen.png[300,300]
+
+== About screen
+
+The third option on the main menu will show you a brief information about the application. You can exit this using the back button.
+
+image:8_about_menu.png[300,300] image:10_aboutscreen.png[300,300] image:back_button.png[300,300] 
