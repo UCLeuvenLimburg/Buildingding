@@ -97,4 +97,4 @@ A work around we found was to manually switch the WiFi on and off, thus triggeri
 
 == Conclusion of WPS
 
-With this in mind we started preliminary scanning of the APs to map the positions, but with too many time lost with trying to resolve the API limitations, we decided to furgo the implementation of WPS and decided to use the offline method of using positioning based on visual markers, namely QR-codes.
+With this in mind we started preliminary scanning of the APs to map the positions, but with too much time lost with trying to resolve the API limitations, we decided to furgo the implementation of WPS and decided to use the offline method of using positioning based on visual markers, namely QR-codes.
