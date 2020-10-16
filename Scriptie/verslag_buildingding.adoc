@@ -1280,7 +1280,7 @@ r0716543 +
 |15/10    14:00	| 2.5 	  | {all}               | Preparation for graduation project presentations.
 |16/10    10:00	| 3 	    | {h}                 | Finalizing the logbook, meeting reports, Research documents in github.
 |16/10    14:00	| 4.5 	  | {ht}                | Finalizing the logbook, meeting reports, Research documents in github and checking with {t}
-
+|16/10    19:00	|4    	  | {all}               | Checking spellings and corrections.
 |=======================
 
 === 8.2. Johan Molenberghs
@@ -1453,7 +1453,7 @@ r0705835 +
 |16/10 12u00|1u|{t}|thesis: in orde brengen backlog
 |16/10 14u30|4u|{t}|thesis: installatiehandleiding, en diverse documenten in orde brengen
 |16/10 19u15|1u|{t}|thesis: Peer assessment.
-|16/10 21u00|1.5u|{ht}|thesis: Verbeteren einddocument
+|16/10 21u00|2u|{ht}|thesis: Verbeteren einddocument
 |=======================
 
 === 8.4. Jaron Trossaert
@@ -1488,7 +1488,6 @@ r0374256 +
 |25/09 15u30|1u|{all}|Algemene vergadering voor planning week 2
 |28/09 14:00|0,5|{all}|voorbereiding vergadering met klant/begeleider
 |28/09 14u30|1u|{all}|Derde vergadering met klant/begeleider
-
 |02/10 14u30|2|{all}|Bespreking staat project en taak verdeling
 |13/10 16:30|1|{all}|Bespreking stand van zaken
 |14/10 16:30|2|{all}|Meeting Vogels: demo application
