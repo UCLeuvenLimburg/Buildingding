@@ -1,0 +1,192 @@
+:toc: macro
+:toclevels: 5
+:icons: font
+:doctype: article
+:imagesdir: ./img
+:nofooter:
+
+image::ucll_pink.png[float="left, role="left",200,200]
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[.text-center]
+AFSTUDEERPROJECT TOEGEPASTE INFORMATICA +
+Schooljaar 2020-2021
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+image::bdd_logo.png[400,400,float="center",align="center"]
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+[.text-right]
+*_Auteurs:_* +
+Hamid Khodayari +
+Thomas Nelen +
+Johan Molenberghs +
+Jaron Trossaert
+
+{nbsp} +
+{nbsp} +
+
+[.text-right]
+*_Promotor:_* +
+Frédéric Vogels
+
+<<<
+
+toc::[]
+
+== 1. Scope and vision
+
+=== 1.1. Business Requirements
+
+==== 1.1.1. Background
+Students and personnel at UCLL Proximus do not always know their way around the campus.
+Especially first-timers such as new teachers and first year students often have to ask around on-site to know where they should go for their next class, or they might not even know how to get back to their car in the parking lot.
+Of lesser importance are - amongst others - the cafeteria and the public restrooms, but even those places of interest are usually not easily found. +
+Furthermore, some lost sheep sometimes don’t even know where they themselves are - for example when leaving a very confusing course, Databases 2 for example.
+Being in such a state of disorientation can be quite a negative experience for anyone, quite possibly ruining the rest of the day. +
+But it’s not only people who attend or teach classes that might need some guidance getting somewhere on campus.
+Regularly, visitors not directly affiliated with the UCLL such as guest lecturers have to be somewhere on campus as well.
+Delays due to high traffic around the campus notwithstanding, nobody’s happy when a guest arrives fabulously late for a specific appointment within the halls of campus Proximus, which sadly enough happens a lot. +
+The problem of not finding the way around campus efficiently, or at all, is an issue that also pertains to locating certain objects like printers, emergency kits, cleaning utilities for the cleaning crew, and so on.
+Finally, let us not forget about the emergency services.
+It’s very important for them to not get lost on the way to an accident on the premises, or even on their way back to the ambulance.
+This does not happen too often, but these kinds of dumb mishaps should be avoided at all costs when lives are on the line.
+
+==== 1.1.2. Business Opportunity
+Many persons have requested a system that would permit one to better navigate their way around the campus, or to be guided to the utilities, like the nearest printer or water fountain.
+Such a system would save students and employees time as well as increase the chance of getting to their destinations in time.
+Knowing the shortest route to their destination would reduce the time lost waiting for a lecturer or guest speaker and decrease the odds of classes getting disturbed by wayward students.
+
+==== 1.1.3. Business Improvement Objectives
+* BO-1: Reduce the arrival latency in freshman classes within a month following initial release.
+** Scale: The duration freshmen spend finding an accurate path.
+** Meter: Location of devices according to access points.
+** Past: Approximately 15 minutes.
+** Goal: Less than 10 minutes.
+
+* BO-2: Reduce the amount of people in crowded areas.
+
+* BO-3: Reduce the disruptions while classes are taking place.
+
+* BO-4: Increase the course efficiency and students’ concentration during class.
+
+==== 1.1.4. Success Metrics
+* SM-1: 12% of campus first-timers and first year students use the app to find their way around.
+
+* SM-2: Campus regulars who use the app find shorter routes than the ones known to them.
+
+* SM-3: Utilities like printers and first aid kits are more easily found.
+
+==== 1.1.5. Vision Statement
+For people at UCLL Campus Proximus who want to find the shortest path to their destination on campus, Buildingding is an Android application that will guide its users along that path.
+The application will save time and effort for the user by not needing to visit the reception, nor asking someone for directions, as well as not having to return from wrong paths.
+Additionally, correct app usage reduces interaction with the receptionists for related questions, giving these employees more time for tasks with a higher priority.
+
+==== 1.1.6. Business Risks
+* RI-1: Too few students, staff and guests might use the application, making the time and effort put into the project appear as a waste of time. (Probability = 0.6, Impact = 3)
+
+* RI-2: The application might give incorrect info about or wrong directions to a specific location, which would result in the user being worse off than before consulting the app. Additionally, this experience would reduce user satisfaction with the app and possibly their usage of it. (Probability = 0.3, Impact = 9)
+
+* RI-3: The navigational aspect of the app might become outdated, for example when certain hallways become unavailable - either temporarily or permanently - to travel through, which means that the app users would not always be able to adhere to the suggested route. (Probability = 0.4, Impact = 7)
+
+* RI-4: The access points, used for identifying locations within the app, might get modified over time. This would result in the app not performing to its full potential, or it might even make the app unusable if the app is improperly maintained post-release. (Probability = 0.2, Impact = 8)
+
+=== 1.2. Scope and Limitations
+
+==== 1.2.1. Major Features
+* FE-1: Receive the shortest route to a designated spot on campus.
+
+* FE-2: Find your current location on the premises.
+
+* FE-3: View basic information for a specified location within the building complex.
+
+==== 1.2.2. Stakeholders profiles
+[options="header"]
+|=======================
+|Stakeholder|Major Value|Attitudes|Major Interests|Constraints
+|First-year students, trainees, guests, new lecturers|Reduced stress when looking for a classroom.|Strong enthusiasm, can traverse through the campus more easily.|Simplicity of use; time and effort savings to find specific locations on campus.|Parties should be made aware of the existence of the application beforehand.
+|Reception staff|Less frequently distracted from work to give directions.|Concern about not being aware of guests currently on campus; otherwise receptive.|Reducing the total workload with minimal changes to payroll.|Communication with third parties to create application awareness. 
+|Attendees on campus|In case of emergency, quickly find the nearest exit.|Strong commitment through release 2; may not be used frequently.|Simplicity of use; extra means of safety when traversing campus grounds.|Need to have application installed and mobile device nearby when an emergency arises. 
+|Students|Find infrequently used locations more easily.|Receptive through release 1; may not use application frequently.|Minimal effort needed; become more knowledgeable of campus features and their respective locations.|Need to have application installed and device within reach.
+|Application maintenance team|No benefit; needs to maintain the application to ensure routes are up to date in case of unconventional situations.|Not happy about the obligatory software work; recognize the value to the organization and its users.|Minimal new technology needed; concern about difficulty of editing and updating the application.|Might not have the staff or knowhow necessary to make changes to the application.
+|=======================
+
+=== 1.3. Software Requirements Specifications
+
+==== 1.3.1. Users and Characteristics
+.Guidee
+The guidee is any user who wants to find a specified location on campus.
+There are on average one thousand people present on campus, of which 50 or more would be expected to use the application simultaneously.
+
+==== 1.3.2. Operating Environment Constraints
+* OE-1: The app only works on mobile devices running Android 9 and later.
+
+* OE-2: Because the app uses Kotlin, the backend is cross-platform.
+
+==== 1.3.3. Design and Implementation Constraints
+* CO-1: The system’s design, code, and maintenance documentation shall conform to the UCLL Intranet Development Standard.
+
+* CO-2: The system shall use Kotlin as the main programming language.
+
+* CO-3: The app utilises the Wi-Fi Round Trip Time Android standard to help localise the user with Time of Flight ranging capabilities.
+
+==== 1.3.4. Assumptions
+* The operation of the app depends on the usage consistency of the current Cisco access points which broadcast their BSSID.
+
+* Buildingding and its creators assume that the campus premises are available to its user while consulting the app.
+It does not account for temporary closures such as during holiday periods and lockdowns.
+
+* Location on the mobile device is enabled.
+
+* The app will be distributed as an .apk file through a private link. Therefore, application installations coming from sources unknown to the Android system must be allowed on the related device.
+
+* The app only works on the premises of Campus Proximus.
+
+=== 1.4. External Interface Requirements
+
+==== 1.4.1. User Interfaces
+* UI-1: The Buildingding app screen displays shall conform to the corporate design of the UCLLfootnote:[https://intranet.ucll.be/nl/student/studeren-aan-ucll/pba-de-toegepaste-informatica-proximus/opleiding/kleuren-en-lettertypes-ucll].
+
+* UI-2: The app shall provide multiple languages for each displayed page in order to provide support for international students.
+
+* UI-3: The application pages shall permit complete navigation using single hand gestures alone, in addition to optionally using the phone camera.
+
+* UI-4: Buildingding can be used in both portrait and landscape mode, but is primarily designed to use in portrait mode.
+
+* UI-5: Additional accessibility options such as a colour-blind mode are not supported as of yet, but it will be looked into in the near future if there is a demand for it.
+
+==== 1.4.2. Software Interfaces
+* SI-1: Localisation System
+** SI-1.1: Buildingding shall transmit the whereabouts of the user to the Localisation System through a programmatic interface.
+** SI-1.2: The app shall poll the Localisation System either through a location list or through scanning for the user's whereabouts.
+** SI-1.3: The scanning utility within the Localisation System only supports certain scannable entities, i.e. very specific QR codes.
+
+* SI-2: Navigational System +
+Buildingding shall communicate with the Navigational System through a programmatic interface for the following operations:
+** SI-2.1:  To allow a Guidee to enter his/her destination address.
+** SI-2.2: To calculate the optimal route for the Guidee to follow from his/her start location to his/her destination.
+** SI-2.3: To allow the Guidee to see his/her optimal path as a list of instructions.
+** SI-2.4: To show the optimal path on a two-dimensional visualisation, i.e. show the route on a map.
+** SI-2-4: To back out of the calculated route in order for the Guidee to enter new start and/or end positions.
+
+==== 1.4.3. Communications Interfaces
+* CI-1: The Buildingding app does not notify the Guidee as of yet when he/she has arrived at the chosen destination, but it will be looked into in the near future if there is a demand for it.
