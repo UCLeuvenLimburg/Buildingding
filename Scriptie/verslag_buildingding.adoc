@@ -686,7 +686,7 @@ If the setting "Scan" is applied, you will have to scan a QR-code, after which y
 
 image:5_4_start_location_QR.png[width=100%, scalewidth=40cm] image:5_4_start_location_QR_scan.png[width=100%, scalewidth=40cm] image:5_5_chosen_start.png[width=100%, scalewidth=40cm]
 
-===== 6.2.4.2 Choosing a destination
+===== 6.2.4.2. Choosing a destination
 
 After choosing the start position, you should choose a destination by tapping the button marked "END POSITION". Doing so will show you a scrollable list of possible locations. When you tap on a location, you will be back on the main navigation screen, where you can change the locations, or start the navigation.
 
