@@ -100,8 +100,9 @@ Johan Molenberghs; r0728245; 3TI/2SO
 |14/10 11:30|1|{jo}|test 2D
 |14/10 16:30|2|{all}|Meeting Vogels: demo application
 |15/10 10:00|3|{hjo}|Aligning the 2-D navigation with text based and how to visualize it
-|15/10 13u00|2|{all}|Voorbereiden presentatie eindwerk
-|15/10 16u00|1|{all}|Presentatie afstudeerproject
-|16/10 10u00|2|{all}|Documentatie: gebruikershandleiding
-|16/10 13u00|7|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
+|15/10 16:00|1|{all}|Presentatie afstudeerproject
+|16/10 10:00|2|{all}|Documentatie: gebruikershandleiding
+|16/10 13:00|7.25|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|16/10 21:00|3|{all}|Verdere documentatie
 |=======================
