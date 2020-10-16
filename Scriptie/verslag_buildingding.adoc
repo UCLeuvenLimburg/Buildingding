@@ -171,6 +171,8 @@ It does not account for temporary closures such as during holiday periods and lo
 
 * UI-5: Additional accessibility options such as a colour-blind mode are not supported as of yet, but it will be looked into in the near future if there is a demand for it.
 
+<<<
+
 ==== 1.4.2. Software Interfaces
 * SI-1: Localisation System
 ** SI-1.1: Buildingding shall transmit the whereabouts of the user to the Localisation System through a programmatic interface.
@@ -187,6 +189,8 @@ Buildingding shall communicate with the Navigational System through a programmat
 
 ==== 1.4.3. Communications Interfaces
 * CI-1: The Buildingding app does not notify the Guidee as of yet when he/she has arrived at the chosen destination, but it will be looked into in the near future if there is a demand for it.
+
+<<<
 
 == 2. Planning
 
@@ -247,6 +251,8 @@ image::story_map_v2.png[float="center",align="center"]
 |AR arrow-based directions
 |Colour-blind support
 |=======================
+
+<<<
 
 == 3. User stories
 
@@ -330,6 +336,8 @@ detail page for the nearest by chosen Utility.
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
 *Then* the application returns back to Find Nearest by page.
+
+<<<
 
 ==== 3.3.2. Wireframes
 image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
@@ -418,6 +426,8 @@ so that I *can show the route* between the points in a basic 2-Dimensional map.
 ==== 3.6.2. Wireframes
 image:usb06_wireframe.png[alt="User Story 6 Wireframe."]
 
+<<<
+
 === 3.7. User story B07: Corona Proof Navigation
 As a *user*
 
@@ -465,6 +475,8 @@ image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
 
 ==== 3.8.3. Technical details
 - Use Event Listeners for displaying the details of the selected utility.
+
+<<<
 
 == 4. UML Domain class diagram
 image:uml.png[]
@@ -531,6 +543,8 @@ AGENDA: Planning, manier van werken, Testing
 - Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
 - Databank aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
 - verschillende modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
+
+<<<
 
 === 5.4. Meeting 12/10
 ---------------------------------------------------------
@@ -664,8 +678,6 @@ image:4_1_navigation_menu.png[width=100%, scalewidth=40cm] image:4_2_navigation_
 
 On this screen can start choosing locations, or go back to the main menu
 
-<<<
-
 ===== 6.2.4.1. Choosing a starting location
 
 To choose a start location you have to tap the button marked "START POSITION"
@@ -703,8 +715,6 @@ After tapping this button you will see a scrollable list of locations, which you
 image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm]
 image:6_8_2D_navigation_tilted.png[]
 
-<<<
-
 ==== 6.2.5. Changing the Settings
 
 To change the settings you should tap the button marked "SETTINGS" on the main menu.
@@ -722,8 +732,6 @@ When you tap on the "SETTINGS" button, you will be shown a list of possible sett
 To change the desired setting you can tap the correct button, otherwise you can cancel by tapping the back button (image may differ on your device.) When you have made a choice, you will be returned to the main menu.
 
 image:9_1_settingsscreen.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm]
-
-<<<
 
 ===== 6.2.5.1. Changing the language
 
@@ -862,6 +870,8 @@ image::dijstra_graph_init.png[[alt="Dijkstra initialization process.", width=500
 ===============================
 . The distance from node C001 to C001 is 0.
 ===============================
+
+<<<
 
 ===== 7.3.1.2. Evaluation
 
