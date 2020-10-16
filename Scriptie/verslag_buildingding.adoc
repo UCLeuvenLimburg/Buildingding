@@ -1180,3 +1180,315 @@ With the help of the Vector Asset tool, we can convert the SVG’s to vector dra
 
 Visit this  https://developer.android.com/studio/write/vector-asset-studio[link^] for more information.
 ===============================
+
+== 8. Logboeken
+
+// Macro's voor betrokkenen
+// Usage: insert {shortcut} in cel
+:h: Hamid
+:jo: Johan
+:t: Thomas
+:ja: Jaron
+:hjo: Hamid, Johan
+:ht: Hamid, Thomas
+:hja: Hamid, Jaron
+:jot: Johan, Thomas
+:joja: Johan, Jaron
+:tja: Thomas, Jaron
+:hjot: Hamid, Johan, Thomas
+:htja: Hamid, Thomas, Jaron
+:hjoja: Hamid, Johan, Jaron
+:jotja: Johan, Thomas, Jaron
+:all: Hamid, Johan, Thomas, Jaron
+
+=== 8.1. Hamid Khodayari
+
+r0716543 +
+3TI/6BS
+
+[options="header"]
+|=======================
+|Date & hour  |Duration   |Involved members     |Topics
+|21/09 1:30	  |1	        |{h} 	                |Brainstorm for project features.
+|21/09 09:45  |0.5        |{h}                  |Setting documents up for the project.
+|21/09 10:15  |0.75       |{all}                |First meeting with the client/mentor.
+|21/09 11:15  |1          |{all}                |First meeting: Assign roles, impact analysis, etc.
+|21/09 11:15  |1          |{all}                |First meeting: Assign roles, impact analysis, etc.
+|21/09    14:40 |	0.9	    | {all}               |	Second meeting of the day: brainstorm Minimum viable product, Scope and vision.
+|22/09    10:00	| 1.5     | {hjot}              |	Technical explanation of the project.
+|22/09    13:15	| 2	      | {all}               |	Scope and vision document filled.
+|22/09    15:30	| 1.5	    | {hjot}              |	Stories mapping and prioritizing.
+|22/09    20:30	| 0.75    |	{h}                 | User Story B1: Navigation
+|22/09    23:00	| 1	      | {h}                 | Research: Kotlin & Android Studio.
+|22/09    12:00	| 0.5	    | {h}                 |	User Story B1: Navigation continued
+|23/09    13:30	| 0.75    |	{all}               |	Meeting: project status & ideas
+|23/09    15:00	| 1.5	    | {h}                 |	Research: Kotlin
+|23/09    19:00	| 0.75    |	{h}                 |	Research: Kotlin continued
+|23/09    23:30	| 1.5	    | {h}                 |	Research: Kotlin continued
+|24/09    9:30	| 0.75    |	{all}               |	F2F meeting: prepretion for the meeting with the mentor
+|24/09    10:30	| 0.5	    | {all}               |	Meeting with the mentor & client
+|24/09    11:30	| 2	      | {all}               |	Brainstorm: UML Model, logical data structure, mathematical solution for path navigation.
+|24/09    15:30	| 1	      | {h}                 |	USER Story 1
+|24/09    18:30	| 2	      | {h}                 |	USER Story 2 & Research: Vector & Euclidean algorithm
+|24/09    23:00	| 0.75    |	{h}                 |	Meeting report: 24/09
+|25/09    02:00	|  1	    | {h}                 |	Story 3
+|25/09   14:00	| 1.5	    | {all}               |	Campus scout: positions of utilities & nodes
+|25/09   19:00	|  2	    | {h}                 |	Making User Stories
+|26/09   11:00	|  2	    | {h}                 |	Making User Stories Continued.
+|28/09   13:30	|  1	    | {all}               | Preparation for meeting with mentor.
+|28/09   14:30	|  1	    | {all}               |	Meeting with Mentor.
+|28/ 09  20:00	|  2     	| {h}                 |	Making user stories release 3
+|29/ 09   11:00	|  2	    | {h}                 |	Research: Dijkstra algo for usb02
+|29/ 09   13:00	|  1.5    |	{h}                 |	Research: Dijkstra algo for usb02 Continued
+|30/09    14:00	|  3 	    | {h}                 |	Dijkstra implementation for our Buildingding
+|1/10     13:00	|  2	    | {h}                 |	Dijkstra algorithm implementation with java solution.
+|1/10     23:00	| 2 	    | {h}                 |	Dijkstra algorithm implementation with java solution. DONE
+|2/10     10:00	| 3.5	    | {h}                 |	Research: 2D Navigation possibilities in Android
+|2/10     16:00	| 2.5	    | {h}                 |	Research: 2D Navigation possibilities in Android Continued.
+|2/10     21:00	| 2 	    | {h}                 |	Research: 2D Navigation VectorDrawable
+|5/10     11:00	| 1.5	    | {h}                 |	Research: 2D Navigation VectorDrawable
+|5/10     13:30	| 2.5	    | {ht}                |	Brainstorm: navigation 2D
+|5/10     19:00	| 3 	    | {h}                 |	Research: VectorDrawable Android Tutorials
+|6/10     10:00	| 2 	    | {h}                 |	Research: VectorDrawable Android From SVG files
+|6/10     13:30	| 3 	    | {ht}                |	Brainstorm: How to convert the building map into a svg file?
+|6/10     19:30	| 3 	    | {h}                 |	InkSpace: first project to examine possible outcome.
+|7/10     13:30	| 2 	    | {hjot}              |	Brainstorm: Automation of Start location, Bluetooth-options, QR-code, Wifi Access point.
+|7/10     16:30	| 3.5	    | {h}                 |	First Trail: Converting Images to SVGs.
+|8/10     10:00	| 3 	    | {h}                 |	Converting map c0 to svg.
+|8/10     15:30	| 3.5	    | {h}                 |	Converting map c1 to svg.
+|9/10     10:00	| 3 	    | {h}                 |	Converting map c2 to svg.
+|9/10     15:30	| 4.5	    | {h}                 |	Converting map b0 to svg.
+|10/10    10:00	| 3.5	    | {h}                 |	ActivityClass: 2-D Navigation
+|10/10    16:30	| 2.5 	  | {h}                 |	ActivityClass: 2-D Navigation - Drawing on a canvas
+|11/10    10:30	| 3 	    | {h}                 |	Using PNG's for 2-D Navigation
+|11/10    16:30	| 2.5	    | {h}                 |	Making PNG's de 2-d navigation - Drawing on a canvas
+|12/10    10:30	| 2.5	    | {h}                 |	Research: Possible formats for the 2-D navigation
+|12/10    13:45	| 1 	    | {ht}                | Meeting with Mr. Vogels: PNG's not usable.
+|12/10    15:30	| 2.5	    | {h}                 | Back to SVG's: finding a new approch to save maps as vector drawables
+|13/10    10:30	| 2.5	    | {h}                 | Making the vector drawables out of SVGs.
+|13/10    16:30	| 4.5	    | {h}                 | Making the vector drawables out of SVGs continued.
+|14/10    11:30	| 3.5	    | {h}                 | B0 is converted as vector drawable and ready to be used.
+|14/10    16:30	| 2 	    | {all}               | Meeting Vogels: demo application
+|14/10    23:30	| 6	      | {h}                 | Finishing the 2-D navigation
+|15/10    10:00	| 3 	    | {hjo}               | Aligning the 2-D navigation with text based and how to visualize it
+|15/10    14:00	| 2.5 	  | {all}               | Preparation for graduation project presentations.
+|16/10    10:00	| 3 	    | {h}                 | Finalizing the logbook, meeting reports, Research documents in github.
+|16/10    14:00	| 4.5 	  | {ht}                | Finalizing the logbook, meeting reports, Research documents in github and checking with {t}
+
+|=======================
+
+=== 8.2. Johan Molenberghs
+
+r0728245 +
+3TI/2SO
+
+[options="header"]
+|=======================
+|Datum & uur|Duur|Betrokkenen|Topics
+|21/09 09:45|0,5|{jo}|Opzoeken tools (JIRA, confluence)
+|21/09 10:15|0,75|{all}|Eerste vergadering met klant/begeleider 
+|21/09 11:15|1|{all}|Eerste meeting, toewijzing rollen, bespreking aanpak
+|21/09 13:15|1,25|{jo}|Opzoeken Wi-Fi positioning system, methodes
+|21/09 14:30|1|{all}|Tweede meeting: brainstorm MVPm scope & vision
+|22/09 09:00|1|{jo}|Opzoeken WPS en Asciidoc
+|22/09 10:00|2|{all}|Technische inleiding, setup ide, …
+|22/09 13:00|3.25|{all}|Scope & Vision
+|22/09 16:30|1|{all}|User Story mapping
+|23/09 09:30|2|{jo}|Onderzoek WPS
+|23/09 12:45|0,75|{jo}|Onderzoek WPS
+|23/09 13:30|0,75|{all}|Scrum + status project bespreken, brainstorm
+|23/09 14:30|1|{jo}|Opschonen en onderzoek Jira
+|23/09 15:30|2,5|{jo}|Opmaken basis model 
+|24/09 09:30|1|{all}|voorbereiding vergadering met klant
+|24/09 10u30|0,5|{all}|Tweede vergadering met klant/begeleider
+|24/09 11u00|2|{all}|Hervorming datarepresentatie en verfijning user story map
+|24/09 15:00|1|{joja}|Aanpassen basis model 
+|24/09 17:00|2|{jo}|CRUD db opzoeken lijst
+|24/09 19:00|0,25|{jo}|bijwerken logs
+|25/09 09:30|0,5|{jotja}|Scrum
+|25/09 10:00|0,5|{jot}|Jira proberen te koppelen met Github
+|25/09 10:30|1|{jo}|Herorganisatie Jira issues
+|25/09 11:30|0,5|{jo}|Opzoeking whiteboard vermits niet adequaat lokaal en administratie
+|25/09 12:30|0,5|{jo}|opzoeking optimalisatie Jira tickets
+|25/09 14:45|0,5|{all}|scouting lokalen en POI's
+|25/09 15:15|0,25|{hjo}|bespreking user stories
+|25/09 15:30|1,5|{all}|bespreking planning en conventies
+|26/09 16:30|3|{jo}|refactoring model en invoeren lokalen
+|28/09 10:00|2,5|{jo}|testapp WPS
+|28/09 13:30|0,5|{jo}|testapp WPS
+|28/09 14:00|0,5|{all}|voorbereiding vergadering met klant/begeleider
+|28/09 14:30|1u|{all}|Derde vergadering met klant/begeleider
+|28/09 15:30|2|{jo}|herwerken app
+|29/09 09u30|1|{jo}|herwerken app
+|29/09 16:00|0,35|{jo}|aanpassen klassendiagram volgens vergadering
+|29/09 16:20|1,02|{jo}|aanpassen model en problemen met Android studio oplossen
+|30/09 10:00|2|{jo}|BDD-47 kies locaties
+|01/10 13:00|3|{jo}|onderzoek app WPS
+|02/10 12:30|2|{jo}|BDD-59 implementatie testing
+|02/10 14u30|2|{all}|bespreking staat project en taak verdeling
+|04/10 10:00|2|{jo}|BDD-59 implementatie testing van bestaande klassen
+|04/10 13:00|3|{jo}|input locaties in locations,csv
+|04/10 16:00|1|{jo}|uitlijnen tekst in gui
+|05/10 10:00|2|{jo}|onderzoek oplossing WPS probleem
+|05/10 13:30|3|{jo}|Wifiscanner test app
+|05/10 16u30|1|{hjot}|Team bespreking
+|06/10 08:30|0,5|{jo}|basis class WPS
+|06/10 09:00|2|{jo}|wifi localisation
+|06/10 15:30|3.5|{jo}|wifi localisation
+|07/10 13:30|2|{hjot}|brainstom automatisatie start locatis, bluetooth, QR, WPS
+|08/10 10:30|1|{jo}|herwerking code accesspoints
+|08/10 13:00|1|{jo}|scannen accesspoints
+|08/10 14:00|0,5|{jot}|bespreking met begeleider
+|08/10 14:30|3|{jo}|testapplicatie QR code
+|09/10 08:30|2|{jo}|aanmaken QR codes
+|09/10 10:60|2|{jo}|testapplicatie QR code
+|09/10 12u30|1,5|{hjot}|Team meeting en taak verdeling
+|09/10 14:00|2|{jot}|wireframes voor GUI
+|09/10 16:00|1,5|{jo}|integratie QR in applicatie
+|10/10 07:30|0,5|{jo}|GUI aanpassen naar huisstijl
+|10/10 08:30|3,5|{jo}|integratie activities op basis van wireframes
+|10/10 13:00|4|{jo}|verder uitwerken GUI
+|12/10 10:00|2|{jo}|uitschrijven reseachdocumenten
+|12/10 13:00|2,5|{jo}|uitschrijven reseachdocumenten
+|13/10 10:00|2|{jo}|start eindpresentatie
+|13/10 14:00|0,5|{jo}|welkomscherm is nu timer based
+|13/10 15:00|1|{jo}|bijwerken logs
+|13/10 16:30|1|{all}|bespreking stand van zaken
+|13/10 17:30|0,25|{hjo}|bespreking visualiatie nodes
+|13/10 17:45|0,5|{jo}|i18n
+|14/10 11:00|0,25|{hjo}|uitleg "D visualisation
+|14/10 11:15|0,25|{jo}|bijwerken log      
+|14/10 11:30|1|{jo}|test 2D
+|14/10 16:30|2|{all}|Meeting Vogels: demo application
+|15/10 10:00|3|{hjo}|Aligning the 2-D navigation with text based and how to visualize it
+|15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
+|15/10 16:00|1|{all}|Presentatie afstudeerproject
+|16/10 10:00|2|{all}|Documentatie: gebruikershandleiding
+|16/10 13:00|7.25|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|16/10 21:00|3|{all}|Verdere documentatie
+|=======================
+
+=== 8.3. Thomas Nelen
+
+r0705835 +
+3TI/2SO
+
+[options="header"]
+|=======================
+|Datum & uur|Duur|Betrokkenen|Topics
+|20/09 10u|2u|{t}|communicatie: regeling afstudeerproject
+|20/09 20u|1u|{t}|planning Project
+|21/09 10u15|1u|{all}|eerste vergadering met klant/begeleider
+|21/09 11u15|1u|{all}|eerste meeting: toewijzing rollen, bespreken aanpak
+|21/09 14u30|1u|{all}|tweede meeting: brainstorm basic app, scope & vision
+|21/09 16u00|1u|{t}|setup: File hierarchie en initiële applicatie
+|22/09 11u30|0.5u|{all}|Technische inleiding + inhalen persoonlijke daily standup
+|22/09 13u00|4u|{all}|thesis: Scope & vision, user story map
+|22/09 20u00|0.5u|{t}|setup: update basis applicatie en file structuur
+|23/09 10u00|1u|{t}|thesis: Verslag inleidingsgesprek
+|23/09 13u30|0.75y|{all}|communicatie: Daily standup, status project & ideeën
+|23/09 15u30|1u|{t}|develop: Update gitignore, created project structure and removed files from git
+|24/09 09u30|1u|{t}|thesis: Research document Kotlin
+|24/09 10u30|0.5u|{all}|communicatie: Tweede vergadering met klant/begeleider
+|24/09 11u00|0.25u|{all}|communicatie: Daily standup, bespreking meeting met klant/begeleider
+|24/09 11u15|1.75u|{all}|thesis: Hervorming datarepresentatie en verfijning user story map
+|25/09 9u30|0.5u|{jotja}|communicatie: Daily standup, uitwerken van on-location plattegrond mapping
+|25/09 12u00|1u|{t}|develop: git integration with Jira
+|25/09 14u00|1.5u|{all}|Scouten en uitmappen op campus
+|25/09 15u30|1u|{all}|communicatie: Algemene vergadering voor planning week 2
+|25/09 17u00|1u|{t}|thesis: Imported UserStoryMap to repo and research Access points
+|27/09 18u00|3u|{t}|Campus circulatieplan digitaal uitwerken
+|28/09 13u30|1u|{t}|Aanpassingen campus circulatieplan
+|28/09 14u00|0,5|{all}|voorbereiding vergadering met klant/begeleider
+|28/09 14u30|1u|{all}|communicatie: Derde vergadering met klant/begeleider
+|28/09 16u00|1u|{t}|Campus circulatieplan aanpassen
+|29/09 17u30|1u|{t}|Campus circulatieplan afronden
+|29/09 20u00|1u|{t}|Git research: branches
+|29/09 21u00|1u|{t}|Git research: Jira intergration
+|30/09 14u30|1u|{ht}|develop: Fix project and research algorithms
+|30/09 15u30|1u|{t}|develop: Fix project and research algorithms
+|30/09 20u00|1u|{t}|thesis: meeting reports adaptation and correction
+|31/09 10u00|2u|{t}|thesis: git research
+|01/10 12u00|1u|{t}|thesis: moduleverdeling
+|02/10 12u30|2u|{t}|communication: updates project, algorithms and MVVM
+|02/10 14u30|2u|{all}|communication: bespreking staat project en taak verdeling
+|04/10 14u30|2u|{t}|thesis: research app design
+|05/10 9u30|2u|{t}|develop: Dijkstra in Kotlin
+|05/10 16u30|1u|{hjot}|communication: Team bespreking
+|06/10 14u30|2u|{t}|develop: Algorithm refactoring
+|06/10 16u30|2u|{t}|develop: Repository refactoring
+|06/10 13u30|0.5u|{ht}|brainstorm: building map naar displayable image
+|07/10 13u30|1u|{hjot}|brainstorm: Automatisatie start locaties, bluetooth-opties, QR-code, Wifi Access Points.
+|07/10 14u30|2u|{t}|develop: Repository implementation
+|07/10 16u30|2u|{t}|develop: Algorithm implementation
+|08/10 14:00|0,5|{jot}bespreking met begeleider
+|09/10 12u30|1.5u|{hjot}|communication: Team meeting and taak verdeling
+|09/10 14:00|2u|{jot}|design: Wireframes voor GUI
+|10/10 12u00|1u|{t}|communication: Mails opleidingshoofd en klant
+|11/10 15u00|2u|{t}|develop: Settings research
+|11/10 18u00|1u|{t}|develop: Initial attempt settings
+|11/10 22u00|1u|{t}|design: Design bespreking met art en interaction design studenten
+|12/10 00u00|1u|{t}|develop: Text-based navigatie weergeven
+|12/10 08u00|2u|{t}|develop: singleton repositories en bugfixing
+|12/10 13u00|1.5u|{t}|develop: applicatie settings
+|12/10 14u30|1u|{ht}|communication: Meeting meneer Vogels
+|13/10 11u30|1u|{t}|develop: Werkende proberen te krijgen van taalsettings
+|13/10 16u30|1u|{all}|communication: bespreking stand van zaken
+|13/10 17u30|2u|{t}|develop: implementatie van meerdere talen
+|13/10 20u30|2u|{t}|develop: Werkende versie van RouteDisplay en startLocation selectie settings
+|14/10 00u00|3u|{t}|develop: bugfixing locations, filteren en virtual locations
+|14/10 11u00|2u|{t}|develop: refactor van groot deel code en versnelling van programma
+|14/10 16u30|0.5u|{all}|communication: eindmeeting meneer Vogels
+|14/10 16u30|2u|{all}|develop: samenzitten voor feedback en details aanpassen
+|14/10 22u00|2u|{t}|develop: Verschillende settings opties in orde brengen en UI
+|15/10 10u30|2.5u|{t}|develop: Talen in orde brengen en bugfixing
+|15/10 13u00|2u|{all}|presentation: Voorbereiden presentatie eindwerk
+|15/10 16u00|1u|{all}|communication: Presentatie afstudeerproject
+|16/10 12u00|1u|{t}|thesis: in orde brengen backlog
+|16/10 14u30|4u|{t}|thesis: installatiehandleiding, en diverse documenten in orde brengen
+|16/10 19u15|1u|{t}|thesis: Peer assessment.
+|16/10 21u00|1.5u|{ht}|thesis: Verbeteren einddocument
+|=======================
+
+=== 8.4. Jaron Trossaert
+
+r0374256 +
+3TI/4SO
+
+[options="header"]
+|=======================
+|Datum & uur|Duur|Betrokkenen|Topics
+|20/09 19u30|0.5u|{ja}|Solo brainstormsessie over projectu features
+|21/09 9u45|0.5u|{ja}|Klaarzetten documenten (scope & vision, logboek, verslag vergadering)
+|21/09 10u15|0.75u|{all}| Eerste vergadering met klant/begeleider 
+|21/09 11u15|1u|{all}|Eerste meeting: toewijzing rollen, bespreken aanpak
+|21/09 14u30|1u|{all}|Tweede meeting: brainstorm MVP, scope & vision
+|22/09 11u30|0.5u|{all}|Technische inleiding + inhalen persoonlijke daily standup
+|22/09 13u00|4u|{all}|Scope & vision, user story map
+|23/09 10u00|2.5u|{ja}|Scope & vision in asciidoc, logboek template in asciidoc
+|23/09 13u30|0.75u|{all}|Daily standup, status project & ideeën
+|23/09 10u00|2.5u|{ja}|User story en peer assessment template in asciidoc
+|24/09 09u30|1u|{tja}|Research document Kotlin
+|24/09 10u30|0.5u|{all}|Tweede vergadering met klant/begeleider
+|24/09 11u00|0.25u|{all}|Daily standup, bespreking meeting met klant/begeleider
+|24/09 11u15|1.75u|{all}|Hervorming datarepresentatie en verfijning user story map
+|24/09 13u30|0.25u|{ja}|Aanvullen logboek
+|24/09 13u45|0.25u|{ja}|Manual template
+|24/09 14u00|1u|{ja}|Research Kotlin/db repo
+|24/09 15u00|1u|{joja}|Backend domain pair programming
+|25/09 9u30|0.5u|{jotja}|Daily standup, uitwerken van on-location plattegrond mapping
+|25/09 10u00|2u|{ja}|Aanmaken default plattegronden
+|25/09 14u00|1.5u|{all}|Scouten en uitmappen op campus
+|25/09 15u30|1u|{all}|Algemene vergadering voor planning week 2
+|28/09 14:00|0,5|{all}|voorbereiding vergadering met klant/begeleider
+|28/09 14u30|1u|{all}|Derde vergadering met klant/begeleider
+
+|02/10 14u30|2|{all}|Bespreking staat project en taak verdeling
+|13/10 16:30|1|{all}|Bespreking stand van zaken
+|14/10 16:30|2|{all}|Meeting Vogels: demo application
+|15/10 13:00|2|{all}|Voorbereiden presentatie eindwerk
+|15/10 16:00|1|{all}|Presentatie afstudeerproject
+|16/10 10:00|2|{all}|Documentatie: gebruikershandleiding
+|16/10 13:00|7.25|{all}|Documentatie: gebruikershandleiding, UML, verdere documentatie
+|16/10 21:00|3|{all}|Verdere documentatie
+|=======================
