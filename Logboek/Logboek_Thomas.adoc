@@ -23,54 +23,73 @@ Voornaam Achternaam; r0123456; 3TI/SO3
 [options="header"]
 |=======================
 |Datum & uur|Duur|Betrokkenen|Topics
-|20/09 10u|2u|{t}|Communicatie afstudeerproject
-|20/09 20u|1u|{t}|Planning Project
-|21/09 10.15|1u|{all}|Eerste vergadering met klant/begeleider
-|21/09 11.15|1u|{all}|Eerste meeting: toewijzing rollen, bespreken aanpak
-|21/09 14.30|1u|{all}|Tweede meeting: brainstorm basic app, scope & vision
-|21/09 16.00|1u|{t}|Setup: File hierarchy and initial application
+|20/09 10u|2u|{t}|communicatie: regeling afstudeerproject
+|20/09 20u|1u|{t}|planning Project
+|21/09 10u15|1u|{all}|eerste vergadering met klant/begeleider
+|21/09 11u15|1u|{all}|eerste meeting: toewijzing rollen, bespreken aanpak
+|21/09 14u30|1u|{all}|tweede meeting: brainstorm basic app, scope & vision
+|21/09 16u00|1u|{t}|setup: File hierarchie en initiële applicatie
 |22/09 11u30|0.5u|{all}|Technische inleiding + inhalen persoonlijke daily standup
-|22/09 13u00|4u|{all}|Scope & vision, user story map
-|22/09 20u00|0.5u|{t}|Setup: update basic application and centralized files
-|23/09 10u00|1u|{t}|Verslag inleidingsgesprek
-|23/09 13u30|0.75|{all}|Daily standup, status project & ideeën
-|23/09 15u30|1u|{t}|Update gitignore, created project structure and removed files from git
-|24/09 09u30|1u|{t}|Research document Kotlin
-|24/09 10u30|0.5u|{all}|Tweede vergadering met klant/begeleider
-|24/09 11u00|0.25u|{all}|Daily standup, bespreking meeting met klant/begeleider
-|24/09 11u15|1.75u|{all}|Hervorming datarepresentatie en verfijning user story map
-|25/09 9u30|0.5u|{jotja}|Daily standup, uitwerken van on-location plattegrond mapping
-|25/09 12u00|1u|{t}|git integration with Jira
+|22/09 13u00|4u|{all}|thesis: Scope & vision, user story map
+|22/09 20u00|0.5u|{t}|setup: update basis applicatie en file structuur
+|23/09 10u00|1u|{t}|thesis: Verslag inleidingsgesprek
+|23/09 13u30|0.75y|{all}|communicatie: Daily standup, status project & ideeën
+|23/09 15u30|1u|{t}|develop: Update gitignore, created project structure and removed files from git
+|24/09 09u30|1u|{t}|thesis: Research document Kotlin
+|24/09 10u30|0.5u|{all}|communicatie: Tweede vergadering met klant/begeleider
+|24/09 11u00|0.25u|{all}|communicatie: Daily standup, bespreking meeting met klant/begeleider
+|24/09 11u15|1.75u|{all}|thesis: Hervorming datarepresentatie en verfijning user story map
+|25/09 9u30|0.5u|{jotja}|communicatie: Daily standup, uitwerken van on-location plattegrond mapping
+|25/09 12u00|1u|{t}|develop: git integration with Jira
 |25/09 14u00|1.5u|{all}|Scouten en uitmappen op campus
-|25/09 15u30|1u|{all}|Algemene vergadering voor planning week 2
-|25/09 17u00|1u|{t}|Imported UserStoryMap to repo and research Access points
+|25/09 15u30|1u|{all}|communicatie: Algemene vergadering voor planning week 2
+|25/09 17u00|1u|{t}|thesis: Imported UserStoryMap to repo and research Access points
 |27/09 18u00|3u|{t}|Campus circulatieplan digitaal uitwerken
 |28/09 13u30|1u|{t}|Aanpassingen campus circulatieplan
-|28/09 14u30|1u|{all}|Derde vergadering met klant/begeleider
+|28/09 14u00|0,5|{all}|voorbereiding vergadering met klant/begeleider
+|28/09 14u30|1u|{all}|communicatie: Derde vergadering met klant/begeleider
 |28/09 16u00|1u|{t}|Campus circulatieplan aanpassen
 |29/09 17u30|1u|{t}|Campus circulatieplan afronden
 |29/09 20u00|1u|{t}|Git research: branches
 |29/09 21u00|1u|{t}|Git research: Jira intergration
-|29/09 14u30|1u|{t}|develop: project fix
-|29/09 15u00|1u|{t}|develop: add all locations
 |30/09 14u30|1u|{ht}|develop: Fix project and research algorithms
 |30/09 15u30|1u|{t}|develop: Fix project and research algorithms
 |30/09 20u00|1u|{t}|thesis: meeting reports adaptation and correction
 |31/09 10u00|2u|{t}|thesis: git research
-|01/10 12u00|1u|{t}|thesis: division of modules
+|01/10 12u00|1u|{t}|thesis: moduleverdeling
 |02/10 12u30|2u|{t}|communication: updates project, algorithms and MVVM
-|02/10 14u30|2u|{all}|communication: group meeting updated state of affairs and task distribution
+|02/10 14u30|2u|{all}|communication: bespreking staat project en taak verdeling
 |04/10 14u30|2u|{t}|thesis: research app design
 |05/10 9u30|2u|{t}|develop: Dijkstra in Kotlin
-|05/10 16u30|1u|{hjot}|communication: Team discussion
+|05/10 16u30|1u|{hjot}|communication: Team bespreking
 |06/10 14u30|2u|{t}|develop: Algorithm refactoring
 |06/10 16u30|2u|{t}|develop: Repository refactoring
-|07/10 14u00|2u|{t}|develop: Repository implementation
+|06/10 13u30|0.5u|{ht}|brainstorm: building map naar displayable image
+|07/10 13u30|1u|{hjot}|brainstorm: Automatisatie start locaties, bluetooth-opties, QR-code, Wifi Access Points.
+|07/10 14u30|2u|{t}|develop: Repository implementation
 |07/10 16u30|2u|{t}|develop: Algorithm implementation
-|09/10 12u30|1.5u|{hjot}|communication: Team meeting and task division
+|08/10 14:00|0,5|{jot}bespreking met begeleider
+|09/10 12u30|1.5u|{hjot}|communication: Team meeting and taak verdeling
+|09/10 14:00|2u|{jot}|design: Wireframes voor GUI
 |10/10 12u00|1u|{t}|communication: Mails opleidingshoofd en klant
 |11/10 15u00|2u|{t}|develop: Settings research
 |11/10 18u00|1u|{t}|develop: Initial attempt settings
-|11/10 22u00|1u|{t}|develop: Design bespreking met art studenten
+|11/10 22u00|1u|{t}|design: Design bespreking met art en interaction design studenten
 |12/10 00u00|1u|{t}|develop: Text-based navigatie weergeven
+|12/10 08u00|2u|{t}|develop: singleton repositories en bugfixing
+|12/10 13u00|1.5u|{t}|develop: applicatie settings
+|12/10 14u30|1u|{ht}|communication: Meeting meneer Vogels
+|13/10 11u30|1u|{t}|develop: Werkende proberen te krijgen van taalsettings
+|13/10 16u30|1u|{all}|communication: bespreking stand van zaken
+|13/10 17u30|2u|{t}|develop: implementatie van meerdere talen
+|13/10 20u30|2u|{t}|develop: Werkende versie van RouteDisplay en startLocation selectie settings
+|14/10 00u00|3u|{t}|develop: bugfixing locations, filteren en virtual locations
+|14/10 11u00|2u|{t}|develop: refactor van groot deel code en versnelling van programma
+|14/10 16u30|0.5u|{all}|communication: eindmeeting meneer Vogels
+|14/10 16u30|2u|{all}|develop: samenzitten voor feedback en details aanpassen
+|14/10 22u00|2u|{t}|develop: Verschillende settings opties in orde brengen en UI
+|15/10 10u30|2.5u|{t}|develop: Talen in orde brengen en bugfixing
+|15/10 13u00|2u|{all}|presentation: Voorbereiden presentatie eindwerk
+|15/10 16u00|1u|{all}|communication: Presentatie afstudeerproject
+|16/10 12u00|1u|{t}|thesis: in orde brengen backlog
 |=======================
