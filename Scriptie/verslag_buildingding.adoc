@@ -1,5 +1,5 @@
 :toc: macro
-:toclevels: 5
+:toclevels: 2
 :icons: font
 :doctype: article
 :imagesdir: ./img
@@ -206,8 +206,8 @@ image::kanban_backlog.png[float="center",align="center"]
 image::story_map_v2.png[float="center",align="center"]
 
 === 2.3. User story priority list
-|=======================
 [options="header"]
+|=======================
 |Must have
 |Show list of start locations
 |Show list of end locations
@@ -218,8 +218,9 @@ image::story_map_v2.png[float="center",align="center"]
 |Start navigation
 |=======================
 
+[options="header"]
 |=======================
-6.|Should have
+|Should have
 |Basic location info
 |2D visual navigation
 |End navigation
@@ -228,12 +229,243 @@ image::story_map_v2.png[float="center",align="center"]
 |Automated localisation
 |=======================
 
+[options="header"]
 |=======================
-16.|Should have
-|Basic location info
-|2D visual navigation
-|End navigation
-|Change destination
-|Corona based directions
-|Automated localisation
+|Nice to have
+|Compass-based map rotation
+|Restroom hotkey
+|AR text-based directions
+|"Point me to the nearest free classroom"
+|Schedule integration
+|Find people on campus
+|Text-to-speech based directions
+|Alternative starting position
+|Multi-language support
+|Voice assist
+|Time tracking
+|Time estimates
+|Find location by room name
+|Update current location
+|Find optimised path to destination with constraints
+|AR arrow-based directions
+|Colour-blind support
 |=======================
+
+== 3. User stories
+
+=== 3.1. User story B01: Localisation
+As a *user*
+
+I *want* to select locations from input list
+
+so that I *can navigate* between the points.
+
+==== 3.1.1. Acceptance criteria
+*Scenario 1:  Valid starting point and destination point list* +
+*Given* a user +
+*When* user types the code-name of classroom that user is at the moment
+in _'Choose starting point'_  or code-name of classroom
+that he wants to be in _'Choose destination'._ +
+*Then* a selectable list of locations based on input value will be shown.
+
+==== 3.1.2. Wireframes
+image::usb01_wireframe.png[alt="User Story 1 Wireframe."]
+
+==== 3.1.3. Technical details
+- Use this topic to make the input autocomplete option: https://www.geeksforgeeks.org/autocompletetextview-in-kotlin/[AutoCompleteTextView in Kotlin
+^]
+
+=== 3.2. User story B02: Text-based Navigation
+As a *user*
+
+I *want* to go to details page
+
+so that, I *can see* a text-based navigation between two points.
+
+==== 3.2.1. Acceptance criteria
+*Scenario 1: Find the shortest route between points* +
+*Given* a user +
+*When* the user clicks on _'Find shortest Route'_ button +
+*Then* a list of steps to be taken to reach destination will be shown.
+
+*Scenario 2: Cancelling the navigation details page* +
+*Given* a user +
+*When* the user clicks on _'Cancel'_ button on details page +
+*Then* the applications returns to previous page.
+
+==== 3.2.2. Wireframes
+image::usb02_wireframe.png[alt="User Story 2 Wireframe."]
+
+==== 3.2.3. Technical details
+- https://www.geeksforgeeks.org/check-possible-move-given-coordinate-desired-coordinate/?ref=lbp[Check if possible to move from given coordinate to desired coordinate^]
+ (Java)
+- This example will help you understand the Vector implementation on a Java application: https://noobtuts.com/java/vector2-class[vector2 Class^]
+- To know the directions of the path such as, left, right or straight.
+You can use https://www.intmath.com/vectors/3-vectors-2-dimensions.php[Vectors in 2-D^]
+* Giving the location coordination parameters (x, y)
+* Using magnitude and direction of a 2-dimensional Vector
+. Clockwise direction of the angle: right
+. Counterclockwise direction of the angle: left
+* A vector showing the position of a point A with coordinates (2, 3) and a point O with coordinates (0,0)
+
+image::vector.png[alt="A vector in the Cartesian plane, showing the position of a point A with coordinates (2, 3).", width=200]
+
+=== 3.3. User story B03: Utility-based Navigation
+As a *user*
+
+I *want* to select my location in order to find a nearest by Utility
+
+so that I *can see* the text-based navigation detail page.
+
+==== 3.3.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* user types the code-name of classroom that user is at the moment
+in _'Start point'_ +
+*Then* a selectable list of locations based on input value will be shown.
+
+*Scenario 2: Utility selection from the list* +
+*Given* a user +
+*When* the user selects the Utility +
+*Then* the applications returns the text-based navigation
+detail page for the nearest by chosen Utility.
+
+*Scenario 3: Canceling the navigation details page* +
+*Given* a user +
+*When* the user clicks on _'Cancel'_ button on details page +
+*Then* the applications returns back to Find Nearest by page.
+
+==== 3.3.2. Wireframes
+image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
+
+==== 3.3.3. Technical details
+- Follow User Story B01 for start point input recommendation list.
+- Follow User Stroy B02 for Nearest By Utility, Text-Based Detail page.
+- Make a nested and logical list of utilities for selection.
+- Make sure that after clicking 'Cancel' the value of the input for start point will remain the same in the 'Find Nearest by' page.
+
+=== 3.4. User story B04: Basic Information about Location
+As a *user*
+
+I *want* to select a location
+
+so that I *can see* a basic Information about that particular locations.
+
+==== 3.4.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* the user types the code-name of location +
+*Then* a selectable list of locations based on input value will be shown.
+
+*Scenario 2: Details of the locations is shown* +
+*Given* a user +
+*When* the user selects the location code-name +
+*Then* the applications returns the basic details on the detail section of the page.
+
+*Scenario 3: Invalid code-names returns error* +
+*Given* a user +
+*When* the user enters invalid code-name  +
+*Then* the applications returns 'No location found by this code-name'.
+
+==== 3.4.2. Wireframes
+image:usb04_wireframe.png[alt="User Story 4 Wireframe."]
+
+==== 3.4.3. Technical details
+- Follow User Story B01 for location's code-name input recommendation list.
+- Use Event Listeners for displaying the details of the selected location.
+* Working of event Listeners with https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_parameters[JavaScript^]
+
+=== 3.5. User story B05: Automate Starting Point
+As a *user*
+
+I *want* to select my starting location automatically
+
+so that I *can navigate* between the points.
+
+==== 3.5.1. Acceptance criteria
+*Scenario 1: Checkbox enabled sets my location automatically* +
+*Given* a user +
+*When* the user checks the checkbox 'Automate Location' +
+*Then* the input value becomes the current location of the person.
+
+*Scenario 2: Disabled GPS on device puts checkbox out of action and gives an error message* +
+*Given* a user +
+*When* the user's GPS is not available +
+*Then* the checkbox is disabled and a message is shown 'Allow the application to use your location information.'.
+
+==== 3.5.2. Wireframes
+image:usb05_wireframe.png[alt="User Story 5 Wireframe."]
+
+==== 3.5.3. Technical details
+* Options to automate user location:
+. WI-FI location: ranging with RTT https://developer.android.com/things/sdk/drivers/location[Android Developers^]
+. Android Location user drivers allow the app to publish updates to the device's physical location through the https://developer.android.com/things/sdk/drivers/location[Android locations Services.^]
+
+=== 3.6. User story B06: Select Visual Navigation
+As a *user*
+
+I *want* to select Visual navigation type
+
+so that I *can show the route* between the points in a basic 2-Dimensional map.
+
+==== 3.6.1. Acceptance criteria
+*Scenario 1: Visualize in 2D map* +
+*Given* a user +
+*When* the user clicks on _'Visualize in 2D'_ button +
+*Then* a 2D map of the route is shown on the 2D map page.
+
+*Scenario 2: Cancelling the navigation details page* +
+*Given* a user +
+*When* the user clicks on _'Cancel'_ button on 2D map page +
+*Then* the applications returns to previous page.
+
+==== 3.6.2. Wireframes
+image:usb06_wireframe.png[alt="User Story 6 Wireframe."]
+
+=== 3.7. User story B07: Corona Proof Navigation
+As a *user*
+
+I *want* to select Covid-19 regulations Checkbox
+
+so that I *can show the route* between the points based on Covid-19 regulations.
+
+==== 3.7.1. Acceptance criteria
+*Scenario 1: Checkbox enabled navigation via Covid-19 regulations based pathway* +
+*Given* a user +
+*When* the user checks the checkbox 'Covid-19 regulations' +
+*Then* the application return a list of steps based on Corona regulations, on details page.
+
+==== 3.7.2. Wireframes
+image:usb07_wireframe.png[alt="User Story 7 Wireframe."]
+
+==== 3.7.3. Technical details
+- Use a directed graph for setting the paths between the nodes.
+
+=== 3.8. User story B08: Utility Information
+As a *user*
+
+I *want* to select a Utility
+
+so that I *can see* a basic Information about that particular Utility.
+
+==== 3.8.1. Acceptance criteria
+*Scenario 1: Relatable list of code-names shown as list* +
+*Given* a user +
+*When* the user types the code-name of Utility +
+*Then* a selectable list of utilities based on input value will be shown.
+
+*Scenario 2: Details of the Utility is shown* +
+*Given* a user +
+*When* the user selects the utility code-name +
+*Then* the applications returns the basic details on the detail section of the page.
+
+*Scenario 3: Invalid code-names returns error* +
+*Given* a user +
+*When* the user enters invalid code-name  +
+*Then* the applications returns 'No Utility found by this code-name'.
+
+==== 3.8.2. Wireframes
+image:usb08_wireframe.png[alt="User Story 8 Wireframe."]
+
+==== 3.8.3. Technical details
+- Use Event Listeners for displaying the details of the selected utility.
