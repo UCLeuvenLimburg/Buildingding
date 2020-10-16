@@ -1,18 +1,27 @@
-Utility type als string bijhouden (we gaan geen onderscheid maken tussen versch utility types)
-==> al de onderste dingen van de UML van Johan mogen weg
+image:https://www.ucll.be/sites/default/files/ckeditor/ucll_logo_rgb.jpg[alt="kotlin logo.",width=170,height=75,float=left]
 
-bidirectioneel tussen 2 locaties opsplitsen in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
+= Verslag Vergadering
+---------------------------------------------------------
 
-we moeten meer test-driven-development toepassen
+DATUM: 14/10/2020
+AANWEZIGEN: JOHAN, JARON, THOMAS, HAMID
+VERONTSCHULDIGD:
+VERSLAGGEVER: JOHAN, THOMAS
+DATUM VOLGENDE VERSLAG: 12/10/2020
+AGENDA: Planning, manier van werken, Testing
+---------------------------------------------------------
+===== KORT VERSLAG:
 
-waterfall model van mr Fox is vrij dom, nutteloos bezig
+- Demonstreren van project UML
+- Bijhouden van data binnen de applicatie
+- Bespreking uitwerking algoritme
+- Waterfall manier van werken bespreken
 
-we willen iets kleins maken in 't begin, dan kritisch nadenken over het design en uitbreiden
+===== ACTIES:
 
-wat is verschil tussen multipurpose en classroom? waarom hebben we het nodig? waarom niet gewoon rooms? (met al dan niet categorie)
-
-databank aanmaken voor de lokalen in apart bestand en dat inlezen, dan moet het niet telkens hercompileren als locaties gewijzigd worden
-==> we gaan in een excel bestand werken? of toch SQL?
-
-
-versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en achteraf joinen
+- UML vereenvoudigen, er zijn een heel aantal klassen die overbodig zijn
+- Test-driven en modulair werken in plaats van zoveel mogelijk op voorhand te designen
+- Kleine app maken om te beginnen, en daarna uitbreidingen maken
+- Bidirectioneel tussen twee locaties opsplitsten in 2 directed pijlen, de ene naar de ene kant en de andere omgekeerd
+- Databanke aanmaken voor de lokalen in een apart bestand en dan inlezen, zodat het programma niet moet recompilen als locaties gewijzigd worden. Excel of SQL?
+- versch modules maken (pathfinding, visualisatie), goed denken wat die nodig hebben en daarna samenvoegen
