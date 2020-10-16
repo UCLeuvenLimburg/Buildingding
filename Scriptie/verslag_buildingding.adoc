@@ -144,7 +144,7 @@ There are on average one thousand people present on campus, of which 50 or more 
 
 * CO-2: The system shall use Kotlin as the main programming language.
 
-* CO-3: The app utilises the Wi-Fi Round Trip Time Android standard to help localise the user with Time of Flight ranging capabilities.
+* CO-3: The app utilizes the Wi-Fi Round Trip Time Android standard to help localize the user with Time of Flight ranging capabilities.
 
 ==== 1.3.4. Assumptions
 * The operation of the app depends on the usage consistency of the current Cisco access points which broadcast their BSSID.
@@ -287,7 +287,7 @@ so that I *can see* a text-based navigation between two points.
 *Scenario 2: Cancelling the navigation details page* +
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
-*Then* the applications returns to previous page.
+*Then* the application returns to previous page.
 
 ==== 3.2.2. Wireframes
 image::usb02_wireframe.png[alt="User Story 2 Wireframe."]
@@ -323,13 +323,13 @@ in _'Start point'_ +
 *Scenario 2: Utility selection from the list* +
 *Given* a user +
 *When* the user selects the Utility +
-*Then* the applications returns the text-based navigation
+*Then* the application returns the text-based navigation
 detail page for the nearest by chosen Utility.
 
 *Scenario 3: Canceling the navigation details page* +
 *Given* a user +
 *When* the user clicks on _'Cancel'_ button on details page +
-*Then* the applications returns back to Find Nearest by page.
+*Then* the application returns back to Find Nearest by page.
 
 ==== 3.3.2. Wireframes
 image:usb03_wireframe.png[alt="User Story 3 Wireframe."]
@@ -588,18 +588,18 @@ AGENDA: Demo Applicatie, Kleine aanpassingen & voorbreiding afstudeerproject pre
 Buildingding is a Proof of Concept application made for Campus Proximus to help people navigate through the campus. The application is not yet available on the Play Store.
 
 ==== 6.1.2. Git and GitHub
-First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be installed.
+First of all we need to get the Buildingding application on our local device. To do this we need to install Git. We can install git by first navigating to this url https://git-scm.com/downloads, and downloading the correct installer. Next run the installer, follow the steps and Git will be present in your system.
 
 image::git.png[500, 500]
 
-After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally. 
+After these steps are completed, open a GitBash terminal and type the following command. It will fetch the application from a remote repository and store it locally.
 
 ----
 git clone https://github.com/UCLeuvenLimburg/Buildingding.git
 ----
 
 ==== 6.1.3. Android Studio
-Now that we have our application on our device, we still need a way to run it and an emulator for a mobile device. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program. 
+Now that we have our application on our device, we still need an emulator for a mobile device and a way to run it. Luckily for us Android Studio can serve as both. Go to the website of Android Studio (https://developer.android.com/studio), download and install the program.
 
 image::android_studio.png[500, 500]
 
@@ -610,7 +610,7 @@ image::android_studio_open_project.png[500, 500]
 ==== 6.1.4. Running the application
 To run the project we need an emulator, which we can easily set-up in Android studio. Locate the AVD manager. Next choose create a new virtual device. Any device should work, but we recommend the Pixel 3a. After selecting a device click next, and choose the release "Q" with API level 29.
 
-Now that we have a device selected. Now that we have done all these steps we can run the application by clicking the green triangle.
+Now that we have done all these steps we can run the application by clicking the green triangle.
 
 image::start.png[500, 500]
 
@@ -618,11 +618,11 @@ image::start.png[500, 500]
 
 ==== 6.2.1. Buildingding: purpose
 
-The purpose of Buildingding is to help the user navigate Campus Proximus. Which is especially helpfull with the standing cirucaltion planning due to the pandemic concerning 'COVID-19'. This applicatoin was written as a graduation project for UCLL Applied Informatics in 2020 by order of Dr Vogels F.
+The purpose of Buildingding is to help the user navigate Campus Proximus. Which is especially helpful with the standing circulation planning due to the pandemic concerning 'COVID-19'. This application was written as a graduation project for UCLL Applied Informatics in 2020 by order of Dr. Vogels F.
 
-The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code presetn at the current location to set the starting location, but still has to choose the destination from a list.
+The user can choose a starting location and destination by choosing from a list of available locations. Alternatively, the user could scan a QR-code present at the current location to set the starting location, but still has to choose the destination from a list.
 
-Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualisation on a map.
+Once the path has been calculated, the user can choose to see the path as a list of locations or as a 2D visualization on a map.
 
 The application does not use real-time tracking.
 
@@ -644,7 +644,7 @@ You can start the application by tapping the Buildingding icon on your screen. (
 
 image:1_homescreen.png[width=100%, scalewidth=40cm]
 
-If the icon is missing, you can search for Buildingding by 
+If the icon is missing, you can search for Buildingding by
 
 . Swiping 'up' on your main screen.
 . Entering the term 'buildingding' in the searchbar
@@ -652,7 +652,7 @@ If the icon is missing, you can search for Buildingding by
 
 image:2_1_appscreen.png[width=100%, scalewidth=40cm] image:2_2_appscreen.png[width=100%, scalewidth=40cm] image:2_3_appscreen.png[width=100%, scalewidth=40cm]
 
-You will then be shown a welcome screen for 2 seconds after which you will enter the main menu
+You will then be shown a welcome screen for two seconds after which you will enter the main menu
 
 image:3_1_splashscreen.png[width=100%, scalewidth=40cm] image:3_2_homescreen.png[width=100%, scalewidth=40cm]
 
@@ -672,11 +672,11 @@ To choose a start location you have to tap the button marked "START POSITION"
 
 image:5_1_navigation_start_position.png[width=100%, scalewidth=40cm]
 
-Depending on the apllied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds you previous choice.
+Depending on the applied setting, you will have to choose a starting location from a list, or scan a QR-code. Afterwards you can alter the choice by tapping the button again, which now holds your previous choice.
 
 ====== 6.2.4.1.1. Choosing a starting location from the list
 
-If the setting "List" is apllied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
+If the setting "List" is applied, you will be shown a scrollable list of possible locations. When you tap on a location, you will be taken back to the main navigation screen.
 
 image:5_2_start_location_list.png[width=100%, scalewidth=40cm] image:5_3_start_location_list_scrolled.png[width=100%, scalewidth=40cm] image:5_5_chosen_start.png[width=100%, scalewidth=40cm]
 
@@ -700,18 +700,21 @@ image:5_8_start_navigation.png[width=100%, scalewidth=40cm]
 
 After tapping this button you will see a scrollable list of locations, which you have to follow to reach your destination. If you tap a location in this list, you will be shown a map of the floor with the highlighted route. The starting location will be marked green and the destination will be red. If you tap this map, you will return to the list overview.
 
-image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm] 
+image:6_1_path as list.png[width=100%, scalewidth=40cm] image:6_2_path as list_scrolled.png[width=100%, scalewidth=40cm] image:6_7_2D_navigation.png[width=100%, scalewidth=40cm]
 image:6_8_2D_navigation_tilted.png[]
 
 <<<
 
 ==== 6.2.5. Changing the Settings
 
-To change the settings you should tap the button marked "SETTINGS" on the main menu. To reach the main menu, you can use the back button on your mobile device. (image may differ on your device.) It could be possible you need to tap the back button multiple times.
+To change the settings you should tap the button marked "SETTINGS" on the main menu.
+To reach the main menu, you can use the back button on your mobile device.
+(image may differ on your device.) It could be possible you need to tap the back button multiple times.
 
 image:7_change_settings.png[width=100%, scalewidth=40cm]image:back_button.png[width=100%, scalewidth=40cm]
 
-When you tap on the "SETTINGS" button, you will be shown a list of possible settings. At the moment these are:
+When you tap on the "SETTINGS" button, you will be shown a list of possible settings.
+ At the moment these are:
 
 * Language: this will change the language used in Buildingding
 * Start choice: this will change the way you can set the starting point.
@@ -724,7 +727,7 @@ image:9_1_settingsscreen.png[width=100%, scalewidth=40cm]image:back_button.png[w
 
 ===== 6.2.5.1. Changing the language
 
-If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the choices are:
+If you chose to change the language, you will be shown a list of the implemented languages. To choose a language, you can tap the button marked with the appropriate text. To cancel a change, you can utilize the back button (image may differ on your device.) At the moment the choices are:
 
 * English
 * Nederlands
@@ -737,7 +740,9 @@ image:9_2_languagescreen.png[width=100%, scalewidth=40cm] image:back_button.png[
 
 ===== 6.2.5.2. Changing the start location input method
 
-To change the input method, you should tap the corresponding button. To cancel a change, you can utilise the back button (image may differ on your device.) At the moment the coices are:
+To change the input method, you should tap the corresponding button.
+To cancel a change, you can utilize the back button (image may differ on your device.)
+At the moment the choices are:
 
 * Scan
 * List (default)
@@ -748,6 +753,7 @@ image:9_3_startchoicescreen.png[width=100%, scalewidth=40cm]image:back_button.pn
 
 ==== 6.2.6. About screen
 
-The third option on the main menu will show you a brief information about the application. You can exit this using the back button.
+The third option on the main menu will show you brief information about the application.
+You can exit this using the back button.
 
-image:8_about_menu.png[width=100%, scalewidth=40cm] image:10_aboutscreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm] 
+image:8_about_menu.png[width=100%, scalewidth=40cm] image:10_aboutscreen.png[width=100%, scalewidth=40cm] image:back_button.png[width=100%, scalewidth=40cm]
