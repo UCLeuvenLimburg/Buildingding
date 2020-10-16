@@ -164,7 +164,7 @@ It does not account for temporary closures such as during holiday periods and lo
 === 1.4. External Interface Requirements
 
 ==== 1.4.1. User Interfaces
-* UI-1: The Buildingding app screen displays shall conform to the corporate design of the UCLLfootnote:[https://intranet.ucll.be/nl/student/studeren-aan-ucll/pba-de-toegepaste-informatica-proximus/opleiding/kleuren-en-lettertypes-ucll].
+* UI-1: The Buildingding app screens shall conform to the corporate design of the UCLLfootnote:[https://intranet.ucll.be/nl/student/studeren-aan-ucll/pba-de-toegepaste-informatica-proximus/opleiding/kleuren-en-lettertypes-ucll].
 
 * UI-2: The app shall provide multiple languages for each displayed page in order to provide support for international students.
 
@@ -190,3 +190,50 @@ Buildingding shall communicate with the Navigational System through a programmat
 
 ==== 1.4.3. Communications Interfaces
 * CI-1: The Buildingding app does not notify the Guidee as of yet when he/she has arrived at the chosen destination, but it will be looked into in the near future if there is a demand for it.
+
+== 2. Planning
+
+=== 2.1. Kanban
+Jira software was used to monitor and support the Buildingding project. The roadmap, backlog, and board features of this agile project management tool were invaluable during the development of the app.
+
+.In-progress epics on the kanban board
+image::kanban_prep.png[float="center",align="center"]
+
+.A snapshot of the backlog
+image::kanban_backlog.png[float="center",align="center"]
+
+=== 2.2. User story map
+image::story_map_v2.png[float="center",align="center"]
+
+=== 2.3. User story priority list
+|=======================
+[options="header"]
+|Must have
+|Show list of start locations
+|Show list of end locations
+|Find optimal path to destination
+|Show path in text format
+|Designate starting position
+|Designate finish position
+|Start navigation
+|=======================
+
+|=======================
+6.|Should have
+|Basic location info
+|2D visual navigation
+|End navigation
+|Change destination
+|Corona based directions
+|Automated localisation
+|=======================
+
+|=======================
+16.|Should have
+|Basic location info
+|2D visual navigation
+|End navigation
+|Change destination
+|Corona based directions
+|Automated localisation
+|=======================
