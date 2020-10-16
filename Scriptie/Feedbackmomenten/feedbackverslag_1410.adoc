@@ -12,7 +12,7 @@ AGENDA: Demo Applicatie, Kleine aapassingen & voorbreiding afstudeerproject pres
 ---------------------------------------------------------
 ===== KORT VERSLAG:
 
-- Demonestereren van de BuildingDing App
+- Demonstreren van de BuildingDing App
 - Instellingen features: Taal veranderen naar Frans, Engels en Nederlands
 - Text based navigatie: Een mooie oplijsting van route beschrijving
 - 2-D Navigatie: volgens de circulatie plan
